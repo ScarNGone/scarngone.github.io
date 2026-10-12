@@ -478,6 +478,7 @@ document.addEventListener('click', e => {
   if(t.hasAttribute('data-retry')){ NODATA = false; renderAll(); initData(); return; }
   if(t.hasAttribute('data-about')){ openAbout(); return; }
   if(t.hasAttribute('data-install')){ promptInstall(); return; }
+  if(t.hasAttribute('data-copy-link')){ const url = location.origin + location.pathname; (navigator.clipboard ? navigator.clipboard.writeText(url) : Promise.reject()).then(() => toast('Lien copié : colle-le dans Safari'), () => toast(url)); return; }
   if(t.hasAttribute('data-install-dismiss')){ store('clave.installDismissed', true); renderInstall(); return; }
   if(t.hasAttribute('data-close')){ closeSheets(); return; }
   if(t.dataset.tab){ setTab(t.dataset.tab); return; }
@@ -534,6 +535,8 @@ function openAbout(){
   const upd = META && META.updated_at ? new Date(META.updated_at).toLocaleDateString('fr-FR',{day:'numeric',month:'long',year:'numeric'}) : 'inconnue';
   $('#aboutUpd').textContent = upd;
   $('#aboutCount').textContent = EVENTS.length ? plural(EVENTS.length,'événement','événements') : 'les événements';
+  $('#aboutInstall').hidden = !deferredPrompt;
+  $('#aboutCopy').hidden = !isIOS;
   $('#aboutSheet').hidden = false;
 }
 
@@ -548,9 +551,12 @@ function renderInstall(){
   const show = !isStandalone() && !load('clave.installDismissed') && (deferredPrompt || isIOS);
   box.hidden = !show;
   if(!show) return;
+  const chromeIOS = isIOS && /CriOS/.test(navigator.userAgent);
   const how = deferredPrompt
     ? `<span>Ajoute Clave Salsa à ton écran d'accueil pour l'ouvrir comme une app, même sans réseau.</span><div class="install-actions"><button class="btn primary" data-install>Installer</button><button class="btn" data-install-dismiss>Plus tard</button></div>`
-    : `<span>Dans Safari, touche le bouton Partager puis « Sur l'écran d'accueil ». L'app s'ouvrira comme les autres, même sans réseau.</span><div class="install-actions"><button class="btn" data-install-dismiss>Compris</button></div>`;
+    : chromeIOS
+    ? `<span>Touche le bouton Partager en haut à droite, puis « Ajouter à l'écran d'accueil ».</span><div class="install-actions"><button class="btn" data-install-dismiss>Compris</button></div>`
+    : `<span>Sur iPhone, l'ajout se fait depuis Safari : touche Partager puis « Sur l'écran d'accueil », en laissant « Ouvrir comme app web » activé. Brave ne propose pas cette option : copie le lien et colle-le dans Safari.</span><div class="install-actions"><button class="btn primary" data-copy-link>Copier le lien</button><button class="btn" data-install-dismiss>Plus tard</button></div>`;
   box.innerHTML = `<b>Installer l'app</b>${how}`;
 }
 async function promptInstall(){

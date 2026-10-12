@@ -1,7 +1,7 @@
 // Clave Salsa : fonctionnement hors ligne.
 // Code et données : réseau d'abord, copie locale si le réseau ne répond pas.
 // Polices, icônes et bibliothèque de carte : copie locale d'abord.
-const VERSION = 'clave-2026-10-12b';
+const VERSION = 'clave-2026-10-12c';
 const SHELL = [
   './', 'index.html', 'app.css', 'app.js', 'manifest.webmanifest',
   'vendor/leaflet.js', 'vendor/leaflet.css',
