@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Clave Salsa · soirées salsa en Auvergne-Rhône-Alpes</title>
+<meta name="description" content="Agenda, carte et statistiques des soirées, stages et festivals de salsa, bachata et kizomba en Auvergne-Rhône-Alpes, mis à jour chaque lundi.">
+<meta name="theme-color" content="#F7F4FA" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#120D1C" media="(prefers-color-scheme: dark)">
+<meta name="color-scheme" content="light dark">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png" type="image/png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Clave Salsa">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Clave Salsa">
+<meta property="og:description" content="Où danser la salsa, la bachata et la kizomba en Auvergne-Rhône-Alpes : agenda, carte et statistiques.">
+<meta property="og:url" content="https://scarngone.github.io/clave-salsa/">
+<meta property="og:image" content="https://scarngone.github.io/clave-salsa/icons/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="vendor/leaflet.css">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="brand">
+      <h1>Clave <span>Salsa</span></h1>
+      <div class="clave" aria-hidden="true"><i class="on"></i><i></i><i></i><i class="on"></i><i></i><i></i><i class="on"></i><i></i><i></i><i></i><i class="on"></i><i></i><i class="on"></i><i></i><i></i><i></i></div>
+    </div>
+    <button class="loc-btn" id="locBtn" aria-haspopup="dialog">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.6"/></svg>
+      <span class="lbl"><small id="locKind">Région</small><b id="locName">Auvergne-Rhône-Alpes</b></span>
+    </button>
+    <button class="icon-btn info-btn" data-about aria-label="À propos et installation"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.01"/></svg></button>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="view" id="view-agenda">
+    <div class="install" id="installBanner" hidden></div>
+    <label class="search" for="q">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="q" type="search" placeholder="Soirée, lieu, école…" autocomplete="off" aria-label="Rechercher">
+    </label>
+    <div class="seg" id="whenSeg" role="group" aria-label="Période">
+      <button data-when="weekend">Week-end</button><button data-when="7j">7 jours</button><button data-when="30j">30 jours</button><button data-when="tout">Tout</button>
+    </div>
+    <div class="chips" id="chips" role="group" aria-label="Filtres"></div>
+    <div class="summary"><span id="summary"></span><button class="linkbtn" id="resetBtn" hidden>Effacer les filtres</button></div>
+    <div id="list" style="display:flex;flex-direction:column;gap:14px"></div>
+    <p class="note" id="dataNote"></p>
+  </section>
+
+  <section class="view" id="view-carte" hidden>
+    <div class="summary"><span id="mapSummary"></span></div>
+    <div id="map" role="region" aria-label="Carte des soirées"></div>
+    <div class="city-panel" id="cityPanel"></div>
+  </section>
+
+  <section class="view" id="view-stats" hidden>
+    <div id="stats" style="display:flex;flex-direction:column;gap:14px"></div>
+  </section>
+
+  <section class="view" id="view-favoris" hidden>
+    <div id="favs" style="display:flex;flex-direction:column;gap:14px"></div>
+  </section>
+</main>
+
+<nav class="tabs" aria-label="Sections">
+  <div class="wrap">
+    <button data-tab="agenda" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>Agenda</button>
+    <button data-tab="carte"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 4-5.5 2v14L9 18l6 2 5.5-2V4L15 6 9 4z"/><path d="M9 4v14M15 6v14"/></svg>Carte</button>
+    <button data-tab="stats"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h16"/><rect x="5.5" y="11" width="3" height="6" rx="1"/><rect x="10.5" y="6" width="3" height="11" rx="1"/><rect x="15.5" y="9" width="3" height="8" rx="1"/></svg>Stats</button>
+    <button data-tab="favoris"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.5 2.6 5.4 5.9.8-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8L3.5 9.7l5.9-.8L12 3.5z"/></svg>Favoris<span class="badge" id="favBadge" hidden>0</span></button>
+  </div>
+</nav>
+
+<div class="backdrop" id="locSheet" hidden>
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="locTitle">
+    <div class="grab" aria-hidden="true"></div>
+    <div class="sheet-head"><h2 id="locTitle">Où veux-tu danser ?</h2><button class="icon-btn" data-close aria-label="Fermer"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+    <div class="seg" id="modeSeg" role="group" aria-label="Échelle">
+      <button data-mode="region">Région</button><button data-mode="dept">Département</button><button data-mode="city">Ville</button>
+    </div>
+    <div id="locBody" style="display:flex;flex-direction:column;gap:12px"></div>
+  </div>
+</div>
+
+<div class="backdrop" id="evSheet" hidden>
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="evTitle" id="evBody"></div>
+</div>
+
+<div class="backdrop" id="aboutSheet" hidden>
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="aboutTitle">
+    <div class="grab" aria-hidden="true"></div>
+    <div class="sheet-head"><h2 id="aboutTitle">À propos</h2><button class="icon-btn" data-close aria-label="Fermer"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+    <p class="desc">Clave Salsa recense les soirées, stages, festivals et concerts de salsa, bachata et kizomba en Auvergne-Rhône-Alpes. Choisis une région, un département ou une ville, puis filtre par style et par date.</p>
+    <div class="about">
+      <section><h3>D'où viennent les infos</h3><p>Les <span id="aboutCount">événements</span> sont relevés sur des agendas publics (AIRDancia, Salsavida, HelloAsso, AllEvents, Fest.fr, Dance Events), sur les sites des écoles, bars et associations, et sur ceux des offices de tourisme. Chaque fiche renvoie vers l'annonce d'origine. Les soirées annoncées seulement sur Facebook ou Instagram n'y figurent pas.</p></section>
+      <section><h3>Mise à jour</h3><p>Chaque lundi matin, les nouvelles dates sont ajoutées et les dates passées retirées. Dernière mise à jour : <b id="aboutUpd">inconnue</b>. Le badge <span class="tag warn">À confirmer</span> signale une source ancienne ou incomplète : vérifie auprès de l'organisateur avant de te déplacer.</p></section>
+      <section><h3>Installer l'app</h3><p><b>Android</b> : dans Chrome, ouvre le menu ⋮ puis « Installer l'application » (ou « Ajouter à l'écran d'accueil »).<br><b>iPhone</b> : dans Safari, touche le bouton Partager puis « Sur l'écran d'accueil ».<br>Une fois installée, l'app garde les dernières soirées chargées et fonctionne sans réseau.</p><button class="btn primary" data-install id="aboutInstall">Installer maintenant</button></section>
+      <section><h3>Tes données</h3><p>Pas de compte, pas de cookie, pas de mesure d'audience. Tes favoris et tes filtres restent enregistrés sur ton appareil.</p></section>
+      <section><h3>Mentions</h3><p>Site personnel non commercial. Hébergement : GitHub Pages, GitHub Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis.<br>Contours des départements : IGN Admin Express (Licence Ouverte). Communes : GeoNames (CC BY 4.0). Carte : Leaflet. Polices : Archivo et Figtree (SIL Open Font License).</p></section>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast" hidden></div>
+
+<script src="vendor/leaflet.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
