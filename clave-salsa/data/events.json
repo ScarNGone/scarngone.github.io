@@ -37,6 +37,38 @@
   ]
  },
  {
+  "title": "Lundis bachata et kizomba avec Lionel Find",
+  "type": "initiation",
+  "styles": [
+   "bachata",
+   "kizomba"
+  ],
+  "date": "2026-10-19",
+  "end_date": null,
+  "start_time": "19:10",
+  "recurrence": {
+   "freq": "weekly",
+   "weekday": 1
+  },
+  "venue": "All In Country Club (Groupama Stadium, entrée P5)",
+  "address": "13 rue Marceau, 69150 Décines-Charpieu",
+  "city": "Décines-Charpieu",
+  "department": "Rhône",
+  "dept_code": "69",
+  "lat": 45.7687,
+  "lng": 4.9588,
+  "geo_precision": "lieu",
+  "price": "8 € le cours, 10 € de 2 à 4 cours",
+  "price_min": 8,
+  "organizer": "Lionel Find / L'Annex Events",
+  "description": "Quatre cours ouverts sans inscription ni abonnement, bachata puis kizomba en débutant et intermédiaire, payés sur place à l'unité.",
+  "source_url": "https://airdancia.com/event/tous-les-lundis-cours-bachata-kizomba-avec-lionel-find-all-in-country-club-decines-charpieu/",
+  "source_name": "AIRDancia",
+  "confidence": "haute",
+  "id": "lundis-bachata-et-kizomba-avec-lionel-find-decines-charpieu-rec",
+  "added_on": "2026-10-19"
+ },
+ {
   "title": "Monday Kiz à L'Annex",
   "type": "soirée",
   "styles": [
@@ -94,6 +126,35 @@
   "confidence": "moyenne",
   "id": "stage-intensif-kizomba-debutant-et-intermediaire-publier-2026-10-19",
   "added_on": "2026-10-12"
+ },
+ {
+  "title": "Stages de danses latines chez Caona Studio",
+  "type": "stage",
+  "styles": [
+   "bachata",
+   "salsa"
+  ],
+  "date": "2026-10-19",
+  "end_date": null,
+  "start_time": "18:45",
+  "recurrence": null,
+  "venue": "CAONA Studio",
+  "address": "16 rue des Vieux Moulins, 74160 Saint-Julien-en-Genevois",
+  "city": "Saint-Julien-en-Genevois",
+  "department": "Haute-Savoie",
+  "dept_code": "74",
+  "lat": 46.1443,
+  "lng": 6.0826,
+  "geo_precision": "lieu",
+  "price": "25 € le stage",
+  "price_min": 25,
+  "organizer": "CAONA Studio",
+  "description": "Deux stages avec Julien : lady latines en solo puis initiation couple débutant centrée sur la bachata, avec bases de salsa.",
+  "source_url": "https://airdancia.com/event/stage-de-danses-latines-saint-julien-en-genevois/",
+  "source_name": "AIRDancia",
+  "confidence": "haute",
+  "id": "stages-de-danses-latines-chez-caona-studio-saint-julien-en-gene-2026-10-19",
+  "added_on": "2026-10-19"
  },
  {
   "title": "Afterwork Tapas, cours salsa & bachata débutant et soirée",
@@ -205,7 +266,7 @@
   "recurrence": {
    "freq": "weekly",
    "weekday": 2,
-   "until": "2026-10-20"
+   "until": "2026-10-27"
   },
   "venue": "Le Lydo",
   "address": "14 boulevard Eugène Réguillon, 69100 Villeurbanne",
@@ -342,6 +403,37 @@
   "confidence": "haute",
   "id": "cours-ouverts-bachata-sensual-et-lady-styling-annecy-2026-10-21",
   "added_on": "2026-10-12"
+ },
+ {
+  "title": "Initiation salsa et soirée du mercredi au Barãgones",
+  "type": "initiation",
+  "styles": [
+   "salsa"
+  ],
+  "date": "2026-10-21",
+  "end_date": null,
+  "start_time": "20:30",
+  "recurrence": {
+   "freq": "weekly",
+   "weekday": 3
+  },
+  "venue": "Barãgones",
+  "address": "5 place Saint-Paul, 69005 Lyon",
+  "city": "Lyon",
+  "department": "Rhône",
+  "dept_code": "69",
+  "lat": 45.7485,
+  "lng": 4.8467,
+  "geo_precision": "lieu",
+  "price": "tarif non communiqué",
+  "price_min": null,
+  "organizer": "Barãgones / Abraso Danse",
+  "description": "Chaque mercredi soir, initiation à la salsa animée par Abraso Danse puis soirée dansante dans ce bar à cocktails et tapas du Vieux-Lyon.",
+  "source_url": "https://baragones.fr/evenements/",
+  "source_name": "Barãgones",
+  "confidence": "moyenne",
+  "id": "initiation-salsa-et-soiree-du-mercredi-au-baragone-lyon-rec",
+  "added_on": "2026-10-19"
  },
  {
   "title": "La Sociale BSK au Lydo",
@@ -516,8 +608,8 @@
   "end_date": null,
   "start_time": "19:00",
   "recurrence": null,
-  "venue": "CPNG Valence Châteauvert",
-  "address": "4 rue Auguste Giraud, 26000 Valence",
+  "venue": "Salle Pepuy, complexe sportif Briffaut",
+  "address": "Route de Malissard, 26000 Valence",
   "city": "Valence",
   "department": "Drôme",
   "dept_code": "26",
@@ -563,6 +655,34 @@
   "source_name": "AIRDancia",
   "confidence": "moyenne",
   "id": "afterwork-kiz-time-valence-valence-rec",
+  "added_on": "2026-10-19"
+ },
+ {
+  "title": "Danza Kizomba, soirée 100 % kiz",
+  "type": "soirée",
+  "styles": [
+   "kizomba"
+  ],
+  "date": "2026-10-22",
+  "end_date": null,
+  "start_time": "20:00",
+  "recurrence": null,
+  "venue": "Salle Ract",
+  "address": "14 rue de l'Épine, 73160 Cognin",
+  "city": "Cognin",
+  "department": "Savoie",
+  "dept_code": "73",
+  "lat": 45.5595,
+  "lng": 5.8911,
+  "geo_precision": "lieu",
+  "price": "Soirée 7 €, cours et soirée 10 €",
+  "price_min": 7,
+  "organizer": "Titi & Nanou Events",
+  "description": "Rendez-vous kizomba mensuel : cours d'une heure avec Titi et Nanou, puis soirée dansante jusqu'à minuit.",
+  "source_url": "https://allevents.in/chambery/danza-kizomba/200030835211209",
+  "source_name": "AllEvents",
+  "confidence": "haute",
+  "id": "danza-kizomba-soiree-100-kiz-cognin-2026-10-22",
   "added_on": "2026-10-19"
  },
  {
@@ -969,35 +1089,34 @@
   "added_on": "2026-10-12"
  },
  {
-  "title": "Nuit SBK Annecy « Vos plus belles Nuits »",
+  "title": "SBK Tropical Night #2, warm-up du Ritmo Latino Congress",
   "type": "soirée",
   "styles": [
-   "salsa cubaine",
+   "salsa",
    "bachata",
-   "kizomba",
-   "zouk"
+   "kizomba"
   ],
   "date": "2026-10-23",
   "end_date": null,
-  "start_time": "19:00",
+  "start_time": "20:00",
   "recurrence": null,
-  "venue": "RACA Danse",
-  "address": "50 impasse de la Futaie, ZA d'Aléry, 74960 Annecy",
-  "city": "Annecy",
-  "department": "Haute-Savoie",
-  "dept_code": "74",
-  "lat": 45.9088,
-  "lng": 6.1257,
-  "geo_precision": "ville",
-  "price": "Soirée 10 €, pass 20 € en ligne ou 30 € sur place",
-  "price_min": 10,
-  "organizer": "RACA Danse",
-  "description": "Ateliers dès 20h puis grande soirée de 22h à 3h sur trois salles (salsa cubaine, bachata, kizomba), avec concours de costumes pour Halloween.",
-  "source_url": "https://airdancia.com/event/nuit-sbk-annecy-vendredi-23-octobre-vos-plus-belles-nuits-annecy/",
+  "venue": "Le Domaine de La Garde",
+  "address": "Domaine de La Garde, 01000 Bourg-en-Bresse",
+  "city": "Bourg-en-Bresse",
+  "department": "Ain",
+  "dept_code": "01",
+  "lat": 46.2057,
+  "lng": 5.2258,
+  "geo_precision": "lieu",
+  "price": "Stage 5 €, soirée 10 €",
+  "price_min": 5,
+  "organizer": "Bresstival Dance",
+  "description": "Soirée SBK lançant le futur Ritmo Latino Congress : stages bachata fusion et kizomba à 20h30, puis soirée animée par Lucille dès 21h30.",
+  "source_url": "https://airdancia.com/event/sbk-tropical-night-2-warm-up-ritmo-latino-congress-bourg-en-bresse/",
   "source_name": "AIRDancia",
-  "confidence": "moyenne",
-  "id": "nuit-sbk-annecy-vos-plus-belles-nuits-annecy-2026-10-23",
-  "added_on": "2026-10-12"
+  "confidence": "haute",
+  "id": "sbk-tropical-night-2-warm-up-du-ritmo-latino-congr-bourg-en-bresse-2026-10-23",
+  "added_on": "2026-10-19"
  },
  {
   "title": "Soirée 2 ambiances salsa-bachata à Dime Que Sí",
@@ -1218,6 +1337,36 @@
   "added_on": "2026-10-12"
  },
  {
+  "title": "Vendredi Party Halloween WCS et SBK chez Moioli",
+  "type": "soirée",
+  "styles": [
+   "salsa",
+   "bachata",
+   "kizomba"
+  ],
+  "date": "2026-10-23",
+  "end_date": null,
+  "start_time": "21:00",
+  "recurrence": null,
+  "venue": "École de danse Moioli (Annexe)",
+  "address": "401 rue des Champagnes, 73290 La Motte-Servolex",
+  "city": "La Motte-Servolex",
+  "department": "Savoie",
+  "dept_code": "73",
+  "lat": 45.597,
+  "lng": 5.8672,
+  "geo_precision": "lieu",
+  "price": "7 €, softs inclus",
+  "price_min": 7,
+  "organizer": "École de danse Moioli",
+  "description": "Soirée pratique spéciale Halloween partagée entre West Coast swing et salsa, bachata, kizomba, de 21 h à minuit.",
+  "source_url": "https://www.dansemoioli.com/pdf/SE.pdf",
+  "source_name": "École de danse Moioli",
+  "confidence": "haute",
+  "id": "vendredi-party-halloween-wcs-et-sbk-chez-moioli-la-motte-servolex-2026-10-23",
+  "added_on": "2026-10-19"
+ },
+ {
   "title": "Vendredi SBK au Lydo",
   "type": "soirée",
   "styles": [
@@ -1300,6 +1449,9 @@
    "freq": "weekly",
    "weekday": 5
   },
+  "exdates": [
+   "2026-10-30"
+  ],
   "venue": "RACA Danse",
   "address": "50 impasse de la Futaie, ZA d'Aléry, Cran-Gevrier, 74960 Annecy",
   "city": "Annecy",
@@ -1703,6 +1855,39 @@
   "added_on": "2026-10-19"
  },
  {
+  "title": "Dimanches bachata à La Seiche : initiation et soirée BSK",
+  "type": "soirée",
+  "styles": [
+   "bachata",
+   "salsa",
+   "kizomba"
+  ],
+  "date": "2026-10-25",
+  "end_date": null,
+  "start_time": "18:00",
+  "recurrence": {
+   "freq": "weekly",
+   "weekday": 0
+  },
+  "venue": "La Seiche",
+  "address": "35 route de Piron, 74320 Sevrier",
+  "city": "Sevrier",
+  "department": "Haute-Savoie",
+  "dept_code": "74",
+  "lat": 45.8644,
+  "lng": 6.1399,
+  "geo_precision": "lieu",
+  "price": "Initiation 3 € (selon l'école)",
+  "price_min": 3,
+  "organizer": "Annecy Bachata",
+  "description": "Chaque dimanche au bord du lac : une heure d'initiation (bachata le plus souvent, parfois kizomba) puis soirée bachata, salsa, kizomba jusqu'à 22 h 30.",
+  "source_url": "https://lemarchedelaseiche.fr/events/categorie/danse-sevrier-Annecy/",
+  "source_name": "La Seiche (agenda)",
+  "confidence": "haute",
+  "id": "dimanches-bachata-a-la-seiche-initiation-et-soiree-sevrier-rec",
+  "added_on": "2026-10-19"
+ },
+ {
   "title": "El Gran Combo de Puerto Rico, Europa Tour 2026",
   "type": "concert",
   "styles": [
@@ -1846,6 +2031,35 @@
   "confidence": "haute",
   "id": "sbrock-party-au-markadas-meyzieu-rec",
   "added_on": "2026-10-12"
+ },
+ {
+  "title": "Workshop salsa cubaine intermédiaire avec Estelle & Christophe",
+  "type": "stage",
+  "styles": [
+   "salsa cubaine",
+   "rueda"
+  ],
+  "date": "2026-10-27",
+  "end_date": null,
+  "start_time": "19:00",
+  "recurrence": null,
+  "venue": "Salle de la Libération",
+  "address": "3 rue de l'Hôtel de Ville, 42390 Villars",
+  "city": "Villars",
+  "department": "Loire",
+  "dept_code": "42",
+  "lat": 45.4678,
+  "lng": 4.3554,
+  "geo_precision": "lieu",
+  "price": "10 €",
+  "price_min": 10,
+  "organizer": "Salsa Villars",
+  "description": "Atelier de salsa cubaine niveau intermédiaire de 19h à 21h, prolongé par une rueda pour les stagiaires. Inscription obligatoire.",
+  "source_url": "https://allevents.in/saint-etienne/workshop-salsa-inter/200030780791428",
+  "source_name": "AllEvents",
+  "confidence": "haute",
+  "id": "workshop-salsa-cubaine-intermediaire-avec-estelle--villars-2026-10-27",
+  "added_on": "2026-10-19"
  },
  {
   "title": "Stage salsa au FJEP La Métare",
@@ -1995,6 +2209,37 @@
   "confidence": "haute",
   "id": "la-nuit-du-gouyad-2-villeurbanne-2026-10-30",
   "added_on": "2026-10-19"
+ },
+ {
+  "title": "Nuit SBK Annecy « Vos plus belles Nuits »",
+  "type": "soirée",
+  "styles": [
+   "salsa cubaine",
+   "bachata",
+   "kizomba",
+   "zouk"
+  ],
+  "date": "2026-10-30",
+  "end_date": null,
+  "start_time": "20:00",
+  "recurrence": null,
+  "venue": "RACA Danse",
+  "address": "50 impasse de la Futaie, ZA d'Aléry, 74960 Annecy",
+  "city": "Annecy",
+  "department": "Haute-Savoie",
+  "dept_code": "74",
+  "lat": 45.9088,
+  "lng": 6.1257,
+  "geo_precision": "ville",
+  "price": "Soirée 10 €, pass 20 € en ligne ou 30 € sur place",
+  "price_min": 10,
+  "organizer": "RACA Danse",
+  "description": "Ateliers dès 20h puis grande soirée de 22h à 3h sur trois salles (salsa cubaine, bachata, kizomba), avec concours de costumes pour Halloween.",
+  "source_url": "https://www.raca-danse.com/nuit-de-la-salsa-cubaine-bachata-kiz-vendredi-30-octobre/",
+  "source_name": "RACA Danse",
+  "confidence": "moyenne",
+  "id": "nuit-sbk-annecy-vos-plus-belles-nuits-annecy-2026-10-30",
+  "added_on": "2026-10-12"
  },
  {
   "title": "SBK 80 % et rock 20 % au Broadway",
@@ -2262,6 +2507,36 @@
   "added_on": "2026-10-19"
  },
  {
+  "title": "Full Party Swing spécial Halloween",
+  "type": "soirée",
+  "styles": [
+   "salsa",
+   "bachata",
+   "kizomba"
+  ],
+  "date": "2026-10-31",
+  "end_date": null,
+  "start_time": "21:00",
+  "recurrence": null,
+  "venue": "Markadas Dance Center",
+  "address": "20 avenue du Docteur Schweitzer, 69330 Meyzieu",
+  "city": "Meyzieu",
+  "department": "Rhône",
+  "dept_code": "69",
+  "lat": 45.7664,
+  "lng": 5.0028,
+  "geo_precision": "lieu",
+  "price": "8 € la soirée, 10 € un stage, 15 € deux stages (soirée offerte)",
+  "price_min": 8,
+  "organizer": "Markadas Dance Center",
+  "description": "Soirée d'Halloween sur trois salles dont une petite salle 100 % SBK, les autres en rock et west coast, avec concours de déguisement.",
+  "source_url": "https://markadas-danse.com/event/halloween-party-full-party-swing-meyzieu/",
+  "source_name": "Markadas",
+  "confidence": "haute",
+  "id": "full-party-swing-special-halloween-meyzieu-2026-10-31",
+  "added_on": "2026-10-19"
+ },
+ {
   "title": "Halloween Annecy Bachata Party",
   "type": "soirée",
   "styles": [
@@ -2348,6 +2623,36 @@
   "added_on": "2026-10-12"
  },
  {
+  "title": "S'CHIC Halloween Edition",
+  "type": "soirée",
+  "styles": [
+   "kizomba",
+   "bachata",
+   "salsa"
+  ],
+  "date": "2026-10-31",
+  "end_date": null,
+  "start_time": "19:00",
+  "recurrence": null,
+  "venue": "Social Club",
+  "address": null,
+  "city": "Grenoble",
+  "department": "Isère",
+  "dept_code": "38",
+  "lat": 45.1787,
+  "lng": 5.7148,
+  "geo_precision": "ville",
+  "price": "15 €",
+  "price_min": 15,
+  "organizer": "S'CHIC",
+  "description": "Soirée Halloween costumée avec initiations urbankiz, bachata, salsa et ladies styling, puis DJ Matt jusqu'à 2 h.",
+  "source_url": "https://airdancia.com/event/schic-halloween-edition-grenoble/",
+  "source_name": "AIRDancia",
+  "confidence": "haute",
+  "id": "s-chic-halloween-edition-grenoble-2026-10-31",
+  "added_on": "2026-10-19"
+ },
+ {
   "title": "Samedi latino SRBK et West Coast à La Seiche",
   "type": "soirée",
   "styles": [
@@ -2398,8 +2703,8 @@
   "lat": 45.7458,
   "lng": 4.9709,
   "geo_precision": "ville",
-  "price": "tarif non communiqué",
-  "price_min": null,
+  "price": "12 € soirée seule, 15 € stages et soirée",
+  "price_min": 12,
   "organizer": "L'Annex",
   "description": "After-party Halloween de la National Salsa Bachata Cup, cours et soirée salsa-bachata jusqu'au bout de la nuit.",
   "source_url": "https://www.lannex.fr/event-details/sbk-xperience-special-halloween-cours-et-soiree-a-shine-academie",
@@ -2573,10 +2878,10 @@
   "venue": "The Lab",
   "address": "15 rue du Dauphiné, 69800 Saint-Priest",
   "city": "Saint-Priest",
-  "department": "Ardèche",
-  "dept_code": "07",
-  "lat": 44.7165,
-  "lng": 4.5463,
+  "department": "Rhône",
+  "dept_code": "69",
+  "lat": 45.6965,
+  "lng": 4.9439,
   "geo_precision": "ville",
   "price": "15 € soirée, 20 € avec cours",
   "price_min": 15,
@@ -2793,6 +3098,70 @@
   "source_name": "AIRDancia",
   "confidence": "haute",
   "id": "bachataxzouk-weekender-lyon-2026-11-06",
+  "added_on": "2026-10-19"
+ },
+ {
+  "title": "Soirée Rock & Swing, SBK et West Coast du vendredi au Ballroom",
+  "type": "soirée",
+  "styles": [
+   "salsa",
+   "bachata",
+   "kizomba"
+  ],
+  "date": "2026-11-06",
+  "end_date": null,
+  "start_time": "21:00",
+  "recurrence": {
+   "freq": "monthly",
+   "weekday": 5,
+   "nth": 1
+  },
+  "venue": "Le Ballroom",
+  "address": "137 route des Tattes de Borly, 74380 Cranves-Sales",
+  "city": "Cranves-Sales",
+  "department": "Haute-Savoie",
+  "dept_code": "74",
+  "lat": 46.188,
+  "lng": 6.299,
+  "geo_precision": "lieu",
+  "price": "10 €, softs à volonté (écocup 2 €)",
+  "price_min": 10,
+  "organizer": "Le Ballroom",
+  "description": "Le premier vendredi du mois, trois salles au Ballroom : rock et swing, salsa bachata kizomba, et West Coast swing.",
+  "source_url": "https://airdancia.com/event/soiree-rock-n-swing-s-b-k-west-coast-3-salles-3-ambiances-au-ballroom-cranves-sales/",
+  "source_name": "AIRDancia",
+  "confidence": "haute",
+  "id": "soiree-rock-swing-sbk-et-west-coast-du-vendredi-au-cranves-sales-rec",
+  "added_on": "2026-10-19"
+ },
+ {
+  "title": "Vendredi Party salsa, bachata, kizomba chez Moioli",
+  "type": "soirée",
+  "styles": [
+   "salsa",
+   "bachata",
+   "kizomba"
+  ],
+  "date": "2026-11-06",
+  "end_date": null,
+  "start_time": "21:00",
+  "recurrence": null,
+  "venue": "École de danse Moioli (Annexe)",
+  "address": "401 rue des Champagnes, 73290 La Motte-Servolex",
+  "city": "La Motte-Servolex",
+  "department": "Savoie",
+  "dept_code": "73",
+  "lat": 45.597,
+  "lng": 5.8672,
+  "geo_precision": "lieu",
+  "price": "7 €, softs inclus",
+  "price_min": 7,
+  "organizer": "École de danse Moioli",
+  "description": "Soirée pratique de l'école avec une salle salsa, bachata, kizomba et une autre ambiance en parallèle, jusqu'à minuit.",
+  "source_url": "https://www.dansemoioli.com/pdf/SE.pdf",
+  "source_name": "École de danse Moioli",
+  "confidence": "haute",
+  "id": "vendredi-party-salsa-bachata-kizomba-chez-moioli-la-motte-servolex-2026-11-06",
   "added_on": "2026-10-19"
  },
  {
@@ -3039,6 +3408,40 @@
   "added_on": "2026-10-12"
  },
  {
+  "title": "Soirée pratique du Mambo Rock (1er samedi)",
+  "type": "soirée",
+  "styles": [
+   "salsa",
+   "bachata",
+   "kizomba"
+  ],
+  "date": "2026-11-07",
+  "end_date": null,
+  "start_time": "21:00",
+  "recurrence": {
+   "freq": "monthly",
+   "weekday": 6,
+   "nth": 1
+  },
+  "venue": "Studio Alpes Académie (Mambo Rock)",
+  "address": "3 route de la Peysse, 73000 Barberaz",
+  "city": "Barberaz",
+  "department": "Savoie",
+  "dept_code": "73",
+  "lat": 45.5618,
+  "lng": 5.9431,
+  "geo_precision": "lieu",
+  "price": "8 €",
+  "price_min": 8,
+  "organizer": "Mambo Rock",
+  "description": "Soirée toutes danses de couple sur trois salles, dont une salle salsa, bachata, kizomba animée par Matt, César ou Deejlio.",
+  "source_url": "https://www.mambo-rock.com/soirees-et-stages/214-soiree-pratique-du-3-septembre-du-07-11-2026.htm",
+  "source_name": "Mambo Rock",
+  "confidence": "haute",
+  "id": "soiree-pratique-du-mambo-rock-1er-samedi-barberaz-rec",
+  "added_on": "2026-10-19"
+ },
+ {
   "title": "Stage afro et kizomba à Irigny",
   "type": "stage",
   "styles": [
@@ -3065,6 +3468,62 @@
   "confidence": "moyenne",
   "id": "stage-afro-et-kizomba-a-irigny-irigny-2026-11-07",
   "added_on": "2026-10-12"
+ },
+ {
+  "title": "Stage kizomba perfectionnement avec Matt et Léa",
+  "type": "stage",
+  "styles": [
+   "kizomba"
+  ],
+  "date": "2026-11-07",
+  "end_date": null,
+  "start_time": "19:30",
+  "recurrence": null,
+  "venue": "Studio Alpes Académie (Mambo Rock)",
+  "address": "3 route de la Peysse, 73000 Barberaz",
+  "city": "Barberaz",
+  "department": "Savoie",
+  "dept_code": "73",
+  "lat": 45.5618,
+  "lng": 5.9431,
+  "geo_precision": "lieu",
+  "price": "20 € (16 € adhérents), soirée pratique offerte",
+  "price_min": 16,
+  "organizer": "Mambo Rock",
+  "description": "Atelier d'une heure trente pour danseurs confirmés, consacré à de nouvelles passes de kizomba, suivi de la soirée pratique.",
+  "source_url": "https://www.mambo-rock.com/",
+  "source_name": "Mambo Rock",
+  "confidence": "moyenne",
+  "id": "stage-kizomba-perfectionnement-avec-matt-et-lea-barberaz-2026-11-07",
+  "added_on": "2026-10-19"
+ },
+ {
+  "title": "Stage lady styling bachata avec Ginie",
+  "type": "stage",
+  "styles": [
+   "bachata"
+  ],
+  "date": "2026-11-07",
+  "end_date": null,
+  "start_time": "17:00",
+  "recurrence": null,
+  "venue": "Em'Studio",
+  "address": "31 chemin de la Saint-Martin, 73190 Saint-Baldoph",
+  "city": "Saint-Baldoph",
+  "department": "Savoie",
+  "dept_code": "73",
+  "lat": 45.5312,
+  "lng": 5.9522,
+  "geo_precision": "lieu",
+  "price": "15 à 35 € à l'unité selon la durée, packs disponibles",
+  "price_min": 15,
+  "organizer": "Ginie",
+  "description": "Stage féminin de style (posture, bras, fluidité) en deux niveaux, accessible à l'unité, près de Chambéry.",
+  "source_url": "https://www.dance-events.fr/fr/event/23133",
+  "source_name": "dance-events.fr",
+  "confidence": "haute",
+  "id": "stage-lady-styling-bachata-avec-ginie-saint-baldoph-2026-11-07",
+  "added_on": "2026-10-19"
  },
  {
   "title": "Stages et soirée SBK Swing Party",
@@ -3106,7 +3565,7 @@
   ],
   "date": "2026-11-07",
   "end_date": null,
-  "start_time": null,
+  "start_time": "14:00",
   "recurrence": null,
   "venue": "École Tempo Noi",
   "address": "15 rue du Onze Novembre, 42100 Saint-Étienne",
@@ -3116,7 +3575,7 @@
   "lat": 45.4339,
   "lng": 4.39,
   "geo_precision": "ville",
-  "price": null,
+  "price": "Stages 20 € (1 h) ou 25 € (2 h), pratique incluse ; Tea Time seul 8 €",
   "price_min": null,
   "organizer": "Tempo Noi",
   "description": "Samedi de stages en danses latines suivis du Tea Time, une pratique libre ouverte au public. Programme et horaires de cette date pas encore détaillés.",
@@ -3125,6 +3584,34 @@
   "confidence": "moyenne",
   "id": "stages-et-tea-time-latino-chez-tempo-noi-saint-etienne-2026-11-07",
   "added_on": "2026-10-12"
+ },
+ {
+  "title": "Workshop bachata fusion avec Antony et Elena",
+  "type": "stage",
+  "styles": [
+   "bachata"
+  ],
+  "date": "2026-11-07",
+  "end_date": null,
+  "start_time": "10:30",
+  "recurrence": null,
+  "venue": "Centre sportif de la Cité de l'eau",
+  "address": "350 route du Vieux Mottay, 74500 Publier",
+  "city": "Publier",
+  "department": "Haute-Savoie",
+  "dept_code": "74",
+  "lat": 46.3877,
+  "lng": 6.5436,
+  "geo_precision": "lieu",
+  "price": "30 € la séance, 120 € les cinq",
+  "price_min": 30,
+  "organizer": "Nuances de danse",
+  "description": "Séance de deux heures de bachata fusion niveau intermédiaire, ouverte à l'unité, dans un cycle proposé environ toutes les trois semaines.",
+  "source_url": "https://airdancia.com/event/workshop-bachata-fusion-2h-publier/",
+  "source_name": "AIRDancia",
+  "confidence": "haute",
+  "id": "workshop-bachata-fusion-avec-antony-et-elena-publier-2026-11-07",
+  "added_on": "2026-10-19"
  },
  {
   "title": "Intensifs bachata avec Mikita",
@@ -3306,6 +3793,70 @@
   "added_on": "2026-10-19"
  },
  {
+  "title": "La Nuit Latine, acte II",
+  "type": "soirée",
+  "styles": [
+   "bachata",
+   "salsa",
+   "kizomba"
+  ],
+  "date": "2026-11-13",
+  "end_date": null,
+  "start_time": "19:00",
+  "recurrence": null,
+  "venue": "L'Escale",
+  "address": "96 rue du Gabion, 42340 Veauche",
+  "city": "Veauche",
+  "department": "Loire",
+  "dept_code": "42",
+  "lat": 45.5633,
+  "lng": 4.2919,
+  "geo_precision": "lieu",
+  "price": "10 €, sirop offert",
+  "price_min": 10,
+  "organizer": "Baila Roja",
+  "description": "Deuxième grande soirée de Baila Roja avec DJ Boubou, atelier bachata intermédiaire à 20h, puis danse jusqu'à 3h.",
+  "source_url": "https://allevents.in/saint-etienne/la-nuit-latine-act-ii/200030846164635",
+  "source_name": "AllEvents",
+  "confidence": "haute",
+  "id": "la-nuit-latine-acte-ii-veauche-2026-11-13",
+  "added_on": "2026-10-19"
+ },
+ {
+  "title": "SBK Night au restaurant Le Mirage",
+  "type": "soirée",
+  "styles": [
+   "salsa",
+   "bachata",
+   "kizomba"
+  ],
+  "date": "2026-11-13",
+  "end_date": null,
+  "start_time": "20:00",
+  "recurrence": {
+   "freq": "monthly",
+   "weekday": 5,
+   "nth": 2
+  },
+  "venue": "Restaurant Le Mirage",
+  "address": "129 route de Certines, 01250 Montagnat",
+  "city": "Montagnat",
+  "department": "Ain",
+  "dept_code": "01",
+  "lat": 46.1676,
+  "lng": 5.2879,
+  "geo_precision": "lieu",
+  "price": "Consommation sur place obligatoire",
+  "price_min": null,
+  "organizer": "LMDance (Lucille), en partenariat avec Bresstival Dance",
+  "description": "Deuxième vendredi du mois au restaurant Le Mirage : stage évolutif de 45 minutes à 20h15, puis soirée salsa, bachata et kizomba jusqu'à 1h.",
+  "source_url": "https://airdancia.com/event/sbk-night-montagnat/",
+  "source_name": "AIRDancia",
+  "confidence": "haute",
+  "id": "sbk-night-au-restaurant-le-mirage-montagnat-rec",
+  "added_on": "2026-10-19"
+ },
+ {
   "title": "Soirée 2 ambiances salsa-bachata à Dime Que Sí",
   "type": "soirée",
   "styles": [
@@ -3400,6 +3951,36 @@
   "confidence": "haute",
   "id": "soirees-latino-rock-et-west-coast-de-latin-addicti-valence-rec",
   "added_on": "2026-10-12"
+ },
+ {
+  "title": "Vendredi Party salsa, bachata, kizomba chez Moioli",
+  "type": "soirée",
+  "styles": [
+   "salsa",
+   "bachata",
+   "kizomba"
+  ],
+  "date": "2026-11-13",
+  "end_date": null,
+  "start_time": "21:00",
+  "recurrence": null,
+  "venue": "École de danse Moioli (Annexe)",
+  "address": "401 rue des Champagnes, 73290 La Motte-Servolex",
+  "city": "La Motte-Servolex",
+  "department": "Savoie",
+  "dept_code": "73",
+  "lat": 45.597,
+  "lng": 5.8672,
+  "geo_precision": "lieu",
+  "price": "7 €, softs inclus",
+  "price_min": 7,
+  "organizer": "École de danse Moioli",
+  "description": "Soirée pratique de l'école avec une salle salsa, bachata, kizomba et une autre ambiance en parallèle, jusqu'à minuit.",
+  "source_url": "https://www.dansemoioli.com/pdf/SE.pdf",
+  "source_name": "École de danse Moioli",
+  "confidence": "haute",
+  "id": "vendredi-party-salsa-bachata-kizomba-chez-moioli-la-motte-servolex-2026-11-13",
+  "added_on": "2026-10-19"
  },
  {
   "title": "Atelier musicalité Musica y baile, cycle son",
@@ -3579,6 +4160,42 @@
   "added_on": "2026-10-12"
  },
  {
+  "title": "Samedi latino SRBK et West Coast à La Seiche",
+  "type": "soirée",
+  "styles": [
+   "salsa",
+   "bachata",
+   "kizomba",
+   "merengue",
+   "rueda"
+  ],
+  "date": "2026-11-14",
+  "end_date": null,
+  "start_time": "19:30",
+  "recurrence": {
+   "freq": "weekly",
+   "weekday": 6,
+   "until": "2026-11-21"
+  },
+  "venue": "La Seiche",
+  "address": "35 route de Piron, 74320 Sevrier",
+  "city": "Sevrier",
+  "department": "Haute-Savoie",
+  "dept_code": "74",
+  "lat": 45.8644,
+  "lng": 6.1399,
+  "geo_precision": "lieu",
+  "price": "non communiqué",
+  "price_min": null,
+  "organizer": "La Seiche Sevrier (avec Olesya)",
+  "description": "Initiations salsa, bachata, merengue à 19 h 30, danse en ligne, puis soirée latino avec rueda, rock et West Coast jusqu'à minuit.",
+  "source_url": "https://lemarchedelaseiche.fr/event/salsa-rock-bachata-kiz-wcs-annecy-sevrier-5/",
+  "source_name": "La Seiche (agenda)",
+  "confidence": "haute",
+  "id": "samedi-latino-srbk-et-west-coast-a-la-seiche-sevrier-rec",
+  "added_on": "2026-10-19"
+ },
+ {
   "title": "Soirée dansante du Cabaret de Betty",
   "type": "soirée",
   "styles": [
@@ -3667,6 +4284,34 @@
   "confidence": "haute",
   "id": "soiree-salsa-bachata-et-kizomba-a-salsa-grenoble-grenoble-2026-11-14",
   "added_on": "2026-10-12"
+ },
+ {
+  "title": "Soirée salsa Día de los Muertos",
+  "type": "soirée",
+  "styles": [
+   "salsa"
+  ],
+  "date": "2026-11-14",
+  "end_date": null,
+  "start_time": "21:00",
+  "recurrence": null,
+  "venue": "Salle Le Météore",
+  "address": "27 route de Frangy, Meythet, 74960 Annecy",
+  "city": "Annecy",
+  "department": "Haute-Savoie",
+  "dept_code": "74",
+  "lat": 45.9088,
+  "lng": 6.1257,
+  "geo_precision": "lieu",
+  "price": "6 €",
+  "price_min": 6,
+  "organizer": "Salsa Sin Fronteras",
+  "description": "Nuit 100 % salsa sur le thème du jour des morts mexicain, avec trois DJ venus de Lausanne, Annecy et Grenoble. Déguisement conseillé.",
+  "source_url": "https://airdancia.com/event/soiree-salsa-dia-de-los-muertos-annecy/",
+  "source_name": "AIRDancia",
+  "confidence": "haute",
+  "id": "soiree-salsa-dia-de-los-muertos-annecy-2026-11-14",
+  "added_on": "2026-10-19"
  },
  {
   "title": "Stage de salsa cubaine avec Graziella et Ismel",
@@ -3782,6 +4427,39 @@
   "confidence": "haute",
   "id": "stage-ven-pa-k-avec-danger-et-marielkis-saint-martin-d-heres-2026-11-14",
   "added_on": "2026-10-12"
+ },
+ {
+  "title": "Stages lady style salsa et bachata dominicaine à L'Académie",
+  "type": "stage",
+  "styles": [
+   "salsa",
+   "bachata"
+  ],
+  "date": "2026-11-14",
+  "end_date": null,
+  "start_time": "19:00",
+  "recurrence": {
+   "freq": "monthly",
+   "weekday": 6,
+   "nth": 2
+  },
+  "venue": "L'Académie Aix-les-Bains",
+  "address": "670 boulevard Lepic, 73100 Aix-les-Bains",
+  "city": "Aix-les-Bains",
+  "department": "Savoie",
+  "dept_code": "73",
+  "lat": 45.6917,
+  "lng": 5.9086,
+  "geo_precision": "lieu",
+  "price": "non communiqué",
+  "price_min": null,
+  "organizer": "Laetitia Letizia Gavend",
+  "description": "Atelier mensuel de style féminin en salsa et bachata dominicaine : attitude, musicalité, expression. Un samedi par mois, inscription auprès de l'école.",
+  "source_url": "https://airdancia.com/event/stages-lady-style-bachata-dominicana-salsa-aix-les-bains/",
+  "source_name": "AIRDancia",
+  "confidence": "haute",
+  "id": "stages-lady-style-salsa-et-bachata-dominicaine-a-l-aix-les-bains-rec",
+  "added_on": "2026-10-19"
  },
  {
   "title": "Suelta Salsa : soirée 100 % salsa",
@@ -3940,6 +4618,34 @@
   "added_on": "2026-10-12"
  },
  {
+  "title": "Corps, rythme et racines : atelier salsa cubaine au féminin",
+  "type": "stage",
+  "styles": [
+   "salsa cubaine"
+  ],
+  "date": "2026-11-21",
+  "end_date": null,
+  "start_time": "14:30",
+  "recurrence": null,
+  "venue": "Salsaddict",
+  "address": "6 rue Rabelais, 69003 Lyon",
+  "city": "Lyon",
+  "department": "Rhône",
+  "dept_code": "69",
+  "lat": 45.7485,
+  "lng": 4.8467,
+  "geo_precision": "lieu",
+  "price": "20 €",
+  "price_min": 20,
+  "organizer": "Salsaddict",
+  "description": "Premier de quatre ateliers de danse cubaine réservés aux femmes, tous niveaux : deux heures sur le rythme, les déplacements et l'expression corporelle.",
+  "source_url": "https://salsaddict.fr/evenements/",
+  "source_name": "Salsaddict",
+  "confidence": "haute",
+  "id": "corps-rythme-et-racines-atelier-salsa-cubaine-au-f-lyon-2026-11-21",
+  "added_on": "2026-10-19"
+ },
+ {
   "title": "Dominicain Flow avec Juan Pablo Paredes",
   "type": "stage",
   "styles": [
@@ -4032,6 +4738,40 @@
   "added_on": "2026-10-19"
  },
  {
+  "title": "Soirée pratique du Mambo Rock (3e samedi)",
+  "type": "soirée",
+  "styles": [
+   "salsa",
+   "bachata",
+   "kizomba"
+  ],
+  "date": "2026-11-21",
+  "end_date": null,
+  "start_time": "21:00",
+  "recurrence": {
+   "freq": "monthly",
+   "weekday": 6,
+   "nth": 3
+  },
+  "venue": "Studio Alpes Académie (Mambo Rock)",
+  "address": "3 route de la Peysse, 73000 Barberaz",
+  "city": "Barberaz",
+  "department": "Savoie",
+  "dept_code": "73",
+  "lat": 45.5618,
+  "lng": 5.9431,
+  "geo_precision": "lieu",
+  "price": "8 €",
+  "price_min": 8,
+  "organizer": "Mambo Rock",
+  "description": "Deuxième soirée mensuelle de l'école : rock et swing, salon et WCS, et une salle dédiée à la salsa, la bachata et la kizomba.",
+  "source_url": "https://www.mambo-rock.com/soirees-et-stages/214-soiree-pratique-du-3-septembre-du-07-11-2026.htm",
+  "source_name": "Mambo Rock",
+  "confidence": "haute",
+  "id": "soiree-pratique-du-mambo-rock-3e-samedi-barberaz-rec",
+  "added_on": "2026-10-19"
+ },
+ {
   "title": "Soirée Rock'n Swing / SBK / West Coast au Ballroom",
   "type": "soirée",
   "styles": [
@@ -4066,6 +4806,63 @@
   "added_on": "2026-10-12"
  },
  {
+  "title": "Stage lady styling salsa avec Ginie",
+  "type": "stage",
+  "styles": [
+   "salsa"
+  ],
+  "date": "2026-11-21",
+  "end_date": null,
+  "start_time": "17:30",
+  "recurrence": null,
+  "venue": "Em'Studio",
+  "address": "31 chemin de la Saint-Martin, 73190 Saint-Baldoph",
+  "city": "Saint-Baldoph",
+  "department": "Savoie",
+  "dept_code": "73",
+  "lat": 45.5312,
+  "lng": 5.9522,
+  "geo_precision": "lieu",
+  "price": "15 à 35 € à l'unité selon la durée, packs disponibles",
+  "price_min": 15,
+  "organizer": "Ginie",
+  "description": "Stage féminin de style (posture, bras, fluidité) en deux niveaux, accessible à l'unité, près de Chambéry.",
+  "source_url": "https://www.dance-events.fr/fr/event/23134",
+  "source_name": "dance-events.fr",
+  "confidence": "haute",
+  "id": "stage-lady-styling-salsa-avec-ginie-saint-baldoph-2026-11-21",
+  "added_on": "2026-10-19"
+ },
+ {
+  "title": "Stages bachata débutant et kizomba débutant+ au Mambo Rock",
+  "type": "stage",
+  "styles": [
+   "bachata",
+   "kizomba"
+  ],
+  "date": "2026-11-21",
+  "end_date": null,
+  "start_time": "18:00",
+  "recurrence": null,
+  "venue": "Studio Alpes Académie (Mambo Rock)",
+  "address": "3 route de la Peysse, 73000 Barberaz",
+  "city": "Barberaz",
+  "department": "Savoie",
+  "dept_code": "73",
+  "lat": 45.5618,
+  "lng": 5.9431,
+  "geo_precision": "lieu",
+  "price": "Bachata 25 € (20 € adhérents), soirée pratique offerte",
+  "price_min": 20,
+  "organizer": "Mambo Rock",
+  "description": "Bachata pour grands débutants avec Alain de 18 h à 20 h, puis kizomba débutant+ avec César, avant la soirée pratique.",
+  "source_url": "https://www.mambo-rock.com/",
+  "source_name": "Mambo Rock",
+  "confidence": "haute",
+  "id": "stages-bachata-debutant-et-kizomba-debutant-au-mam-barberaz-2026-11-21",
+  "added_on": "2026-10-19"
+ },
+ {
   "title": "The Kizomba Factory spécial Rainbow Festival",
   "type": "soirée",
   "styles": [
@@ -4079,10 +4876,10 @@
   "venue": "The Lab",
   "address": "15 rue du Dauphiné, 69800 Saint-Priest",
   "city": "Saint-Priest",
-  "department": "Ardèche",
-  "dept_code": "07",
-  "lat": 44.7165,
-  "lng": 4.5463,
+  "department": "Rhône",
+  "dept_code": "69",
+  "lat": 45.6965,
+  "lng": 4.9439,
   "geo_precision": "ville",
   "price": "15 € soirée, 20 € avec ateliers",
   "price_min": 15,
@@ -4302,6 +5099,34 @@
   "added_on": "2026-10-12"
  },
  {
+  "title": "Pop up class salsa porto On1 : guidage et réceptivité",
+  "type": "stage",
+  "styles": [
+   "salsa portoricaine"
+  ],
+  "date": "2026-11-26",
+  "end_date": null,
+  "start_time": "19:15",
+  "recurrence": null,
+  "venue": "Salle Fontgiève",
+  "address": "Rue Jean Bonnefons, 63000 Clermont-Ferrand",
+  "city": "Clermont-Ferrand",
+  "department": "Puy-de-Dôme",
+  "dept_code": "63",
+  "lat": 45.7797,
+  "lng": 3.0868,
+  "geo_precision": "lieu",
+  "price": "12 € le stage, 20 € les deux",
+  "price_min": 12,
+  "organizer": "Studio Anaya (Justine & Jérôme)",
+  "description": "Deux ateliers salsa porto On1 : fondamentaux tous niveaux à 19h15, puis travail en couple niveau intermédiaire à 20h45.",
+  "source_url": "https://www.studioanaya.fr/",
+  "source_name": "Studio Anaya",
+  "confidence": "haute",
+  "id": "pop-up-class-salsa-porto-on1-guidage-et-receptivit-clermont-ferrand-2026-11-26",
+  "added_on": "2026-10-19"
+ },
+ {
   "title": "Golden Kiz Fridays au Lab",
   "type": "soirée",
   "styles": [
@@ -4314,10 +5139,10 @@
   "venue": "The Lab",
   "address": "15 rue du Dauphiné, 69800 Saint-Priest",
   "city": "Saint-Priest",
-  "department": "Ardèche",
-  "dept_code": "07",
-  "lat": 44.7165,
-  "lng": 4.5463,
+  "department": "Rhône",
+  "dept_code": "69",
+  "lat": 45.6965,
+  "lng": 4.9439,
   "geo_precision": "ville",
   "price": "10 € soirée, 15 € cours + soirée",
   "price_min": 10,
@@ -4356,6 +5181,36 @@
   "confidence": "haute",
   "id": "hoy-se-bebe-only-bachata-festival-v-meyzieu-2026-11-27",
   "added_on": "2026-10-12"
+ },
+ {
+  "title": "Bachata dominicana et salsa cubana avec Laetitia et DJ Chechyto",
+  "type": "soirée",
+  "styles": [
+   "bachata",
+   "salsa cubaine",
+   "rueda"
+  ],
+  "date": "2026-11-28",
+  "end_date": null,
+  "start_time": "19:30",
+  "recurrence": null,
+  "venue": "La Seiche",
+  "address": "35 route de Piron, 74320 Sevrier",
+  "city": "Sevrier",
+  "department": "Haute-Savoie",
+  "dept_code": "74",
+  "lat": 45.8644,
+  "lng": 6.1399,
+  "geo_precision": "lieu",
+  "price": "non communiqué",
+  "price_min": null,
+  "organizer": "La Seiche Sevrier",
+  "description": "Atelier rueda avec Sergio, cours de bachata dominicaine avec Laetitia, puis piste ouverte de 21 h à 1 h avec DJ Chechyto.",
+  "source_url": "https://lemarchedelaseiche.fr/event/bachata-dominicana-salsa-cubana-annecy-sevrier-2/",
+  "source_name": "La Seiche (agenda)",
+  "confidence": "haute",
+  "id": "bachata-dominicana-et-salsa-cubana-avec-laetitia-e-sevrier-2026-11-28",
+  "added_on": "2026-10-19"
  },
  {
   "title": "Journée latino de Bressolles",
@@ -4445,6 +5300,35 @@
   "added_on": "2026-10-19"
  },
  {
+  "title": "Stage intensif Moioli : salsa, bachata, rock, WCS",
+  "type": "stage",
+  "styles": [
+   "salsa",
+   "bachata"
+  ],
+  "date": "2026-11-28",
+  "end_date": null,
+  "start_time": "15:45",
+  "recurrence": null,
+  "venue": "École de danse Moioli",
+  "address": "201 rue Charles Cabaud, 73290 La Motte-Servolex",
+  "city": "La Motte-Servolex",
+  "department": "Savoie",
+  "dept_code": "73",
+  "lat": 45.597,
+  "lng": 5.8672,
+  "geo_precision": "lieu",
+  "price": "20 € une discipline, 35 € deux, 45 € trois (atelier et soirée inclus)",
+  "price_min": 20,
+  "organizer": "École de danse Moioli",
+  "description": "Journée de stages : salsa et bachata en débutant+ et intermédiaire l'après-midi, atelier line dance puis soirée dès 21 h.",
+  "source_url": "https://www.dansemoioli.com/stage/SI26.pdf",
+  "source_name": "École de danse Moioli",
+  "confidence": "haute",
+  "id": "stage-intensif-moioli-salsa-bachata-rock-wcs-la-motte-servolex-2026-11-28",
+  "added_on": "2026-10-19"
+ },
+ {
   "title": "Tarraxo Day Lyon",
   "type": "stage",
   "styles": [
@@ -4473,6 +5357,64 @@
   "added_on": "2026-10-12"
  },
  {
+  "title": "Workshop bachata fusion avec Antony et Elena",
+  "type": "stage",
+  "styles": [
+   "bachata"
+  ],
+  "date": "2026-11-28",
+  "end_date": null,
+  "start_time": "10:30",
+  "recurrence": null,
+  "venue": "Centre sportif de la Cité de l'eau",
+  "address": "350 route du Vieux Mottay, 74500 Publier",
+  "city": "Publier",
+  "department": "Haute-Savoie",
+  "dept_code": "74",
+  "lat": 46.3877,
+  "lng": 6.5436,
+  "geo_precision": "lieu",
+  "price": "30 € la séance, 120 € les cinq",
+  "price_min": 30,
+  "organizer": "Nuances de danse",
+  "description": "Séance de deux heures de bachata fusion niveau intermédiaire, ouverte à l'unité, dans un cycle proposé environ toutes les trois semaines.",
+  "source_url": "https://airdancia.com/event/workshop-bachata-fusion-2h-publier/",
+  "source_name": "AIRDancia",
+  "confidence": "haute",
+  "id": "workshop-bachata-fusion-avec-antony-et-elena-publier-2026-11-28",
+  "added_on": "2026-10-19"
+ },
+ {
+  "title": "Vendredi Party salsa, bachata, kizomba chez Moioli",
+  "type": "soirée",
+  "styles": [
+   "salsa",
+   "bachata",
+   "kizomba"
+  ],
+  "date": "2026-12-04",
+  "end_date": null,
+  "start_time": "21:00",
+  "recurrence": null,
+  "venue": "École de danse Moioli (Annexe)",
+  "address": "401 rue des Champagnes, 73290 La Motte-Servolex",
+  "city": "La Motte-Servolex",
+  "department": "Savoie",
+  "dept_code": "73",
+  "lat": 45.597,
+  "lng": 5.8672,
+  "geo_precision": "lieu",
+  "price": "7 €, softs inclus",
+  "price_min": 7,
+  "organizer": "École de danse Moioli",
+  "description": "Soirée pratique de l'école avec une salle salsa, bachata, kizomba et une autre ambiance en parallèle, jusqu'à minuit.",
+  "source_url": "https://www.dansemoioli.com/pdf/SE.pdf",
+  "source_name": "École de danse Moioli",
+  "confidence": "haute",
+  "id": "vendredi-party-salsa-bachata-kizomba-chez-moioli-la-motte-servolex-2026-12-04",
+  "added_on": "2026-10-19"
+ },
+ {
   "title": "WOW4, World Of Women Kizomba Weekender",
   "type": "festival",
   "styles": [
@@ -4499,6 +5441,34 @@
   "confidence": "haute",
   "id": "wow4-world-of-women-kizomba-weekender-chassieu-2026-12-04",
   "added_on": "2026-10-12"
+ },
+ {
+  "title": "Concert salsa de La Machaca pour les 30 ans d'Obatala",
+  "type": "concert",
+  "styles": [
+   "salsa"
+  ],
+  "date": "2026-12-05",
+  "end_date": null,
+  "start_time": "20:00",
+  "recurrence": null,
+  "venue": "Espace Robert Rameaux",
+  "address": "224 avenue Hoff, 01300 Belley",
+  "city": "Belley",
+  "department": "Ain",
+  "dept_code": "01",
+  "lat": 45.7592,
+  "lng": 5.6881,
+  "geo_precision": "lieu",
+  "price": "Entrée gratuite",
+  "price_min": 0,
+  "organizer": "Espace Robert Rameaux (association Obatala)",
+  "description": "Le collectif lyonnais La Machaca, huit musiciens, joue une salsa festive pour clore les 30 ans d'Obatala, avec bar associatif et DJ set ensuite.",
+  "source_url": "https://airdancia.com/event/la-machaca-belley/",
+  "source_name": "AIRDancia",
+  "confidence": "haute",
+  "id": "concert-salsa-de-la-machaca-pour-les-30-ans-d-obat-belley-2026-12-05",
+  "added_on": "2026-10-19"
  },
  {
   "title": "Expérience Lady styling salsa, bachata, Instant Flow (chapitre 4)",
@@ -4703,6 +5673,62 @@
   "added_on": "2026-10-12"
  },
  {
+  "title": "Bal débutant rock et salsa chez Moioli",
+  "type": "soirée",
+  "styles": [
+   "salsa"
+  ],
+  "date": "2026-12-11",
+  "end_date": null,
+  "start_time": "21:00",
+  "recurrence": null,
+  "venue": "École de danse Moioli (Studio 201)",
+  "address": "201 rue Charles Cabaud, 73290 La Motte-Servolex",
+  "city": "La Motte-Servolex",
+  "department": "Savoie",
+  "dept_code": "73",
+  "lat": 45.597,
+  "lng": 5.8672,
+  "geo_precision": "lieu",
+  "price": "7 €, softs inclus",
+  "price_min": 7,
+  "organizer": "École de danse Moioli",
+  "description": "Bal pensé pour les danseurs débutants en rock et en salsa, en parallèle des soirées WCS et rock de l'école.",
+  "source_url": "https://www.dansemoioli.com/pdf/SE.pdf",
+  "source_name": "École de danse Moioli",
+  "confidence": "haute",
+  "id": "bal-debutant-rock-et-salsa-chez-moioli-la-motte-servolex-2026-12-11",
+  "added_on": "2026-10-19"
+ },
+ {
+  "title": "Poly Bachata Festival 2026",
+  "type": "festival",
+  "styles": [
+   "bachata"
+  ],
+  "date": "2026-12-11",
+  "end_date": "2026-12-13",
+  "start_time": "17:30",
+  "recurrence": null,
+  "venue": null,
+  "address": null,
+  "city": "Annecy",
+  "department": "Haute-Savoie",
+  "dept_code": "74",
+  "lat": 45.9088,
+  "lng": 6.1257,
+  "geo_precision": "ville",
+  "price": "non communiqué",
+  "price_min": null,
+  "organizer": "POLY Bachata Festival",
+  "description": "Deuxième édition d'un festival de bachata sociale sur trois jours : ateliers avec artistes européens et soirées, lieu précis à confirmer.",
+  "source_url": "https://airdancia.com/event/poly-bachata-festival-2026-annecy/",
+  "source_name": "AIRDancia",
+  "confidence": "haute",
+  "id": "poly-bachata-festival-2026-annecy-2026-12-11",
+  "added_on": "2026-10-19"
+ },
+ {
   "title": "Soirée 2 ambiances salsa-bachata à Dime Que Sí",
   "type": "soirée",
   "styles": [
@@ -4729,6 +5755,35 @@
   "source_name": "AIRDancia",
   "confidence": "haute",
   "id": "soiree-2-ambiances-salsa-bachata-a-dime-que-si-lyon-2026-12-11",
+  "added_on": "2026-10-19"
+ },
+ {
+  "title": "Honey Kiz, 100 % ghetto zouk (Winter Edition)",
+  "type": "soirée",
+  "styles": [
+   "kizomba",
+   "zouk"
+  ],
+  "date": "2026-12-12",
+  "end_date": null,
+  "start_time": "21:30",
+  "recurrence": null,
+  "venue": "Studio Garlisi",
+  "address": "32 rue Barnave, 38400 Saint-Martin-d'Hères",
+  "city": "Saint-Martin-d'Hères",
+  "department": "Isère",
+  "dept_code": "38",
+  "lat": 45.1787,
+  "lng": 5.7628,
+  "geo_precision": "lieu",
+  "price": "Soirée 13 €, cours et soirée 15 €, vestiaire 2 €",
+  "price_min": 13,
+  "organizer": "Fa Leonessa",
+  "description": "Troisième édition : cours avec Lastar et Fa, puis nuit entièrement ghetto zouk avec DJ Diablo jusqu'à 4 h.",
+  "source_url": "https://allevents.in/grenoble/honey-kiz-100-ghetto-zouk-winter-edition/200030798481916",
+  "source_name": "AllEvents",
+  "confidence": "haute",
+  "id": "honey-kiz-100-ghetto-zouk-winter-edition-saint-martin-d-heres-2026-12-12",
   "added_on": "2026-10-19"
  },
  {
@@ -4939,6 +5994,36 @@
   "added_on": "2026-10-12"
  },
  {
+  "title": "Christmas Party rock et SBK chez Moioli",
+  "type": "soirée",
+  "styles": [
+   "salsa",
+   "bachata",
+   "kizomba"
+  ],
+  "date": "2026-12-18",
+  "end_date": null,
+  "start_time": "21:00",
+  "recurrence": null,
+  "venue": "École de danse Moioli (Annexe)",
+  "address": "401 rue des Champagnes, 73290 La Motte-Servolex",
+  "city": "La Motte-Servolex",
+  "department": "Savoie",
+  "dept_code": "73",
+  "lat": 45.597,
+  "lng": 5.8672,
+  "geo_precision": "lieu",
+  "price": "7 €, softs inclus",
+  "price_min": 7,
+  "organizer": "École de danse Moioli",
+  "description": "Soirée de Noël de l'école : rock toutes danses d'un côté, salsa, bachata, kizomba de l'autre, jusqu'à minuit.",
+  "source_url": "https://www.dansemoioli.com/pdf/SE.pdf",
+  "source_name": "École de danse Moioli",
+  "confidence": "haute",
+  "id": "christmas-party-rock-et-sbk-chez-moioli-la-motte-servolex-2026-12-18",
+  "added_on": "2026-10-19"
+ },
+ {
   "title": "Atelier musicalité Musica y baile, cycle son",
   "type": "stage",
   "styles": [
@@ -5025,6 +6110,36 @@
   "added_on": "2026-10-12"
  },
  {
+  "title": "Soirée dansante Givré chez VB Danse",
+  "type": "soirée",
+  "styles": [
+   "salsa",
+   "bachata",
+   "kizomba"
+  ],
+  "date": "2026-12-19",
+  "end_date": null,
+  "start_time": null,
+  "recurrence": null,
+  "venue": "VB Danse",
+  "address": "1 rue Jacquard, 15000 Aurillac",
+  "city": "Aurillac",
+  "department": "Cantal",
+  "dept_code": "15",
+  "lat": 44.9254,
+  "lng": 2.4398,
+  "geo_precision": "lieu",
+  "price": "10 €",
+  "price_min": 10,
+  "organizer": "VB Danse",
+  "description": "Soirée à thème hivernal de l'école VB Danse, toutes danses de couple mêlées, dont salsa, bachata et kizomba.",
+  "source_url": "https://www.vbdanse.fr/evenements",
+  "source_name": "VB Danse",
+  "confidence": "haute",
+  "id": "soiree-dansante-givre-chez-vb-danse-aurillac-2026-12-19",
+  "added_on": "2026-10-19"
+ },
+ {
   "title": "Soirée salsa, bachata et kizomba à Salsa Grenoble",
   "type": "soirée",
   "styles": [
@@ -5081,6 +6196,34 @@
   "confidence": "haute",
   "id": "stages-et-soiree-full-party-kizomba-2e-edition-meyzieu-2026-12-19",
   "added_on": "2026-10-12"
+ },
+ {
+  "title": "Workshop bachata fusion avec Antony et Elena",
+  "type": "stage",
+  "styles": [
+   "bachata"
+  ],
+  "date": "2026-12-19",
+  "end_date": null,
+  "start_time": "10:30",
+  "recurrence": null,
+  "venue": "Centre sportif de la Cité de l'eau",
+  "address": "350 route du Vieux Mottay, 74500 Publier",
+  "city": "Publier",
+  "department": "Haute-Savoie",
+  "dept_code": "74",
+  "lat": 46.3877,
+  "lng": 6.5436,
+  "geo_precision": "lieu",
+  "price": "30 € la séance, 120 € les cinq",
+  "price_min": 30,
+  "organizer": "Nuances de danse",
+  "description": "Séance de deux heures de bachata fusion niveau intermédiaire, ouverte à l'unité, dans un cycle proposé environ toutes les trois semaines.",
+  "source_url": "https://airdancia.com/event/workshop-bachata-fusion-2h-publier/",
+  "source_name": "AIRDancia",
+  "confidence": "haute",
+  "id": "workshop-bachata-fusion-avec-antony-et-elena-publier-2026-12-19",
+  "added_on": "2026-10-19"
  },
  {
   "title": "Après-midi dansante SBK, rock et WCS",
