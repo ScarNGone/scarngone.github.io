@@ -102,6 +102,7 @@ let confirmNew = false;
 let wantScroll = false;
 const openDetails = new Set();
 const editing = new Set();
+const otherOpen = new Set();
 let viewStats = false;
 let confirmEnd = false;
 
@@ -163,10 +164,18 @@ function nextFirst(){
   for(let k = 1; k <= n; k++){ const c = a[(i + k) % n]; if(c && !c.dead) return c.id; }
   return state.firstId;
 }
-function hasDoorTool(s){
-  const hands = s.inv.slice(0, 2).join(" ").toLowerCase();
-  return D.doorTools.some(t => hands.includes(t));
+const EQUIP = {};
+D.equipment.forEach(g => g.items.forEach(it => { EQUIP[it.name] = it; }));
+const OTHER = "__autre__";
+function itemInfo(name){
+  if(!name) return null;
+  if(EQUIP[name]) return EQUIP[name];
+  const low = name.toLowerCase();
+  return D.doorTools.some(t => low.includes(t)) ? {door:true, melee:true} : null;
 }
+function hands(s){ return s.inv.slice(0, 2).filter(x => x && x.trim()); }
+function handHas(s, tag){ return hands(s).some(n => { const i = itemInfo(n); return i && i[tag]; }); }
+function hasDoorTool(s){ return handHas(s, "door"); }
 function invUsed(s){ return s.inv.some(x => x && x.trim()); }
 function log(text){
   state.log.unshift({r:state.round, p:state.setup ? "setup" : state.phase, t:text});
@@ -207,8 +216,13 @@ function actState(s, id){
   }else if(r < cost){
     why = "Plus d'action ce tour.";
   }
+  let info = "";
   if(id === "door" && !why && invUsed(s) && !hasDoorTool(s)) soft = "Aucun outil d'ouverture en main d'après ton inventaire.";
-  return {cost:cost, ok:!why, why:why, soft:soft, freeKind:freeKind, slip:slip};
+  if(id === "melee" && !why && invUsed(s) && !handHas(s, "melee") && !hands(s).some(n => !itemInfo(n))) soft = "Aucune arme de corps à corps en main d'après ton inventaire.";
+  if(id === "ranged" && !why && invUsed(s) && !handHas(s, "ranged") && !hands(s).some(n => !itemInfo(n))) soft = "Aucune arme à distance en main d'après ton inventaire.";
+  if(id === "ranged" && handHas(s, "molotov")) info = "Cocktail Molotov en main : il élimine tout ce qui se trouve dans la zone visée, survivants compris, puis se défausse.";
+  if(id === "door" && hasDoorTool(s)) info = "En main : " + hands(s).filter(n => itemInfo(n) && itemInfo(n).door).join(", ") + ".";
+  return {cost:cost, ok:!why, why:why, soft:soft, info:info, freeKind:freeKind, slip:slip};
 }
 
 function addXP(s, n){
@@ -449,15 +463,35 @@ function skillsBlock(s, opts){
   return `<details class="block" id="${id}" ${open ? "open" : ""}><summary class="block-title"><h4>Compétences</h4><span class="chev">${esc(summary)} <span class="closed">▸</span><span class="opened">▾</span></span></summary><div class="block-body skills">${rows.join("")}</div></details>`;
 }
 
+function equipOptions(selected, emptyLabel){
+  let h = `<option value="">${emptyLabel}</option>`;
+  h += D.equipment.map(g => `<optgroup label="${esc(g.group)}">${g.items.map(it => `<option value="${esc(it.name)}" ${it.name === selected ? "selected" : ""}>${esc(it.name)}</option>`).join("")}</optgroup>`).join("");
+  if(selected && !EQUIP[selected]) h += `<optgroup label="Ajouté par toi"><option value="${esc(selected)}" selected>${esc(selected)}</option></optgroup>`;
+  h += `<option value="${OTHER}">Autre objet…</option>`;
+  return h;
+}
+function itemTags(name){
+  const i = itemInfo(name);
+  if(!i) return "";
+  const t = [];
+  if(i.melee) t.push("corps à corps");
+  if(i.ranged) t.push("à distance");
+  if(i.door) t.push("ouvre les portes");
+  return t.length ? `<small>${t.join(" · ")}</small>` : "";
+}
 function invBlock(s, prefix){
   const id = (prefix || "inv-") + s.id;
   const open = openDetails.has(id);
-  const hands = s.inv.slice(0, 2).filter(x => x && x.trim());
-  const summary = hands.length ? "En main : " + hands.map(esc).join(", ") : "Mains vides";
-  const slots = s.inv.map((v, i) =>
-    (i === 2 ? `<span class="inv-sep" aria-hidden="true"></span>` : "") +
-    `<label class="slot ${i < 2 ? "hand" : ""}"><span>${SLOTS[i]}</span><input id="${id}-${i}" value="${esc(v)}" list="equipList" data-change="inv" data-sid="${s.id}" data-slot="${i}" maxlength="40" placeholder="Vide"></label>`
-  ).join("");
+  const hs = hands(s);
+  const summary = hs.length ? "En main : " + hs.map(esc).join(", ") : "Mains vides";
+  const slots = s.inv.map((v, i) => {
+    const oid = `${id}-${i}`;
+    const other = otherOpen.has(oid)
+      ? `<input id="${oid}-autre" data-change="inv-other" data-sid="${s.id}" data-slot="${i}" data-oid="${oid}" maxlength="40" placeholder="Nom de l'objet" aria-label="Nom de l'objet, ${SLOTS[i].toLowerCase()}">`
+      : "";
+    return (i === 2 ? `<span class="inv-sep" aria-hidden="true"></span>` : "") +
+      `<label class="slot ${i < 2 ? "hand" : ""}"><span>${SLOTS[i]}</span><select id="${oid}" data-change="inv" data-sid="${s.id}" data-slot="${i}" data-oid="${oid}">${equipOptions(v, "Vide")}</select>${other}${itemTags(v)}</label>`;
+  }).join("");
   return `<details class="block" id="${id}" ${open ? "open" : ""}><summary class="block-title"><h4>Inventaire</h4><span class="chev">${summary} <span class="closed">▸</span><span class="opened">▾</span></span></summary><div class="block-body"><div class="inv">${slots}</div></div></details>`;
 }
 
@@ -496,6 +530,8 @@ function hints(s){
   if(freeLeft.length) out.push(`<li>Action gratuite disponible : ${freeLeft.join(", ")}.</li>`);
   if(r === 0 && !freeLeft.length) out.push(`<li>Plus d'action pour ce tour. Note tes éliminations si besoin, puis termine le tour.</li>`);
   else if(s.inB && s.z === 0 && !s.searched) out.push(`<li>Zone de bâtiment dégagée : tu peux fouiller.</li>`);
+  const hs = s.inv.slice(0, 2);
+  if(hs[0] && hs[0] === hs[1] && itemInfo(hs[0]) && (itemInfo(hs[0]).melee || itemInfo(hs[0]).ranged)) out.push(`<li>Deux « ${esc(hs[0])} » en main : si la carte porte le symbole double, une seule action attaque avec les deux.</li>`);
   if(state.round === 1 && !invUsed(s)) out.push(`<li>Note ton équipement de départ dans l'inventaire ci-dessous.</li>`);
   return out.length ? `<ul class="hints">${out.join("")}</ul>` : "";
 }
@@ -527,7 +563,7 @@ function followUp(s){
       title = "Fouille faite";
       body = "Garde la carte ou défausse-la, puis réorganise ton inventaire gratuitement.";
       extra = L.found ? `<p>« ${esc(L.found)} » rangé dans l'inventaire.</p>` :
-        `<div class="found"><input id="found-${s.id}" list="equipList" placeholder="Carte trouvée" aria-label="Carte trouvée" maxlength="40"><button class="kill" data-act="found" data-sid="${s.id}">Ranger dans l'inventaire</button></div>`;
+        `<div class="found"><select id="found-${s.id}" data-change="found-sel" data-oid="found-${s.id}" aria-label="Carte trouvée">${equipOptions("", "Carte trouvée…")}</select>${otherOpen.has("found-" + s.id) ? `<input id="found-${s.id}-autre" maxlength="40" placeholder="Nom de la carte" aria-label="Nom de la carte trouvée">` : ""}<button class="kill" data-act="found" data-sid="${s.id}">Ranger dans l'inventaire</button></div>`;
       extra += L.aaah ? `<p>Un marcheur a été ajouté à ta zone.</p>` : `<div class="follow-btns"><button class="kill" data-act="aaah">J'ai pioché « Aaahh!! »</button></div>`;
       break;
     case "door": title = "Porte ouverte"; body = "Premier accès à ce bâtiment ? Pioche une carte Zombie pour chacune de ses pièces. Outil bruyant : pose un jeton Bruit."; break;
@@ -549,7 +585,7 @@ function dashboard(s){
     const why = (r === 0 && st.why === "Plus d'action ce tour.") ? "" : st.why;
     return `<li class="act ${st.ok ? "" : "is-off"}">
       <div class="act-main">
-        <div class="act-text"><h5>${a.name}${st.freeKind && st.ok ? '<span class="free">GRATUITE</span>' : ""}</h5><p>${a.short}</p>${why ? `<p class="why">${why}</p>` : ""}${st.soft ? `<p class="why">${st.soft}</p>` : ""}</div>
+        <div class="act-text"><h5>${a.name}${st.freeKind && st.ok ? '<span class="free">GRATUITE</span>' : ""}</h5><p>${a.short}</p>${why ? `<p class="why">${why}</p>` : ""}${st.soft ? `<p class="why">${st.soft}</p>` : ""}${st.info && st.ok ? `<p class="info">${esc(st.info)}</p>` : ""}</div>
         <div class="act-side"><span class="cost">${costTxt}</span><button class="btn-do" data-act="do" data-id="${a.id}" ${st.ok ? "" : "disabled"} aria-label="${a.name}">Faire</button></div>
       </div>
       <details id="${did}" ${openDetails.has(did) ? "open" : ""}><summary>Règles</summary><ul>${a.rules.map(x => `<li>${x}</li>`).join("")}</ul></details>
@@ -561,7 +597,7 @@ function dashboard(s){
       <span class="lvl-pill lv${L}">Niveau ${LEVELS[L].low}</span>
     </div>
     <div class="meters">
-      <div class="meter"><span class="m-label">Actions</span>${pips(m, r, "act")}<span class="m-val">${r}/${m}</span></div>
+      <div class="meter"><span class="m-label">Actions</span>${pips(m, r, "apips")}<span class="m-val">${r}/${m}</span></div>
       <div class="meter"><span class="m-label">Blessures</span>${pips(maxW(s), s.wounds, "wound")}<span class="m-val">${s.wounds}/${maxW(s)}</span></div>
     </div>
     ${xpTrack(s)}
@@ -941,10 +977,13 @@ document.addEventListener("click", e => {
     case "stats-open": viewStats = true; wantScroll = true; render(); break;
     case "stats-close": viewStats = false; wantScroll = true; render(); break;
     case "found": {
-      const inp = $("found-" + sid);
-      const v = inp ? inp.value.trim() : "";
+      const sel = $("found-" + sid);
+      let inp = sel;
+      let v = sel ? sel.value.trim() : "";
+      if(v === OTHER){ inp = $("found-" + sid + "-autre"); v = inp ? inp.value.trim() : ""; }
       if(!v || !s){ if(inp) inp.focus(); break; }
       if(!s.inv.some(x => !x || !x.trim())){ openDetails.add("inv-" + s.id); toast("Inventaire plein : remplace ou défausse une carte."); render(); break; }
+      otherOpen.delete("found-" + sid);
       commit(() => { putInInventory(s, v); s.st.found++; if(state.last) state.last.found = v; log(`${s.name} trouve : ${v}`); });
       break;
     }
@@ -1012,10 +1051,20 @@ document.addEventListener("change", e => {
     const v = el.value.trim();
     if(s && v && v !== s.name) commit(() => { log(`${s.name} s'appelle désormais ${v}`); s.name = v; });
     else if(s) el.value = s.name;
-  }else if(kind === "inv"){
+  }else if(kind === "found-sel"){
+    if(el.value === OTHER){ otherOpen.add(el.dataset.oid); render(); const o = $(el.dataset.oid + "-autre"); if(o) o.focus(); }
+    else if(otherOpen.delete(el.dataset.oid)) render();
+  }else if(kind === "inv" || kind === "inv-other"){
     if(!s) return;
     const i = +el.dataset.slot, v = el.value.trim();
-    if(s.inv[i] === v) return;
+    if(kind === "inv" && v === OTHER){
+      otherOpen.add(el.dataset.oid); render();
+      const o = $(el.dataset.oid + "-autre"); if(o) o.focus();
+      return;
+    }
+    if(kind === "inv-other" && !v) return;
+    otherOpen.delete(el.dataset.oid);
+    if(s.inv[i] === v){ render(); return; }
     commit(() => { s.inv[i] = v; log(v ? `${s.name} range « ${v} » (${SLOTS[i].toLowerCase()})` : `${s.name} vide un emplacement (${SLOTS[i].toLowerCase()})`); });
   }
 });
@@ -1042,8 +1091,6 @@ document.addEventListener("toggle", e => {
 }, true);
 
 /* Démarrage */
-const list = $("equipList");
-if(list) list.innerHTML = D.equipment.map(x => `<option value="${esc(x)}"></option>`).join("");
 function start(data){
   if(data && data.state){ const m = migrate(data.state); if(m) state = m; }
   render();

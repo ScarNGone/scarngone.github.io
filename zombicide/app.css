@@ -113,7 +113,7 @@ button{font:inherit;color:inherit}
 .m-val{font-family:var(--font-num);font-variant-numeric:tabular-nums;font-size:1.25rem;font-weight:700;min-width:2.6em;text-align:right}
 .pips{display:inline-flex;gap:5px}
 .pip{width:14px;height:14px;border-radius:50%;border:2px solid var(--muted)}
-.pips.act .pip.on{background:var(--accent);border-color:var(--accent)}
+.pips.apips .pip.on{background:var(--accent);border-color:var(--accent)}
 .pips.wound .pip.on{background:var(--wound);border-color:var(--wound)}
 
 .xp{display:grid;gap:6px}
@@ -271,7 +271,7 @@ img{max-width:100%}
 
 /* Inventaire */
 .inv{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
-.inv .slot{display:grid;gap:3px;min-width:0}
+.inv .slot{display:grid;gap:3px;min-width:0;align-content:start}
 .inv .slot span{font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
 .inv .slot input{width:100%;min-width:0;font:inherit;font-size:.92rem;padding:8px 10px;border:1px solid var(--line);border-radius:7px;background:var(--bg);color:var(--ink)}
 .inv .slot.hand input{border-color:var(--ink)}
@@ -312,3 +312,10 @@ img{max-width:100%}
 .stats-tbl thead .n{font-family:var(--font-body);font-size:.8rem;color:var(--ink)}
 .stats-tbl td.best{font-weight:700;color:var(--accent);background:color-mix(in srgb,var(--accent) 10%,var(--surface))}
 .stats-tbl .is-out{text-decoration:line-through;color:var(--muted)}
+
+/* Menus d'équipement */
+.inv .slot select,.found select{width:100%;min-width:0;font:inherit;font-size:.92rem;padding:8px 30px 8px 10px;border:1px solid var(--line);border-radius:7px;background-color:var(--bg);color:var(--ink);appearance:none;-webkit-appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--muted) 50%),linear-gradient(135deg,var(--muted) 50%,transparent 50%);background-position:calc(100% - 15px) 55%,calc(100% - 10px) 55%;background-size:5px 5px,5px 5px;background-repeat:no-repeat;text-overflow:ellipsis}
+.inv .slot.hand select{border-color:var(--ink)}
+.inv .slot small{font-size:.74rem;color:var(--muted);line-height:1.25}
+.found select{flex:1 1 180px;width:auto}
+.act-text .info{font-size:.82rem;color:var(--accent)}

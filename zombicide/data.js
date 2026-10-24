@@ -28,9 +28,32 @@ window.ZDATA = {
   },
   startingGear: "Distribue au hasard les 6 cartes d'équipement de départ (1 batte de baseball, 1 pied-de-biche, 1 hache d'incendie, 3 pistolets), le plus équitablement possible. Dans la règle officielle, le survivant qui reçoit la hache d'incendie commence le premier tour.",
   equipment: [
-    "Pied-de-biche", "Hache d'incendie", "Batte de baseball", "Pistolet", "Machette", "Katana", "Kukri",
-    "Tronçonneuse", "Poêle", "Fusil à pompe", "Fusil à canon scié", "Fusil de précision", "Pistolet-mitrailleur",
-    "Lampe torche", "Cocktail Molotov", "Munitions", "Cartouches", "Bouteille d'eau", "Boîte de conserve", "Sac de riz"
+    {group:"Armes de corps à corps", items:[
+      {name:"Batte de baseball", melee:true},
+      {name:"Pied-de-biche", melee:true, door:true},
+      {name:"Hache d'incendie", melee:true, door:true},
+      {name:"Machette", melee:true},
+      {name:"Katana", melee:true},
+      {name:"Kukri", melee:true},
+      {name:"Poêle", melee:true},
+      {name:"Tronçonneuse", melee:true, door:true}
+    ]},
+    {group:"Armes à distance", items:[
+      {name:"Pistolet", ranged:true},
+      {name:"Fusil à canon scié", ranged:true},
+      {name:"Fusil à pompe", ranged:true},
+      {name:"Fusil de précision", ranged:true},
+      {name:"Pistolet-mitrailleur", ranged:true},
+      {name:"Cocktail Molotov", ranged:true, molotov:true}
+    ]},
+    {group:"Équipement et vivres", items:[
+      {name:"Lampe torche"},
+      {name:"Munitions (balles)"},
+      {name:"Munitions (cartouches)"},
+      {name:"Bouteille d'eau"},
+      {name:"Boîte de conserve"},
+      {name:"Sac de riz"}
+    ]}
   ],
   doorTools: ["pied-de-biche", "pied de biche", "hache", "tronçonneuse", "tronconneuse"]
 };

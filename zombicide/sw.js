@@ -1,7 +1,7 @@
 // Carnet de survie Zombicide : fonctionnement hors ligne.
 // Code : réseau d'abord, copie locale si le réseau ne répond pas.
 // Polices et icônes : copie locale d'abord.
-const VERSION = 'zombicide-2026-10-24b';
+const VERSION = 'zombicide-2026-10-24c';
 const SHELL = [
   './', 'index.html', 'app.css', 'app.js', 'data.js', 'manifest.webmanifest',
   'fonts/saira-stencil-one.woff2', 'fonts/atkinson-400.woff2', 'fonts/atkinson-700.woff2',
