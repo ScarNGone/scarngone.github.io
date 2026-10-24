@@ -50,16 +50,18 @@ const CHAR = {};
 D.characters.forEach(c => { CHAR[c.id] = c; });
 
 /* Données de partie */
+const DMG = {marcheur:1, coureur:1, brute:2, abo:3};
+function blankStats(){ return {kills:{}, melee:0, ranged:0, missM:0, missR:0, ff:0, ffTaken:0, search:0, found:0, aaah:0, doors:0, obj:0, moves:0, noise:0, hurt:0, lost:0, free:0, slip:0}; }
 let seq = 0;
 function uid(){ return "s" + Date.now().toString(36) + (seq++); }
 function newSurvivor(item){
   return {id:uid(), charId:item.charId || null, name:item.name, blue:item.charId ? "" : (item.blue || ""), kid:!!item.kid,
     xp:0, wounds:0, used:0, searched:false, done:false, dead:false, inB:false, z:0,
-    skills:{orange:null, red:null}, inv:["","","","",""], free:{}};
+    skills:{orange:null, red:null}, inv:["","","","",""], free:{}, st:blankStats()};
 }
 function emptyState(draft){
   return {v:2, setup:true, started:false, draft:draft || [], round:1, phase:"joueurs", firstId:null, active:null,
-    survivors:[], objectives:0, kills:{}, log:[], last:null, checks:{}};
+    survivors:[], objectives:0, kills:{}, log:[], last:null, checks:{}, ended:null};
 }
 function migrate(s){
   if(!s || !Array.isArray(s.survivors)) return null;
@@ -76,8 +78,11 @@ function migrate(s){
     if(!x.skills) x.skills = {orange:null, red:null};
     if(!Array.isArray(x.inv) || x.inv.length !== 5) x.inv = ["","","","",""];
     if(!x.free) x.free = {};
+    x.st = Object.assign(blankStats(), x.st || {});
+    if(!x.st.kills) x.st.kills = {};
   });
   if(!Array.isArray(s.draft)) s.draft = [];
+  if(s.ended === undefined) s.ended = null;
   return s;
 }
 function load(){
@@ -97,6 +102,8 @@ let confirmNew = false;
 let wantScroll = false;
 const openDetails = new Set();
 const editing = new Set();
+let viewStats = false;
+let confirmEnd = false;
 
 /* Outils */
 const $ = id => document.getElementById(id);
@@ -225,23 +232,26 @@ function doAction(s, id){
   const st = actState(s, id);
   if(!st.ok) return;
   s.used += st.cost;
-  if(st.freeKind) s.free[st.freeKind] = (s.free[st.freeKind] || 0) + 1;
+  if(st.freeKind){ s.free[st.freeKind] = (s.free[st.freeKind] || 0) + 1; s.st.free++; }
   const n = s.name;
+  const S = s.st;
   const freeTxt = st.freeKind ? " (action gratuite)" : "";
   switch(id){
     case "move":
+      S.moves++;
+      if(st.slip) S.slip++;
       if(st.slip && !activeSkills(s).includes("Insaisissable")) s.free.kidSlip = true;
       if(st.slip){ log(`${n} se faufile entre ${s.z} ${pl(s.z,"zombie","zombies")} (Insaisissable)${freeTxt}`); s.z = 0; break; }
       log(s.z > 0 ? `${n} se dégage de ${s.z} ${pl(s.z,"zombie","zombies")} et change de zone (${st.cost} ${pl(st.cost,"action","actions")})${freeTxt}` : `${n} se déplace d'une zone${freeTxt}`);
       s.z = 0;
       break;
-    case "search": s.searched = true; log(`${n} fouille la zone${freeTxt}`); break;
-    case "door": log(`${n} ouvre une porte`); break;
-    case "melee": log(`${n} attaque au corps à corps${freeTxt}`); break;
-    case "ranged": log(`${n} tire à distance${freeTxt}`); break;
-    case "objective": state.objectives++; log(`${n} prend un objectif (+5 XP)`); addXP(s, 5); break;
+    case "search": s.searched = true; S.search++; log(`${n} fouille la zone${freeTxt}`); break;
+    case "door": S.doors++; log(`${n} ouvre une porte`); break;
+    case "melee": S.melee++; log(`${n} attaque au corps à corps${freeTxt}`); break;
+    case "ranged": S.ranged++; log(`${n} tire à distance${freeTxt}`); break;
+    case "objective": state.objectives++; S.obj++; log(`${n} prend un objectif (+5 XP)`); addXP(s, 5); break;
     case "trade": log(`${n} réorganise son inventaire`); openDetails.add("inv-" + s.id); break;
-    case "noise": log(`${n} fait du bruit`); break;
+    case "noise": S.noise++; log(`${n} fait du bruit`); break;
   }
   state.last = {sid:s.id, act:id};
 }
@@ -250,6 +260,7 @@ function kill(s, type){
   const k = KILLS[type];
   if(!s || !k) return;
   state.kills[type] = (state.kills[type] || 0) + 1;
+  s.st.kills[type] = (s.st.kills[type] || 0) + 1;
   if(state.last && state.last.act === "melee" && s.z > 0) s.z--;
   log(`${s.name} élimine ${k.art} (+${k.xp} XP)`);
   addXP(s, k.xp);
@@ -262,14 +273,17 @@ function wound(t, d){
   t.wounds = Math.min(mw, Math.max(0, t.wounds + d));
   if(t.wounds === before) return;
   if(d > 0){
+    t.st.hurt++;
     log(`${t.name} reçoit une blessure (${t.wounds}/${mw})`);
     if(t.wounds >= mw && !t.dead){
       t.dead = true;
       log(`${t.name} quitte la partie (${mw} blessures)`);
       toast(`${t.name} a reçu ${mw} blessures et quitte la partie. Vérifie les conditions de défaite de la mission.`);
       if(state.active === t.id) nextActive();
+      if(state.survivors.every(x => x.dead)) toast("Tous les survivants sont hors jeu. Le bilan de la partie t'attend.");
     }
   }else{
+    t.st.hurt = Math.max(0, t.st.hurt - 1);
     log(`${t.name} perd une blessure (${t.wounds}/${mw})`);
     if(t.dead && t.wounds < mw){ t.dead = false; log(`${t.name} revient en jeu`); }
   }
@@ -279,6 +293,7 @@ function endTurn(s){
   if(!s) return;
   const r = rem(s);
   s.done = true;
+  s.st.lost += r;
   log(r > 0 ? `${s.name} termine son tour (${r} ${pl(r,"action perdue","actions perdues")})` : `${s.name} termine son tour`);
   state.last = null;
   nextActive();
@@ -378,12 +393,12 @@ function pips(total, filled, cls){
 }
 
 function renderHeader(){
-  const setup = state.setup;
-  $("roundLabel").textContent = setup ? "Mise en place" : "Tour";
-  $("roundNum").textContent = setup ? "" : state.round;
-  $("phases").hidden = setup;
-  $("dangerPill").hidden = setup;
-  if(setup) return;
+  const setup = state.setup, ended = !!state.ended && !setup;
+  $("roundLabel").textContent = setup ? "Mise en place" : ended ? "Partie terminée" : "Tour";
+  $("roundNum").textContent = setup || ended ? "" : state.round;
+  $("phases").hidden = setup || ended;
+  $("dangerPill").hidden = setup || ended;
+  if(setup || ended) return;
   const cur = PHASES.findIndex(p => p.id === state.phase);
   $("phases").innerHTML = PHASES.map((p, i) =>
     `<li><button class="phase-btn ${i < cur ? "is-past" : ""}" data-act="phase" data-to="${p.id}" ${i === cur ? 'aria-current="step"' : ""}><span class="pn">${i + 1}</span>${p.name}</button></li>`
@@ -491,6 +506,17 @@ function killButtons(){
   ).join("") + `</div>`;
 }
 
+function attackExtras(s, kind){
+  const L = state.last || {};
+  const allies = state.survivors.filter(x => x.id !== s.id && !x.dead);
+  let h = `<p class="follow-sub">Zombies éliminés</p>` + killButtons();
+  h += `<p class="follow-sub">Dés ratés${L.miss ? ` : ${L.miss}` : ""}</p><div class="follow-btns"><button class="kill" data-act="miss" data-kind="${kind}">+1 dé raté</button></div>`;
+  if(kind === "ranged" && allies.length){
+    h += `<p class="follow-sub">Allié touché par erreur${L.ff ? ` : ${L.ff} ${pl(L.ff,"blessure","blessures")}` : ""}</p><div class="follow-btns">${allies.map(a => `<button class="kill" data-act="ff" data-target="${a.id}">${esc(a.name)}<span class="num">+1 blessure</span></button>`).join("")}</div>`;
+  }
+  return h;
+}
+
 function followUp(s){
   const L = state.last;
   if(!L || L.sid !== s.id) return "";
@@ -505,8 +531,8 @@ function followUp(s){
       extra += L.aaah ? `<p>Un marcheur a été ajouté à ta zone.</p>` : `<div class="follow-btns"><button class="kill" data-act="aaah">J'ai pioché « Aaahh!! »</button></div>`;
       break;
     case "door": title = "Porte ouverte"; body = "Premier accès à ce bâtiment ? Pioche une carte Zombie pour chacune de ses pièces. Outil bruyant : pose un jeton Bruit."; break;
-    case "melee": title = "Résultat de l'attaque"; body = "Note chaque zombie éliminé pour gagner l'XP. Ta zone est mise à jour."; extra = killButtons(); break;
-    case "ranged": title = "Résultat du tir"; body = "Note chaque zombie éliminé. Pense aux dés ratés si des survivants étaient dans la zone visée."; extra = killButtons(); break;
+    case "melee": title = "Résultat de l'attaque"; body = "Note les zombies éliminés et les dés ratés : ils comptent pour le bilan de fin de partie."; extra = attackExtras(s, "melee"); break;
+    case "ranged": title = "Résultat du tir"; body = "Note les zombies éliminés, les dés ratés et les alliés touchés par erreur."; extra = attackExtras(s, "ranged"); break;
     case "objective": title = "Objectif pris"; body = `+5 XP. Objectifs pris pendant la partie : ${state.objectives}.`; break;
     case "trade": title = "Inventaire"; body = "Modifie l'inventaire ci-dessous. Seules les cartes en main servent en combat."; break;
     case "noise": title = "Bruit"; body = "Pose un jeton Bruit dans ta zone. Il attire les zombies qui ne voient aucun survivant."; break;
@@ -658,15 +684,118 @@ function panelFin(){
   ];
   return `<div><h2 class="panel-title">Fin du tour ${state.round}</h2><p class="lede">Trois vérifications avant de relancer.</p></div>
   <ul class="checks">${items.map(i => `<li><label><input type="checkbox" id="chk-${i.id}" data-change="chk" data-key="${i.id}" ${state.checks[i.id] ? "checked" : ""}><span>${i.t}</span></label></li>`).join("")}</ul>
-  <button class="btn-primary" data-act="next">Commencer le tour ${state.round + 1}</button>`;
+  <button class="btn-primary" data-act="next">Commencer le tour ${state.round + 1}</button>
+  <div class="endbox"><p class="follow-title">La mission est terminée ?</p><p class="note">Le bilan affiche le tableau des statistiques et les titres de chaque survivant.</p><div class="row-btns"><button class="btn-ghost" data-act="end-game" data-result="victoire">Mission accomplie</button><button class="btn-ghost" data-act="end-game" data-result="defaite">Mission échouée</button></div></div>`;
+}
+
+/* Bilan et statistiques */
+const STAT_ROWS = [
+  {k:"xp", label:"XP"},
+  {k:"dmg", label:"Dégâts aux zombies"},
+  {k:"kills", label:"Zombies éliminés"},
+  {k:"big", label:"Brutes et abominations"},
+  {k:"ff", label:"Dégâts collatéraux"},
+  {k:"missR", label:"Tirs ratés"},
+  {k:"missM", label:"Coups ratés"},
+  {k:"loot", label:"Cartes piochées"},
+  {k:"aaah", label:"« Aaahh!! » piochés"},
+  {k:"doors", label:"Portes ouvertes"},
+  {k:"obj", label:"Objectifs"},
+  {k:"moves", label:"Déplacements"},
+  {k:"noise", label:"Bruit volontaire"},
+  {k:"hurt", label:"Blessures reçues"},
+  {k:"lost", label:"Actions perdues"}
+];
+const AWARDS = [
+  {k:"dmg", title:"Faucheur", what:"le plus de dégâts aux zombies", unit:["point de dégâts","points de dégâts"]},
+  {k:"big", title:"Gros gibier", what:"le plus de brutes et d'abominations", unit:["grosse prise","grosses prises"]},
+  {k:"ff", title:"Danger public", what:"le plus de dégâts collatéraux", unit:["blessure infligée à un allié","blessures infligées aux alliés"]},
+  {k:"missR", title:"Tireur du dimanche", what:"le plus de tirs ratés", unit:["dé raté","dés ratés"]},
+  {k:"missM", title:"Moulinet dans le vide", what:"le plus de coups ratés", unit:["dé raté","dés ratés"]},
+  {k:"loot", title:"Pilleur", what:"le plus de cartes piochées en fouille", unit:["carte","cartes"]},
+  {k:"aaah", title:"Aimant à zombies", what:"le plus de « Aaahh!! »", unit:["mauvaise surprise","mauvaises surprises"]},
+  {k:"hurt", title:"Sac de frappe", what:"le plus de blessures reçues", unit:["blessure","blessures"]},
+  {k:"moves", title:"Marathonien", what:"le plus de déplacements", unit:["déplacement","déplacements"]},
+  {k:"doors", title:"Serrurier", what:"le plus de portes ouvertes", unit:["porte","portes"]},
+  {k:"obj", title:"Chasseur de trésors", what:"le plus d'objectifs ramassés", unit:["objectif","objectifs"]},
+  {k:"noise", title:"Fanfare", what:"le plus de bruit volontaire", unit:["jeton Bruit","jetons Bruit"]},
+  {k:"lost", title:"Tête en l'air", what:"le plus d'actions perdues", unit:["action perdue","actions perdues"]}
+];
+function statVal(s, k){
+  const S = s.st || blankStats(), K = S.kills || {};
+  switch(k){
+    case "xp": return s.xp;
+    case "dmg": return Object.keys(DMG).reduce((a, t) => a + (K[t] || 0) * DMG[t], 0);
+    case "kills": return Object.keys(KILLS).reduce((a, t) => a + (K[t] || 0), 0);
+    case "big": return (K.brute || 0) + (K.abo || 0);
+    case "loot": return Math.max(0, S.search - S.aaah);
+    default: return S[k] || 0;
+  }
+}
+function leaders(k){
+  const vals = state.survivors.map(s => ({s:s, v:statVal(s, k)}));
+  const max = vals.reduce((m, x) => Math.max(m, x.v), 0);
+  return {max:max, who:max > 0 ? vals.filter(x => x.v === max).map(x => x.s) : []};
+}
+function nameList(list){
+  const n = list.map(x => esc(x.name));
+  return n.length <= 1 ? n.join("") : n.slice(0, -1).join(", ") + " et " + n[n.length - 1];
+}
+function endGame(result){
+  state.ended = {result:result, round:state.round};
+  log(result === "victoire" ? `Mission accomplie au tour ${state.round}` : result === "defaite" ? `Mission échouée au tour ${state.round}` : `Partie terminée au tour ${state.round}`);
+  viewStats = false;
+  wantScroll = true;
+}
+function allDownNotice(){
+  if(!state.started || !state.survivors.length || !state.survivors.every(x => x.dead)) return "";
+  return `<div class="notice"><p>Tous les survivants sont hors jeu.</p><button class="btn-ghost" data-act="end-game" data-result="defaite">Voir le bilan</button></div>`;
+}
+function panelBilan(){
+  const E = state.ended;
+  const rounds = E ? E.round : state.round;
+  const title = E ? (E.result === "victoire" ? "Mission accomplie" : E.result === "defaite" ? "Mission échouée" : "Partie terminée") : "Statistiques en cours";
+  const totalKills = Object.keys(KILLS).reduce((a, t) => a + (state.kills[t] || 0), 0);
+  const alive = state.survivors.filter(x => !x.dead).length;
+  const n = state.survivors.length;
+  const sub = `${rounds} ${pl(rounds,"tour","tours")} · ${totalKills} ${pl(totalKills,"zombie éliminé","zombies éliminés")} · ${state.objectives} ${pl(state.objectives,"objectif","objectifs")} · ${alive}/${n} ${pl(alive,"survivant debout","survivants debout")}`;
+  const mvp = leaders("xp");
+  let mvpHtml = "";
+  if(mvp.who.length){
+    const L = lvl(mvp.max);
+    mvpHtml = `<div class="mvp lv${L}"><p class="eyebrow">Meilleur survivant</p><p class="mvp-name">${nameList(mvp.who)}</p><p>${mvp.max} XP, niveau ${LEVELS[L].low}</p></div>`;
+  }
+  const cards = AWARDS.map(a => {
+    const l = leaders(a.k);
+    if(!l.who.length) return "";
+    return `<li class="award"><span class="award-title">${a.title}</span><span class="award-who">${nameList(l.who)}</span><span class="award-what">${a.what} : ${l.max} ${pl(l.max, a.unit[0], a.unit[1])}</span></li>`;
+  }).join("");
+  const head = state.survivors.map(x => `<th scope="col" class="n ${x.dead ? "is-out" : ""}">${esc(x.name)}</th>`).join("");
+  const body = STAT_ROWS.map(row => {
+    const l = leaders(row.k);
+    const cells = state.survivors.map(x => { const v = statVal(x, row.k); return `<td class="n ${l.max > 0 && v === l.max ? "best" : ""}">${v}</td>`; }).join("");
+    return `<tr><th scope="row">${row.label}</th>${cells}</tr>`;
+  }).join("");
+  const buttons = E
+    ? `<div class="row-btns"><button class="btn-primary" data-act="new-yes">Nouvelle partie</button><button class="btn-ghost" data-act="resume">Reprendre cette partie</button></div>`
+    : `<div class="row-btns"><button class="btn-primary" data-act="stats-close">Revenir à la partie</button></div>
+       <div class="endbox"><p class="follow-title">La mission est terminée ?</p><div class="row-btns"><button class="btn-ghost" data-act="end-game" data-result="victoire">Mission accomplie</button><button class="btn-ghost" data-act="end-game" data-result="defaite">Mission échouée</button></div></div>`;
+  return `<div><p class="eyebrow">${E ? "Fin de partie" : "Partie en cours"}</p><h2 class="panel-title">${title}</h2><p class="lede">${sub}</p></div>
+    ${mvpHtml}
+    ${cards ? `<h3 class="sub">Les titres</h3><ul class="awards">${cards}</ul>` : `<p class="note">Pas encore assez d'actions notées pour décerner des titres.</p>`}
+    <h3 class="sub">Tableau des statistiques</h3>
+    <div class="tbl-wrap"><table class="stats-tbl"><thead><tr><th scope="col">Statistique</th>${head}</tr></thead><tbody>${body}</tbody></table></div>
+    <p class="note">En gras, le meilleur score de chaque ligne. Dégâts aux zombies : 1 par marcheur ou coureur éliminé, 2 par brute, 3 par abomination. Cartes piochées : fouilles sans « Aaahh!! ». Les dés ratés et les alliés touchés se notent juste après chaque attaque.</p>
+    ${buttons}`;
 }
 
 function renderPanel(){
   const p = state.phase;
   $("phasePanel").innerHTML = state.setup ? panelSetup() :
-    p === "joueurs" ? panelJoueurs() :
+    (state.ended || viewStats) ? panelBilan() :
+    allDownNotice() + (p === "joueurs" ? panelJoueurs() :
     p === "activation" ? panelActivation() :
-    p === "apparition" ? panelApparition() : panelFin();
+    p === "apparition" ? panelApparition() : panelFin());
 }
 
 function renderBilan(){
@@ -679,7 +808,7 @@ function renderBilan(){
     <div class="stat"><span class="stat-n">${state.objectives}</span><span class="stat-l">${pl(state.objectives,"objectif","objectifs")}</span></div>
     <div class="stat"><span class="stat-n">${total}</span><span class="stat-l">zombies éliminés</span></div>
     <div class="stat"><span class="stat-n">${alive}/${state.survivors.length}</span><span class="stat-l">en jeu</span></div>
-  </div>${detail ? `<p class="kills-line">${detail}</p>` : ""}`;
+  </div>${detail ? `<p class="kills-line">${detail}</p>` : ""}${state.ended || viewStats ? "" : `<div class="row-btns"><button class="btn-ghost" data-act="stats-open">Voir les statistiques</button></div>`}`;
 }
 
 function renderTeam(){
@@ -788,16 +917,35 @@ document.addEventListener("click", e => {
     case "kill": commit(() => kill(s, b.dataset.type)); break;
     case "aaah": commit(() => {
       if(!s) return;
-      s.z++;
+      s.z++; s.st.aaah++;
       if(state.last) state.last.aaah = true;
       log(`Aaahh!! Un marcheur apparaît dans la zone de ${s.name}`);
     }); break;
+    case "miss": commit(() => {
+      if(!s) return;
+      const ranged = b.dataset.kind === "ranged";
+      if(ranged) s.st.missR++; else s.st.missM++;
+      if(state.last) state.last.miss = (state.last.miss || 0) + 1;
+      log(`${s.name} rate un dé ${ranged ? "au tir" : "au corps à corps"}`);
+    }); break;
+    case "ff": commit(() => {
+      const t = get(b.dataset.target);
+      if(!s || !t) return;
+      s.st.ff++; t.st.ffTaken++;
+      if(state.last) state.last.ff = (state.last.ff || 0) + 1;
+      log(`${s.name} blesse ${t.name} par erreur`);
+      wound(t, 1);
+    }); break;
+    case "end-game": commit(() => endGame(b.dataset.result)); break;
+    case "resume": commit(() => { state.ended = null; log("Reprise de la partie"); wantScroll = true; }); break;
+    case "stats-open": viewStats = true; wantScroll = true; render(); break;
+    case "stats-close": viewStats = false; wantScroll = true; render(); break;
     case "found": {
       const inp = $("found-" + sid);
       const v = inp ? inp.value.trim() : "";
       if(!v || !s){ if(inp) inp.focus(); break; }
       if(!s.inv.some(x => !x || !x.trim())){ openDetails.add("inv-" + s.id); toast("Inventaire plein : remplace ou défausse une carte."); render(); break; }
-      commit(() => { putInInventory(s, v); if(state.last) state.last.found = v; log(`${s.name} trouve : ${v}`); });
+      commit(() => { putInInventory(s, v); s.st.found++; if(state.last) state.last.found = v; log(`${s.name} trouve : ${v}`); });
       break;
     }
     case "endturn": commit(() => endTurn(s)); break;

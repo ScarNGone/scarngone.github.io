@@ -289,3 +289,26 @@ img{max-width:100%}
 .copyline code{font-family:var(--font-num);font-size:.95rem;background:var(--sunk);padding:4px 8px;border-radius:6px;overflow-wrap:anywhere}
 .footer-note{font-size:.8rem;color:var(--muted)}
 .linkbtn{border:0;background:none;padding:0 0 0 4px;font:inherit;font-size:.78rem;font-weight:700;color:var(--accent);text-decoration:underline;cursor:pointer}
+
+/* Résultats d'attaque */
+.follow-sub{font-size:.72rem!important;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:2px}
+.endbox{display:grid;gap:8px;padding:12px;border:1px dashed var(--line);border-radius:10px}
+
+/* Bilan de partie */
+.mvp{border-radius:10px;padding:16px;display:grid;gap:2px}
+.mvp .eyebrow{color:inherit;opacity:.8}
+.mvp-name{font-family:var(--font-display);font-size:2.2rem;line-height:1.05;overflow-wrap:anywhere}
+.awards{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,150px),1fr));gap:8px}
+.award{display:grid;gap:3px;align-content:start;padding:12px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+.award-title{font-family:var(--font-display);font-size:1.15rem;text-transform:uppercase;line-height:1.1}
+.award-who{font-weight:700;font-size:1.02rem;overflow-wrap:anywhere}
+.award-what{font-size:.84rem;color:var(--muted)}
+.stats-tbl{border-collapse:collapse;width:100%;font-size:.88rem;background:var(--surface)}
+.stats-tbl th,.stats-tbl td{padding:7px 10px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap}
+.stats-tbl thead th{font-size:.8rem;color:var(--muted);font-weight:700}
+.stats-tbl tbody th{font-weight:400}
+.stats-tbl th:first-child{position:sticky;left:0;background:var(--surface);z-index:1}
+.stats-tbl .n{text-align:right;font-family:var(--font-num);font-variant-numeric:tabular-nums;font-size:1rem}
+.stats-tbl thead .n{font-family:var(--font-body);font-size:.8rem;color:var(--ink)}
+.stats-tbl td.best{font-weight:700;color:var(--accent);background:color-mix(in srgb,var(--accent) 10%,var(--surface))}
+.stats-tbl .is-out{text-decoration:line-through;color:var(--muted)}
