@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Carnet de survie Zombicide</title>
+<meta name="description" content="Suivi de partie pour Zombicide 2e édition : choix des survivants, actions possibles à chaque tour, XP, compétences, inventaire, blessures et aide-mémoire des règles.">
+<meta name="theme-color" content="#E7EAE5" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#121614" media="(prefers-color-scheme: dark)">
+<meta name="color-scheme" content="light dark">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="icons/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Carnet Zombicide">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Carnet de survie Zombicide">
+<meta property="og:description" content="Suivi de partie pour Zombicide 2e édition : survivants, actions, XP, compétences et inventaire.">
+<meta property="og:url" content="https://scarngone.github.io/zombicide/">
+<meta property="og:image" content="https://scarngone.github.io/zombicide/icons/icon-512.png">
+<link rel="preload" href="fonts/saira-stencil-one.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/atkinson-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-in">
+    <div class="brand"><span class="round-label" id="roundLabel">Tour</span><span class="round-num" id="roundNum"></span></div>
+    <ol class="phases" id="phases" aria-label="Phases du tour"></ol>
+    <span class="danger-pill lv0" id="dangerPill">Danger bleu</span>
+  </div>
+</header>
+
+<main class="wrap layout">
+  <div class="col-main">
+    <section id="phasePanel" aria-live="polite"></section>
+  </div>
+
+  <aside class="col-side">
+    <section class="side-sec" id="bilanSec" aria-labelledby="bilanT" hidden>
+      <h2 class="side-title" id="bilanT">Bilan</h2>
+      <div id="bilan"></div>
+    </section>
+
+    <section class="side-sec" id="teamSec" aria-labelledby="equipeT" hidden>
+      <h2 class="side-title" id="equipeT">Équipe</h2>
+      <div id="team"></div>
+    </section>
+
+    <section class="side-sec" aria-labelledby="journalT">
+      <h2 class="side-title" id="journalT">Journal <button class="btn-ghost" id="undoBtn" data-act="undo">Annuler la dernière action</button></h2>
+      <div id="journal"></div>
+    </section>
+
+    <section class="side-sec aide" aria-labelledby="aideT">
+      <h2 class="side-title" id="aideT">Aide-mémoire</h2>
+      <div>
+        <details id="aide-tour">
+          <summary>Déroulé d'un tour</summary>
+          <div class="aide-body">
+            <ol class="steps">
+              <li><b>Joueurs.</b> En partant du premier joueur, chaque survivant dépense ses actions : 3 au départ, 4 dès le niveau jaune.</li>
+              <li><b>Zombies, activation.</b> Chaque zombie attaque s'il partage la zone d'un survivant, sinon il avance d'une zone. Les coureurs recommencent ensuite.</li>
+              <li><b>Zombies, apparition.</b> Une carte Zombie par zone d'apparition, lue à la couleur du niveau de danger.</li>
+              <li><b>Fin du tour.</b> On retire les jetons Bruit et le jeton Premier joueur passe à gauche.</li>
+            </ol>
+          </div>
+        </details>
+        <details id="aide-actions">
+          <summary>Les actions d'un survivant</summary>
+          <div class="aide-body">
+            <ul>
+              <li><b>Se déplacer</b> : 1 action par zone, +1 action par zombie présent dans la zone que tu quittes.</li>
+              <li><b>Fouiller</b> : une fois par tour, en bâtiment, sans zombie dans la zone.</li>
+              <li><b>Ouvrir une porte</b> : avec un équipement à symbole porte. La première porte d'un bâtiment fait apparaître des zombies dans chacune de ses pièces.</li>
+              <li><b>Corps à corps</b> : contre les zombies de ta zone, cibles au choix.</li>
+              <li><b>Tir à distance</b> : vers une zone en ligne de vue, ordre des touches imposé.</li>
+              <li><b>Prendre un objectif</b> : +5 XP.</li>
+              <li><b>Réorganiser ou échanger</b> : avec un survivant de ta zone.</li>
+              <li><b>Faire du bruit</b> : un jeton Bruit dans ta zone.</li>
+              <li><b>Ne rien faire</b> : tu termines ton tour, les actions restantes sont perdues.</li>
+            </ul>
+          </div>
+        </details>
+        <details id="aide-combat">
+          <summary>Combat et dés</summary>
+          <div class="aide-body">
+            <ul>
+              <li>Chaque arme indique sa portée, son nombre de dés, sa précision et ses dégâts.</li>
+              <li>Un dé égal ou supérieur à la précision fait une touche.</li>
+              <li>Une touche n'élimine un zombie que si les dégâts de l'arme atteignent sa résistance.</li>
+              <li>Au corps à corps, tu répartis les touches librement.</li>
+              <li>À distance, les touches suivent l'ordre : brutes et abominations, puis marcheurs, puis coureurs. Les dés ratés touchent les autres survivants de la zone visée.</li>
+              <li>Deux armes identiques avec le symbole double s'utilisent ensemble pour une seule action.</li>
+            </ul>
+          </div>
+        </details>
+        <details id="aide-zombies">
+          <summary>Les zombies</summary>
+          <div class="aide-body">
+            <div class="tbl-wrap">
+              <table>
+                <thead><tr><th>Type</th><th class="n">Actions</th><th class="n">Dégâts requis</th><th class="n">XP</th></tr></thead>
+                <tbody>
+                  <tr><td>Marcheur</td><td class="n">1</td><td class="n">1</td><td class="n">1</td></tr>
+                  <tr><td>Coureur</td><td class="n">2</td><td class="n">1</td><td class="n">1</td></tr>
+                  <tr><td>Brute</td><td class="n">1</td><td class="n">2</td><td class="n">1</td></tr>
+                  <tr><td>Abomination</td><td class="n">1</td><td class="n">3</td><td class="n">5</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p>Chaque attaque de zombie inflige 1 blessure. À 3 blessures (2 pour un enfant), le survivant quitte la partie.</p>
+          </div>
+        </details>
+        <details id="aide-xp">
+          <summary>XP et niveaux de danger</summary>
+          <div class="aide-body">
+            <div class="tbl-wrap">
+              <table>
+                <thead><tr><th>Niveau</th><th class="n">XP</th><th>Effet</th></tr></thead>
+                <tbody>
+                  <tr><td><span class="sw lv0"></span>Bleu</td><td class="n">0 à 6</td><td>Compétence de départ</td></tr>
+                  <tr><td><span class="sw lv1"></span>Jaune</td><td class="n">7 à 18</td><td>+1 action</td></tr>
+                  <tr><td><span class="sw lv2"></span>Orange</td><td class="n">19 à 42</td><td>1 compétence au choix parmi 2</td></tr>
+                  <tr><td><span class="sw lv3"></span>Rouge</td><td class="n">43 et plus</td><td>1 compétence au choix parmi 3</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p>Le niveau de danger de la partie est celui du survivant le plus avancé. C'est lui qui fixe la ligne lue sur les cartes Zombie.</p>
+          </div>
+        </details>
+        <details id="aide-bruit">
+          <summary>Bruit et ligne de vue</summary>
+          <div class="aide-body">
+            <ul>
+              <li>Une arme bruyante laisse un jeton Bruit à chaque attaque. Chaque survivant compte aussi comme un bruit.</li>
+              <li>Un zombie qui voit des survivants va vers eux. Sinon, il va vers la zone la plus bruyante.</li>
+              <li>Dans la rue, la vue porte en ligne droite. Dans un bâtiment, elle s'arrête aux pièces voisines reliées par une ouverture.</li>
+              <li>Tous les jetons Bruit sont retirés à la fin du tour.</li>
+            </ul>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section class="side-sec" id="appSec" aria-labelledby="appT" hidden>
+      <h2 class="side-title" id="appT">Sur ton téléphone</h2>
+      <div id="appBody"></div>
+    </section>
+  </aside>
+</main>
+
+<datalist id="equipList"></datalist>
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
