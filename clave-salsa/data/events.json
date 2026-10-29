@@ -225,40 +225,6 @@
   "added_on": "2026-10-12"
  },
  {
-  "title": "Mardi'Kiz au Lydo",
-  "type": "soirée",
-  "styles": [
-   "kizomba",
-   "bachata",
-   "salsa"
-  ],
-  "date": "2026-10-27",
-  "end_date": null,
-  "start_time": "19:45",
-  "recurrence": {
-   "freq": "weekly",
-   "until": "2026-10-27",
-   "weekday": 2
-  },
-  "venue": "Le Lydo",
-  "address": "14 boulevard Eugène Réguillon, 69100 Villeurbanne",
-  "city": "Villeurbanne",
-  "department": "Rhône",
-  "dept_code": "69",
-  "lat": 45.766,
-  "lng": 4.8795,
-  "geo_precision": "ville",
-  "price": "6 € (soirée ou 1 cours), 10 € avec 2 cours",
-  "price_min": 6,
-  "organizer": "Sam-ya Desmarets / Le Lydolatino",
-  "description": "Cours de kizomba évolutif et intermédiaire puis soirée KBS à dominante kizomba avec DJ King-Sérénity, chaque mardi au Lydo.",
-  "source_url": "https://airdancia.com/event/mardikiz-villeurbanne/",
-  "source_name": "AIRDancia",
-  "confidence": "moyenne",
-  "id": "mardi-kiz-au-lydo-villeurbanne-rec",
-  "added_on": "2026-10-19"
- },
- {
   "title": "SBRock Party au Markadas",
   "type": "soirée",
   "styles": [
@@ -1208,6 +1174,10 @@
    "freq": "weekly",
    "weekday": 5
   },
+  "exdates": [
+   "2026-11-13",
+   "2026-12-18"
+  ],
   "venue": "Le Lydo",
   "address": "14 boulevard Eugène Réguillon, 69100 Villeurbanne",
   "city": "Villeurbanne",
@@ -1216,13 +1186,13 @@
   "lat": 45.766,
   "lng": 4.8795,
   "geo_precision": "ville",
-  "price": null,
-  "price_min": null,
+  "price": "10 € la soirée avec une conso, 13 € avec deux cours",
+  "price_min": 10,
   "organizer": "Le Lydolatino",
   "description": "Chaque vendredi, cours de salsa en rueda ou en couple de 20h à 22h, puis soirée SBK à dominante salsa jusqu'à 2h.",
   "source_url": "https://www.lydolatino.com/",
   "source_name": "Le Lydo Latino",
-  "confidence": "moyenne",
+  "confidence": "haute",
   "id": "vendredi-sbk-au-lydo-villeurbanne-rec",
   "added_on": "2026-10-12"
  },
@@ -2770,6 +2740,44 @@
   "confidence": "haute",
   "id": "sociale-sbkr-de-novembre-abrest-2026-11-08",
   "added_on": "2026-10-12"
+ },
+ {
+  "title": "Mardi'Kiz au Lydo",
+  "type": "soirée",
+  "styles": [
+   "kizomba",
+   "bachata",
+   "salsa"
+  ],
+  "date": "2026-11-10",
+  "end_date": null,
+  "start_time": "19:45",
+  "recurrence": {
+   "freq": "weekly",
+   "weekday": 2
+  },
+  "exdates": [
+   "2026-11-03",
+   "2026-12-01",
+   "2027-01-05"
+  ],
+  "venue": "Le Lydo",
+  "address": "14 boulevard Eugène Réguillon, 69100 Villeurbanne",
+  "city": "Villeurbanne",
+  "department": "Rhône",
+  "dept_code": "69",
+  "lat": 45.766,
+  "lng": 4.8795,
+  "geo_precision": "ville",
+  "price": "6 € (soirée ou 1 cours), 10 € avec 2 cours",
+  "price_min": 6,
+  "organizer": "Sam-ya Desmarets / Le Lydolatino",
+  "description": "Cours de kizomba puis soirée KBS à dominante kizomba avec DJ King-Sérénity, chaque mardi au Lydo sauf le premier du mois (Mensuelle).",
+  "source_url": "https://airdancia.com/event/mardikiz-villeurbanne/",
+  "source_name": "AIRDancia",
+  "confidence": "haute",
+  "id": "mardi-kiz-au-lydo-villeurbanne-rec",
+  "added_on": "2026-10-19"
  },
  {
   "title": "Multiverse Kizomba Party spéciale indépendance de l'Angola",
