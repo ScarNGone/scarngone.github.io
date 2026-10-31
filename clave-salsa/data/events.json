@@ -1,42 +1,5 @@
 [
  {
-  "title": "Les Lundis Salsa avec DJ Carlos",
-  "type": "soirée",
-  "styles": [
-   "salsa",
-   "rueda"
-  ],
-  "date": "2026-10-26",
-  "end_date": null,
-  "start_time": "20:00",
-  "recurrence": {
-   "freq": "weekly",
-   "until": "2026-12-28",
-   "weekday": 1
-  },
-  "venue": "Ninkasi Cordeliers",
-  "address": "1 rue du Président Carnot, 69002 Lyon",
-  "city": "Lyon",
-  "department": "Rhône",
-  "dept_code": "69",
-  "lat": 45.7485,
-  "lng": 4.8467,
-  "geo_precision": "ville",
-  "price": "3 €, vestiaire inclus",
-  "price_min": 3,
-  "organizer": "Salsaddict / Ninkasi Cordeliers",
-  "description": "Chaque lundi, soirée salsa de 20h à 1h avec DJ Carlos. Les cours de 19h sont réservés aux abonnés Salsaddict.",
-  "source_url": "https://www.ninkasi.fr/agenda/les-lundis-salsa-by-dj-carlos-100/",
-  "source_name": "Ninkasi",
-  "confidence": "haute",
-  "id": "les-lundis-salsa-avec-dj-carlos-lyon-rec",
-  "added_on": "2026-10-12",
-  "locked_fields": [
-   "price",
-   "price_min"
-  ]
- },
- {
   "title": "Lundis bachata et kizomba avec Lionel Find",
   "type": "initiation",
   "styles": [
@@ -511,40 +474,6 @@
   "added_on": "2026-10-12"
  },
  {
-  "title": "SBK Family Party à Evi'Dance",
-  "type": "soirée",
-  "styles": [
-   "salsa",
-   "bachata",
-   "kizomba"
-  ],
-  "date": "2026-10-29",
-  "end_date": null,
-  "start_time": "21:00",
-  "recurrence": {
-   "freq": "weekly",
-   "until": "2026-11-05",
-   "weekday": 4
-  },
-  "venue": "Evi'Dance",
-  "address": "5 allée Barthélemy Thimonnier, 69970 Chaponnay",
-  "city": "Chaponnay",
-  "department": "Rhône",
-  "dept_code": "69",
-  "lat": 45.6276,
-  "lng": 4.9361,
-  "geo_precision": "ville",
-  "price": "gratuit",
-  "price_min": 0,
-  "organizer": "Evi'Dance Chaponnay",
-  "description": "Soirée sociale salsa, bachata et kizomba du jeudi animée par DJ Momo, entrée libre et ouverte à tous.",
-  "source_url": "https://airdancia.com/event/evidance-sbk-family-party-chaponnay/",
-  "source_name": "AIRDancia",
-  "confidence": "haute",
-  "id": "sbk-family-party-a-evi-dance-chaponnay-rec",
-  "added_on": "2026-10-19"
- },
- {
   "title": "SBK la Midinette",
   "type": "soirée",
   "styles": [
@@ -665,41 +594,6 @@
   "confidence": "haute",
   "id": "stage-salsa-au-fjep-la-metare-saint-etienne-2026-10-29",
   "added_on": "2026-10-12"
- },
- {
-  "title": "Evi'Dance Party, workshops et soirée 3 salles",
-  "type": "soirée",
-  "styles": [
-   "salsa",
-   "bachata",
-   "kizomba"
-  ],
-  "date": "2026-10-30",
-  "end_date": null,
-  "start_time": "21:00",
-  "recurrence": {
-   "freq": "monthly",
-   "nth": -1,
-   "until": "2026-11-27",
-   "weekday": 5
-  },
-  "venue": "Evi'Dance",
-  "address": "5 allée Barthélemy Thimonnier, 69970 Chaponnay",
-  "city": "Chaponnay",
-  "department": "Rhône",
-  "dept_code": "69",
-  "lat": 45.6276,
-  "lng": 4.9361,
-  "geo_precision": "ville",
-  "price": "5 € adhérents, 7 € non-adhérents",
-  "price_min": 5,
-  "organizer": "Evi'Dance Chaponnay",
-  "description": "Soirée du dernier vendredi du mois : atelier au choix puis trois salles, dont une SBK avec DJ Momo.",
-  "source_url": "https://airdancia.com/event/evidance-party-workshops-soiree-3-salles-30-octobre-chaponnay/",
-  "source_name": "AIRDancia",
-  "confidence": "haute",
-  "id": "evi-dance-party-workshops-et-soiree-3-salles-chaponnay-rec",
-  "added_on": "2026-10-19"
  },
  {
   "title": "L'Énergie Pre-Party Annecy : ginga et semba",
@@ -1195,40 +1089,6 @@
   "confidence": "haute",
   "id": "vendredi-sbk-au-lydo-villeurbanne-rec",
   "added_on": "2026-10-12"
- },
- {
-  "title": "Vendredis bachata et soirée SBK à la Casa Latina",
-  "type": "soirée",
-  "styles": [
-   "bachata",
-   "salsa",
-   "kizomba"
-  ],
-  "date": "2026-10-30",
-  "end_date": null,
-  "start_time": "20:00",
-  "recurrence": {
-   "freq": "weekly",
-   "until": "2026-10-30",
-   "weekday": 5
-  },
-  "venue": "Brasserie 3 Rivières (Casa Latina)",
-  "address": "2 place des Terreaux, 69001 Lyon",
-  "city": "Lyon",
-  "department": "Rhône",
-  "dept_code": "69",
-  "lat": 45.7485,
-  "lng": 4.8467,
-  "geo_precision": "ville",
-  "price": "10 € (1 h de cours + soft), 15 € (2 h)",
-  "price_min": 10,
-  "organizer": "Cindy Martin",
-  "description": "Deux heures de cours de bachata, débutant puis intermédiaire, suivies d'une soirée SBK avec happy hour place des Terreaux.",
-  "source_url": "https://airdancia.com/event/tous-les-vendredis-2h-de-cours-de-bachata-soiree-sbk-a-la-casa-latina-lyon/",
-  "source_name": "AIRDancia",
-  "confidence": "haute",
-  "id": "vendredis-bachata-et-soiree-sbk-a-la-casa-latina-lyon-rec",
-  "added_on": "2026-10-19"
  },
  {
   "title": "Clubbing Latino du samedi au Cabana Café",
@@ -1894,6 +1754,42 @@
   "added_on": "2026-10-26"
  },
  {
+  "title": "Les Lundis Salsa avec DJ Carlos",
+  "type": "soirée",
+  "styles": [
+   "salsa",
+   "rueda"
+  ],
+  "date": "2026-11-02",
+  "end_date": null,
+  "start_time": "20:00",
+  "recurrence": {
+   "freq": "weekly",
+   "weekday": 1
+  },
+  "venue": "Ninkasi Cordeliers",
+  "address": "1 rue du Président Carnot, 69002 Lyon",
+  "city": "Lyon",
+  "department": "Rhône",
+  "dept_code": "69",
+  "lat": 45.7485,
+  "lng": 4.8467,
+  "geo_precision": "ville",
+  "price": "3 €, vestiaire inclus",
+  "price_min": 3,
+  "organizer": "Salsaddict / Ninkasi Cordeliers",
+  "description": "Chaque lundi, soirée salsa de 20h à 1h avec DJ Carlos. Les cours de 19h sont réservés aux abonnés Salsaddict.",
+  "source_url": "https://www.ninkasi.fr/agenda/les-lundis-salsa-by-dj-carlos-100/",
+  "source_name": "Ninkasi",
+  "confidence": "haute",
+  "id": "les-lundis-salsa-avec-dj-carlos-lyon-rec",
+  "added_on": "2026-10-12",
+  "locked_fields": [
+   "price",
+   "price_min"
+  ]
+ },
+ {
   "title": "Mardi Kiz, la mensuelle du Lydo",
   "type": "soirée",
   "styles": [
@@ -2040,6 +1936,39 @@
   "source_name": "AIRDancia",
   "confidence": "haute",
   "id": "pop-up-class-lady-styling-salsa-clermont-ferrand-2026-11-05",
+  "added_on": "2026-10-19"
+ },
+ {
+  "title": "SBK Family Party à Evi'Dance",
+  "type": "soirée",
+  "styles": [
+   "salsa",
+   "bachata",
+   "kizomba"
+  ],
+  "date": "2026-11-05",
+  "end_date": null,
+  "start_time": "21:00",
+  "recurrence": {
+   "freq": "weekly",
+   "weekday": 4
+  },
+  "venue": "Evi'Dance",
+  "address": "5 allée Barthélemy Thimonnier, 69970 Chaponnay",
+  "city": "Chaponnay",
+  "department": "Rhône",
+  "dept_code": "69",
+  "lat": 45.6276,
+  "lng": 4.9361,
+  "geo_precision": "ville",
+  "price": "gratuit",
+  "price_min": 0,
+  "organizer": "Evi'Dance Chaponnay",
+  "description": "Soirée sociale salsa, bachata et kizomba du jeudi animée par DJ Momo, entrée libre et ouverte à tous.",
+  "source_url": "https://airdancia.com/event/evidance-sbk-family-party-chaponnay/",
+  "source_name": "AIRDancia",
+  "confidence": "haute",
+  "id": "sbk-family-party-a-evi-dance-chaponnay-rec",
   "added_on": "2026-10-19"
  },
  {
@@ -2196,6 +2125,39 @@
   "source_name": "École de danse Moioli",
   "confidence": "haute",
   "id": "vendredi-party-salsa-bachata-kizomba-chez-moioli-la-motte-servolex-2026-11-06",
+  "added_on": "2026-10-19"
+ },
+ {
+  "title": "Vendredis bachata et soirée SBK à la Casa Latina",
+  "type": "soirée",
+  "styles": [
+   "bachata",
+   "salsa",
+   "kizomba"
+  ],
+  "date": "2026-11-06",
+  "end_date": null,
+  "start_time": "20:00",
+  "recurrence": {
+   "freq": "weekly",
+   "weekday": 5
+  },
+  "venue": "Brasserie 3 Rivières (Casa Latina)",
+  "address": "2 place des Terreaux, 69001 Lyon",
+  "city": "Lyon",
+  "department": "Rhône",
+  "dept_code": "69",
+  "lat": 45.7485,
+  "lng": 4.8467,
+  "geo_precision": "ville",
+  "price": "10 € (1 h de cours + soft), 15 € (2 h)",
+  "price_min": 10,
+  "organizer": "Cindy Martin",
+  "description": "Deux heures de cours de bachata, débutant puis intermédiaire, suivies d'une soirée SBK avec happy hour place des Terreaux.",
+  "source_url": "https://airdancia.com/event/tous-les-vendredis-2h-de-cours-de-bachata-soiree-sbk-a-la-casa-latina-lyon/",
+  "source_name": "AIRDancia",
+  "confidence": "haute",
+  "id": "vendredis-bachata-et-soiree-sbk-a-la-casa-latina-lyon-rec",
   "added_on": "2026-10-19"
  },
  {
@@ -4372,7 +4334,6 @@
   "start_time": "15:00",
   "recurrence": {
    "freq": "weekly",
-   "until": "2026-11-29",
    "weekday": 0
   },
   "venue": "Evi'Dance",
@@ -4449,6 +4410,40 @@
   "source_name": "Studio Anaya",
   "confidence": "haute",
   "id": "pop-up-class-salsa-porto-on1-guidage-et-receptivit-clermont-ferrand-2026-11-26",
+  "added_on": "2026-10-19"
+ },
+ {
+  "title": "Evi'Dance Party, workshops et soirée 3 salles",
+  "type": "soirée",
+  "styles": [
+   "salsa",
+   "bachata",
+   "kizomba"
+  ],
+  "date": "2026-11-27",
+  "end_date": null,
+  "start_time": "21:00",
+  "recurrence": {
+   "freq": "monthly",
+   "nth": -1,
+   "weekday": 5
+  },
+  "venue": "Evi'Dance",
+  "address": "5 allée Barthélemy Thimonnier, 69970 Chaponnay",
+  "city": "Chaponnay",
+  "department": "Rhône",
+  "dept_code": "69",
+  "lat": 45.6276,
+  "lng": 4.9361,
+  "geo_precision": "ville",
+  "price": "5 € adhérents, 7 € non-adhérents",
+  "price_min": 5,
+  "organizer": "Evi'Dance Chaponnay",
+  "description": "Soirée du dernier vendredi du mois : atelier au choix puis trois salles, dont une SBK avec DJ Momo.",
+  "source_url": "https://airdancia.com/event/evidance-party-workshops-soiree-3-salles-30-octobre-chaponnay/",
+  "source_name": "AIRDancia",
+  "confidence": "haute",
+  "id": "evi-dance-party-workshops-et-soiree-3-salles-chaponnay-rec",
   "added_on": "2026-10-19"
  },
  {
