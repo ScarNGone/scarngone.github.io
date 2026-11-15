@@ -56,12 +56,22 @@ function installStandalone(win, config, createPolicy) {
   // Le souvenir de la page précédente ne vaut que si l'on vient du réseau lui-même.
   // Une adresse tapée, un favori ou un lien venu d'ailleurs repartent de zéro.
   function arrivedFromService() {
+    // La page acceptée en dernier, rechargée ou rouverte telle quelle.
+    if (context === win.location.href) return true;
+    // Un rechargement ou un retour dans l'historique. Les navigateurs ne renseignent pas
+    // tous la même mesure aussi tôt dans la vie de la page : on consulte les deux.
     try {
       var entries = win.performance.getEntriesByType('navigation');
-      var type = entries.length ? entries[0].type : 'navigate';
+      var type = entries.length ? entries[0].type : '';
       if (type === 'reload' || type === 'back_forward') return true;
     } catch (error) {
-      // Mesure indisponible : on s'en remet à la page d'origine.
+      // Mesure indisponible.
+    }
+    try {
+      var legacy = win.performance.navigation.type;
+      if (legacy === 1 || legacy === 2) return true;
+    } catch (error) {
+      // Mesure indisponible.
     }
     var referrer = parse(doc.referrer);
     return !!referrer && hosts.indexOf(referrer.hostname.toLowerCase()) !== -1;
