@@ -7,6 +7,8 @@
     { "name": "conversation", "url": "https://www.instagram.com/direct/t/340282366841710300/", "from": "https://www.instagram.com/direct/inbox/", "expect": { "action": "allow", "kind": "messaging" } },
     { "name": "demandes de message", "url": "https://www.instagram.com/direct/requests/", "from": "https://www.instagram.com/direct/inbox/", "expect": { "action": "allow", "kind": "messaging" } },
     { "name": "nouveau message", "url": "https://www.instagram.com/direct/new/", "from": "https://www.instagram.com/direct/inbox/", "expect": { "action": "allow", "kind": "messaging" } },
+    { "name": "appel lancé depuis une conversation", "url": "https://www.instagram.com/call/?has_video=false&ig_thread_id=340282366841710300", "from": "https://www.instagram.com/direct/t/340282366841710300/", "expect": { "action": "allow", "kind": "messaging" } },
+    { "name": "page dont le nom commence comme les appels", "url": "https://www.instagram.com/calligraphie/", "from": null, "expect": { "action": "block" } },
     { "name": "messagerie sans barre oblique finale", "url": "https://www.instagram.com/direct", "from": null, "expect": { "action": "allow", "kind": "messaging" } },
     { "name": "messagerie avec requête et ancre", "url": "https://www.instagram.com/direct/inbox/?x=1#y", "from": null, "expect": { "action": "allow", "kind": "messaging" } },
     { "name": "domaine sans www", "url": "https://instagram.com/direct/inbox/", "from": null, "expect": { "action": "allow", "kind": "messaging" } },

@@ -341,8 +341,9 @@ final class MessagingViewController: UIViewController {
 
     /// Ramène l'app sur une page utile : la messagerie si une session est ouverte, la connexion sinon.
     private func recover() {
+        // Quatre retours forcés en trente secondes : le site tourne en rond, on s'arrête.
         let now = Date()
-        recentRecoveries = recentRecoveries.filter { now.timeIntervalSince($0) < 45 }
+        recentRecoveries = recentRecoveries.filter { now.timeIntervalSince($0) < 30 }
         recentRecoveries.append(now)
         guard recentRecoveries.count <= 3 else {
             recentRecoveries.removeAll()
@@ -463,9 +464,11 @@ extension MessagingViewController: WKNavigationDelegate {
         let userInitiated = navigationAction.navigationType == .linkActivated || opensNewWindow
 
         switch decide(url) {
-        case .allow:
+        case .allow(let kind):
             if opensNewWindow {
                 // Pas de deuxième fenêtre : la page remplace la page courante.
+                // Une fenêtre vide, elle, n'a rien à afficher.
+                if kind == .neutral { return .cancel }
                 pendingURL = url
                 webView.load(navigationAction.request)
                 return .cancel
@@ -577,8 +580,8 @@ extension MessagingViewController: WKUIDelegate {
 
     func webView(
         _ webView: WKWebView,
-        requestMediaCapturePermissionFor origin: WKSecurityOrigin,
-        initiatedByFrame frame: WKFrameInfo,
+        decideMediaCapturePermissionsFor origin: WKSecurityOrigin,
+        initiatedBy frame: WKFrameInfo,
         type: WKMediaCaptureType
     ) async -> WKPermissionDecision {
         // iOS demande déjà l'accès au micro et à la caméra pour l'app ; inutile de reposer

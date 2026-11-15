@@ -12,7 +12,8 @@
         "^/accounts/activity(/|$)"
       ],
       "messaging": [
-        "^/direct(/|$)"
+        "^/direct(/|$)",
+        "^/call(/|$)"
       ],
       "auth": [
         "^/accounts(/|$)",
