@@ -44,6 +44,8 @@ final class MessagingViewController: UIViewController {
     private var lastRefused: URL?
     private var lastHandledBlock: (url: URL, date: Date)?
     private var recentRecoveries: [Date] = []
+    /// Code de réponse de la dernière page reçue.
+    private var pageStatus: Int?
     #if DEBUG
     private var selfTestStarted = false
     #endif
@@ -407,6 +409,36 @@ final class MessagingViewController: UIViewController {
         notice.hide()
     }
 
+    /// Une page sans texte ni script ne s'affichera jamais : le site a refusé de répondre,
+    /// souvent parce qu'il limite temporairement la connexion. On le dit plutôt que de
+    /// laisser un écran blanc.
+    private func reportEmptyPage() {
+        let status = pageStatus
+        Task { [weak self] in
+            guard let self else { return }
+            let script = "String((document.body ? document.body.innerText.trim().length : 0) + document.scripts.length)"
+            guard await self.evaluate(script, in: .defaultClient) == "0" else { return }
+            let code = status.map { " (code \($0))" } ?? ""
+            self.trace("page vide\(code)")
+            self.showFailureNotice(
+                "\(self.service.name) a renvoyé une page vide\(code). Le site limite parfois une connexion pendant quelques minutes, par exemple derrière un VPN."
+            )
+        }
+    }
+
+    private func evaluate(_ script: String, in world: WKContentWorld) async -> String {
+        await withCheckedContinuation { (continuation: CheckedContinuation<String, Never>) in
+            webView.evaluateJavaScript(script, in: nil, in: world) { result in
+                switch result {
+                case .success(let value):
+                    continuation.resume(returning: String(describing: value))
+                case .failure(let error):
+                    continuation.resume(returning: "erreur : \(error.localizedDescription)")
+                }
+            }
+        }
+    }
+
     private func showFailureNotice(_ reason: String) {
         noticeKind = .failure
         notice.show(
@@ -502,6 +534,18 @@ extension MessagingViewController: WKNavigationDelegate {
         }
     }
 
+    func webView(
+        _ webView: WKWebView,
+        decidePolicyFor navigationResponse: WKNavigationResponse
+    ) async -> WKNavigationResponsePolicy {
+        if navigationResponse.isForMainFrame, let response = navigationResponse.response as? HTTPURLResponse {
+            pageStatus = response.statusCode
+            trace("réponse \(response.statusCode) pour \(response.url?.absoluteString ?? "")")
+        }
+        // Même choix que le moteur web quand l'app ne se prononce pas.
+        return navigationResponse.canShowMIMEType ? .allow : .cancel
+    }
+
     func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
         pendingURL = nil
         if noticeKind == .failure {
@@ -520,6 +564,7 @@ extension MessagingViewController: WKNavigationDelegate {
             adopt(url)
         }
         trace("page chargée \(webView.url?.absoluteString ?? "sans adresse")")
+        reportEmptyPage()
         #if DEBUG
         runSelfTestIfRequested()
         #endif
@@ -687,31 +732,25 @@ extension MessagingViewController {
           var hidden = Array.from(document.querySelectorAll('[data-justedm-hidden]')).map(function (e) {
             return e.tagName.toLowerCase() + ' ' + (e.getAttribute('href') || '');
           });
+          var viewport = document.querySelector('meta[name=viewport]');
           return JSON.stringify({
             adresse: location.href,
             titre: document.title,
+            etat: document.readyState,
             navigateur: navigator.userAgent,
             largeur: window.innerWidth,
+            viewport: viewport ? viewport.getAttribute('content') : null,
+            taille: document.documentElement.outerHTML.length,
+            scripts: document.scripts.length,
             liens: document.querySelectorAll('a[href]').length,
+            champs: document.querySelectorAll('input').length,
+            texte: document.body ? document.body.innerText.trim().slice(0, 240) : null,
             caches: hidden
           });
         })()
         """
         let summary = await evaluate(script, in: .defaultClient)
         trace("\(label) : \(summary)")
-    }
-
-    private func evaluate(_ script: String, in world: WKContentWorld) async -> String {
-        await withCheckedContinuation { (continuation: CheckedContinuation<String, Never>) in
-            webView.evaluateJavaScript(script, in: nil, in: world) { result in
-                switch result {
-                case .success(let value):
-                    continuation.resume(returning: String(describing: value))
-                case .failure(let error):
-                    continuation.resume(returning: "erreur : \(error.localizedDescription)")
-                }
-            }
-        }
     }
 }
 #endif
