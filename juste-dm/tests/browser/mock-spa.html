@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maquette de messagerie</title>
+<style>
+  body { margin: 0; font: 16px/1.4 system-ui, sans-serif; }
+  header { height: 44px; display: flex; align-items: center; justify-content: space-between; padding: 0 12px; border-bottom: 1px solid #ccc; }
+  main { padding: 12px 12px 70px; display: grid; gap: 12px; }
+  main a { display: block; padding: 8px 0; }
+  nav#tabs { position: fixed; left: 0; right: 0; bottom: 0; height: 50px; display: flex; justify-content: space-around; align-items: center; border-top: 1px solid #ccc; background: #fff; }
+  nav#tabs .tab { width: 48px; height: 48px; display: grid; place-items: center; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script>
+// Maquette d'application monopage. Elle imite ce qui compte pour guard.js : des liens
+// ordinaires, un seul gestionnaire de clics posé à la racine (comme React) et des
+// changements d'adresse faits avec history.pushState, sans rechargement.
+const root = document.getElementById('root');
+
+const tabs = `
+  <nav id="tabs">
+    <div class="tab"><a href="/">Accueil</a></div>
+    <div class="tab"><a href="/explore/">Recherche</a></div>
+    <div class="tab"><a href="/reels/">Reels</a></div>
+    <div class="tab"><a href="/direct/inbox/">Messages</a></div>
+    <div class="tab"><a href="/monpseudo/">Profil</a></div>
+  </nav>`;
+
+function view(path) {
+  if (path === '/direct/inbox/') {
+    return `
+      <header>
+        <a id="logo" href="/">Logo</a>
+        <a id="back" href="/">Retour</a>
+        <span id="me">monpseudo</span>
+        <a id="new" href="/direct/new/">Nouveau</a>
+      </header>
+      <main>
+        <a class="thread" id="thread-1" href="/direct/t/1/">Alice</a>
+        <a class="thread" id="thread-2" href="/direct/t/2/">Bob</a>
+      </main>${tabs}`;
+  }
+  if (path.startsWith('/direct/t/')) {
+    return `
+      <header>
+        <a id="back" href="/direct/inbox/">Retour</a>
+        <a id="profile" href="/alice/">Alice</a>
+      </header>
+      <main>
+        <p id="message">Salut, regarde ça</p>
+        <a id="post" href="/p/ABC/">Publication reçue</a>
+        <a id="reel" href="/reel/XYZ/">Reel reçu</a>
+        <a id="ext" href="https://l.instagram.com/?u=https%3A%2F%2Fexample.com%2F" target="_blank">Lien reçu</a>
+        <a id="fake-button" href="javascript:void(0)">Bouton déguisé</a>
+        <input id="composer" placeholder="Votre message">
+      </main>`;
+  }
+  if (path.startsWith('/p/')) {
+    return `
+      <header>
+        <a id="back" href="/direct/t/1/">Retour</a>
+        <a id="author" href="/alice/">alice</a>
+      </header>
+      <main>
+        <p id="post-body">Publication ${path}</p>
+        <a id="next-image" href="/p/ABC/?img_index=2">Image suivante</a>
+        <a id="more" href="/p/DEF/">Autre publication</a>
+      </main>${tabs}`;
+  }
+  return `<main><h1 id="feed">Fil ${path}</h1></main>${tabs}`;
+}
+
+function render() {
+  root.innerHTML = view(location.pathname);
+}
+
+root.addEventListener('click', (event) => {
+  const anchor = event.target.closest('a[href]');
+  if (!anchor || anchor.target === '_blank') return;
+  window.__reached = (window.__reached || []).concat(anchor.id || anchor.getAttribute('href'));
+  if (anchor.getAttribute('href').startsWith('javascript:')) return;
+  event.preventDefault();
+  history.pushState({}, '', anchor.getAttribute('href'));
+  render();
+});
+window.addEventListener('popstate', render);
+render();
+</script>
+</body>
+</html>

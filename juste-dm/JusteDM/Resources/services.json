@@ -1,0 +1,89 @@
+{
+  "version": 1,
+  "services": [
+    {
+      "id": "instagram",
+      "name": "Instagram",
+      "home": "https://www.instagram.com/direct/inbox/",
+      "login": "https://www.instagram.com/accounts/login/?next=%2Fdirect%2Finbox%2F",
+      "sessionCookie": { "name": "sessionid", "domain": "instagram.com" },
+      "hosts": ["www.instagram.com", "instagram.com"],
+      "deny": [
+        "^/accounts/activity(/|$)"
+      ],
+      "messaging": [
+        "^/direct(/|$)"
+      ],
+      "auth": [
+        "^/accounts(/|$)",
+        "^/challenge(/|$)",
+        "^/auth_platform(/|$)",
+        "^/two_factor(/|$)",
+        "^/checkpoint(/|$)",
+        "^/consent(/|$)",
+        "^/privacy/checks(/|$)",
+        "^/legal(/|$)",
+        "^/terms(/|$)",
+        "^/oauth(/|$)",
+        "^/fxcal(/|$)"
+      ],
+      "shared": [
+        "^/(?:[^/]+/)?(?:p|reel|reels|tv)/([^/?#]+)",
+        "^/stories/([^/?#]+)",
+        "^/share/([^?#]+)"
+      ],
+      "extraHosts": [
+        {
+          "hosts": ["accountscenter.instagram.com"],
+          "allow": ["^/"]
+        },
+        {
+          "hosts": ["www.facebook.com", "m.facebook.com"],
+          "allow": [
+            "^/login",
+            "^/dialog/",
+            "^/v[0-9.]+/dialog/",
+            "^/oauth",
+            "^/checkpoint",
+            "^/two_step_verification",
+            "^/two_factor",
+            "^/privacy/consent",
+            "^/cookie/consent",
+            "^/recover",
+            "^/auth_platform"
+          ]
+        }
+      ],
+      "redirectors": [
+        { "host": "l.instagram.com", "param": "u" }
+      ],
+      "blockedHosts": [
+        "apps.apple.com",
+        "itunes.apple.com",
+        "threads.net",
+        "www.threads.net",
+        "threads.com",
+        "www.threads.com"
+      ],
+      "immersive": [
+        "^/direct/t/"
+      ],
+      "hide": [
+        "a[href='/']",
+        "a[href='/explore/']",
+        "a[href='/reels/']",
+        "a[href^='/accounts/activity']",
+        "a[href*='apps.apple.com']",
+        "a[href*='itunes.apple.com']",
+        "a[href^='instagram://']",
+        "a[href*='threads.net']",
+        "a[href*='threads.com']"
+      ],
+      "navLinks": [
+        "a[href='/']",
+        "a[href='/explore/']",
+        "a[href='/reels/']"
+      ]
+    }
+  ]
+}
