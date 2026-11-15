@@ -82,6 +82,26 @@ jobs:
           path: ${{ runner.temp }}/ipa/JusteDM-non-signe.ipa
           if-no-files-found: error
 
+  navigateur:
+    name: Scripts dans WebKit
+    runs-on: macos-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: juste-dm
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Installation de Playwright et de WebKit
+        run: |
+          npm install --no-save --no-package-lock playwright
+          npx playwright install webkit
+
+      # guard.js et le script pour Safari, sur une maquette de messagerie, dans le moteur
+      # de Safari. Rien ne sort sur le réseau.
+      - name: Scripts dans WebKit
+        run: JUSTEDM_BROWSER=webkit node --test tests/browser/*.test.js
+
   simulateur:
     name: Lancement dans le simulateur
     runs-on: macos-latest

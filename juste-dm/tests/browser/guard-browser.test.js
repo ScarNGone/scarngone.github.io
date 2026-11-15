@@ -9,11 +9,13 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 
-let chromium = null;
+// Moteur de navigateur : chromium par défaut, webkit (le moteur de Safari) avec JUSTEDM_BROWSER=webkit.
+const engine = process.env.JUSTEDM_BROWSER || 'chromium';
+let browserType = null;
 try {
-  ({ chromium } = require('playwright'));
+  browserType = require('playwright')[engine] || null;
 } catch (error) {
-  chromium = null;
+  browserType = null;
 }
 
 const root = path.join(__dirname, '..', '..');
@@ -55,8 +57,8 @@ const isShown = (page, selector) => page.locator(selector).first().isVisible();
 const blocked = (page) => page.evaluate(() => window.__messages.filter((m) => m.type === 'blocked').map((m) => new URL(m.url).pathname));
 const reached = (page) => page.evaluate(() => window.__reached || []);
 
-test('guard.js dans un navigateur', { skip: chromium ? false : 'Playwright absent' }, async (t) => {
-  const browser = await chromium.launch();
+test(`guard.js dans un navigateur (${engine})`, { skip: browserType ? false : 'Playwright absent' }, async (t) => {
+  const browser = await browserType.launch();
   t.after(() => browser.close());
 
   await t.test('boîte de réception : les menus disparaissent, la messagerie reste', async () => {

@@ -178,8 +178,10 @@ function install(win, config) {
     try {
       win.webkit.messageHandlers[config.handler].postMessage(message);
     } catch (error) {
-      // Hors de l'app (tests dans un navigateur) : personne à prévenir.
+      // Hors de l'app : pas de canal vers du code natif.
     }
+    // Dans Safari, c'est le script lui-même qui affiche le message (voir userscript/standalone.js).
+    if (typeof config.onMessage === 'function') config.onMessage(message);
   }
 
   // 1. Clics
@@ -317,10 +319,16 @@ function install(win, config) {
     win.addEventListener('load', schedule);
   }
 
+  // Selon le navigateur, le script peut démarrer avant que la page ait sa balise <html>.
   if (doc.documentElement) {
     start();
   } else {
-    doc.addEventListener('DOMContentLoaded', start, { once: true });
+    var rootObserver = new win.MutationObserver(function () {
+      if (!doc.documentElement) return;
+      rootObserver.disconnect();
+      start();
+    });
+    rootObserver.observe(doc, { childList: true });
   }
 }
 

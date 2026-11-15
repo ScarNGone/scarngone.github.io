@@ -4,6 +4,13 @@ Une app iPhone qui ouvre la messagerie d'Instagram et bloque le reste du site : 
 
 L'app est prévue pour accueillir d'autres réseaux plus tard. Pour l'instant, seul Instagram est décrit.
 
+Le même blocage existe en deux formes :
+
+| Forme | Coût | Ce qu'il faut |
+| --- | --- | --- |
+| [Un script pour Safari](#dans-safari-avec-un-iphone-seul) | Gratuit | Un iPhone, rien d'autre |
+| [L'app](#installer-lapp-sur-liphone) | Gratuit avec un ordinateur, 99 € par an sans | Un Mac ou un PC pour l'installer, ou un compte développeur Apple |
+
 ## Ce que fait l'app
 
 Au lancement, JusteDM affiche la boîte de réception d'Instagram. La première fois, c'est la page de connexion d'Instagram qui apparaît : on s'y connecte comme dans Safari.
@@ -31,9 +38,28 @@ Trois filets se complètent :
 2. chaque changement d'adresse sans rechargement (le site est une application monopage) est rattrapé et annulé ;
 3. un script, `guard.js`, arrête les clics refusés avant que le site ne réagisse et cache les menus qui mènent hors de la messagerie.
 
+## Dans Safari, avec un iPhone seul
+
+Le script applique à Instagram, dans Safari, les mêmes règles que l'app. Il ne demande ni ordinateur ni compte payant.
+
+1. Installer l'app gratuite [Userscripts](https://apps.apple.com/app/userscripts/id1463298887) depuis l'App Store. Elle ajoute à Safari une extension qui exécute des scripts.
+2. Ouvrir **Réglages > Apps > Safari > Extensions > Userscripts**. Activer l'extension, puis choisir **Autoriser** pour `instagram.com`.
+3. Dans Safari, ouvrir [le script](https://github.com/ScarNGone/scarngone.github.io/raw/refs/heads/claude/exciting-rubin-sfhu46/juste-dm/userscript/justedm.user.js). Toucher le bouton de menu de la barre d'adresse, puis **Userscripts** : l'extension propose d'installer le script.
+4. Ouvrir `https://www.instagram.com/direct/inbox/` et se connecter.
+5. Pour une icône sur l'écran d'accueil : bouton de partage, **Sur l'écran d'accueil**, en désactivant l'ouverture comme app web. Une app web n'exécute pas les extensions de Safari, le blocage n'y fonctionnerait donc pas.
+6. Supprimer l'app Instagram de l'iPhone.
+
+Toute adresse hors messagerie, tapée ou touchée, ramène à la boîte de réception.
+
+Ce que cette forme a de moins que l'app :
+
+- le blocage tient tant que l'extension est active dans Safari. La désactiver, ou ouvrir Instagram dans un autre navigateur, rend le site entier ;
+- pas de réglages : les contenus reçus s'ouvrent, les menus sont masqués ;
+- pas d'essai automatique sur iPhone : le script est vérifié dans le moteur de Safari, sur une maquette.
+
 ## Installer l'app sur l'iPhone
 
-Apple n'autorise l'installation d'une app hors App Store que si elle est signée avec un identifiant Apple. Il faut donc un ordinateur pour la première installation.
+Apple n'autorise l'installation d'une app hors App Store que si elle est signée avec un identifiant Apple. Il faut donc un ordinateur pour la première installation, ou un compte développeur Apple payant.
 
 ### Avec un Mac
 
@@ -57,6 +83,10 @@ Ces outils sont indépendants de ce projet. Ils demandent l'identifiant Apple po
 ### Durée de validité
 
 Avec un identifiant Apple gratuit, l'app fonctionne 7 jours, puis il faut la réinstaller (relancer depuis Xcode, ou laisser AltStore la renouveler en Wi-Fi). La session Instagram est conservée d'une installation à l'autre. Avec un compte développeur Apple payant (99 € par an), la validité passe à un an.
+
+### Sans ordinateur
+
+Un compte développeur Apple permet de recevoir l'app par TestFlight, sans ordinateur : GitHub la compile, la signe et l'envoie à Apple. Cette voie n'est pas encore en place dans ce dépôt.
 
 ## Utiliser l'app
 
@@ -89,14 +119,15 @@ Deux messages peuvent remplacer la page :
 
 ## Vérifications automatiques
 
-À chaque envoi de code, GitHub lance quatre vérifications :
+À chaque envoi de code, GitHub lance cinq vérifications :
 
 1. les règles de navigation passent une soixantaine de cas de test, en JavaScript et en Swift ;
 2. l'app est compilée pour iPhone ;
 3. chaque méthode que l'app fournit à iOS est reconnue par le SDK. Une méthode mal nommée serait ignorée sans erreur ; c'est arrivé une fois pendant l'écriture, pour l'accès au micro ;
-4. l'app est lancée dans un simulateur d'iPhone, face au vrai site et sans compte. Elle y tente quatre sorties de la messagerie, par un clic, par deux changements d'adresse sans rechargement et par une navigation en script. Chacune doit être arrêtée.
+4. `guard.js` et le script pour Safari tournent dans WebKit, le moteur de Safari, sur une maquette de messagerie ;
+5. l'app est lancée dans un simulateur d'iPhone, face au vrai site et sans compte. Elle y tente quatre sorties de la messagerie, par un clic, par deux changements d'adresse sans rechargement et par une navigation en script. Chacune doit être arrêtée.
 
-Instagram répond par une page vide aux machines de GitHub (code 429). La quatrième vérification montre donc que les blocages tiennent dans le vrai moteur web d'iOS, sans montrer la page de connexion elle-même.
+Instagram répond par une page vide aux machines de GitHub (code 429). La cinquième vérification montre donc que les blocages tiennent dans le vrai moteur web d'iOS, sans montrer la page de connexion elle-même.
 
 ## Ajouter un réseau
 
@@ -125,8 +156,9 @@ L'app affiche pour l'instant le premier réseau du fichier. Le choix entre plusi
 JusteDM/            app iPhone (UIKit, WKWebView, réglages en SwiftUI)
   Resources/        services.json, guard.js, icône
 Core/               règles de navigation, sans dépendance à l'interface
+userscript/         script pour Safari : standalone.js et le fichier assemblé
 tests/              cas de test communs à Swift et à JavaScript
-scripts/            génération du projet Xcode et de l'icône
+scripts/            génération du projet Xcode, de l'icône et du script pour Safari
 ```
 
 Les règles existent en deux versions, `NavigationPolicy.swift` pour l'app et `createPolicy` dans `guard.js` pour la page. Les deux sont vérifiées avec les mêmes cas, dans `tests/policy-vectors.json`.
@@ -138,8 +170,12 @@ node --test tests/*.test.js
 # Règles, version Swift (macOS)
 swift test --package-path Core
 
-# Script dans un navigateur, sur la maquette (demande Playwright)
-node --test tests/browser/guard-browser.test.js
+# Scripts dans un navigateur, sur la maquette (demande Playwright)
+node --test tests/browser/*.test.js
+JUSTEDM_BROWSER=webkit node --test tests/browser/*.test.js
+
+# Après avoir modifié guard.js, standalone.js ou services.json
+node scripts/build_userscript.js
 
 # Essai dans un simulateur d'iPhone (macOS, après une compilation Debug pour le simulateur)
 scripts/simulator_smoke_test.sh chemin/vers/JusteDM.app dossier_de_sortie
