@@ -44,6 +44,9 @@ final class MessagingViewController: UIViewController {
     private var lastRefused: URL?
     private var lastHandledBlock: (url: URL, date: Date)?
     private var recentRecoveries: [Date] = []
+    #if DEBUG
+    private var selfTestStarted = false
+    #endif
 
     init(service: Service, settings: AppSettings) {
         guard let home = URL(string: service.home),
@@ -313,7 +316,9 @@ final class MessagingViewController: UIViewController {
     /// Applique les règles à l'adresse réellement affichée.
     private func adopt(_ url: URL) {
         if url == context { return }
-        switch decide(url) {
+        let decision = decide(url)
+        trace("adresse affichée \(url.absoluteString) : \(decision)")
+        switch decision {
         case .allow(let kind):
             if kind != .neutral {
                 context = url
@@ -333,6 +338,7 @@ final class MessagingViewController: UIViewController {
         toast.show(Self.blockedMessage)
 
         if let context, let back = webView.backForwardList.backItem, back.url == context {
+            trace("retour à la page précédente")
             webView.goBack()
         } else {
             recover()
@@ -347,6 +353,7 @@ final class MessagingViewController: UIViewController {
         recentRecoveries.append(now)
         guard recentRecoveries.count <= 3 else {
             recentRecoveries.removeAll()
+            trace("renvois en boucle, arrêt")
             showLoopNotice()
             return
         }
@@ -354,6 +361,7 @@ final class MessagingViewController: UIViewController {
         Task { [weak self] in
             guard let self else { return }
             let signedIn = await self.hasSession()
+            self.trace("retour forcé vers \(signedIn ? "la messagerie" : "la connexion")")
             self.load(signedIn ? self.homeURL : self.loginURL)
         }
     }
@@ -462,8 +470,10 @@ extension MessagingViewController: WKNavigationDelegate {
 
         let opensNewWindow = navigationAction.targetFrame == nil
         let userInitiated = navigationAction.navigationType == .linkActivated || opensNewWindow
+        let decision = decide(url)
+        trace("demande \(url.absoluteString)\(userInitiated ? " (clic)" : "") : \(decision)")
 
-        switch decide(url) {
+        switch decision {
         case .allow(let kind):
             if opensNewWindow {
                 // Pas de deuxième fenêtre : la page remplace la page courante.
@@ -509,6 +519,10 @@ extension MessagingViewController: WKNavigationDelegate {
         if let url = webView.url {
             adopt(url)
         }
+        trace("page chargée \(webView.url?.absoluteString ?? "sans adresse")")
+        #if DEBUG
+        runSelfTestIfRequested()
+        #endif
     }
 
     func webView(
@@ -521,6 +535,7 @@ extension MessagingViewController: WKNavigationDelegate {
         // Annulations provoquées par nos propres refus ou par un chargement plus récent.
         if failure.domain == NSURLErrorDomain, failure.code == NSURLErrorCancelled { return }
         if failure.domain == "WebKitErrorDomain", failure.code == 102 { return }
+        trace("échec du chargement : \(failure.localizedDescription)")
         showFailureNotice(failure.localizedDescription)
     }
 
@@ -610,6 +625,93 @@ extension MessagingViewController: WKScriptMessageHandler {
               let body = message.body as? [String: Any],
               body["type"] as? String == "blocked"
         else { return }
+        trace("clic refusé par guard.js : \(body["url"] as? String ?? "")")
         toast.show(Self.blockedMessage)
     }
 }
+
+// MARK: - Mise au point
+
+extension MessagingViewController {
+    /// Écrit dans la console de Xcode. Absent des versions installées pour de bon.
+    private func trace(_ message: @autoclosure () -> String) {
+        #if DEBUG
+        print("JusteDM | \(message())")
+        #endif
+    }
+}
+
+#if DEBUG
+extension MessagingViewController {
+    /// Essai automatique, lancé avec l'argument `-JusteDMSelfTest`. Il vérifie dans le vrai
+    /// moteur web que chacun des trois filets retient une navigation vers une page refusée.
+    private func runSelfTestIfRequested() {
+        guard !selfTestStarted, ProcessInfo.processInfo.arguments.contains("-JusteDMSelfTest") else { return }
+        selfTestStarted = true
+
+        Task { [weak self] in
+            guard let self else { return }
+            let pause: UInt64 = 1_000_000_000
+
+            try? await Task.sleep(nanoseconds: 3 * pause)
+            await self.probe("départ")
+
+            self.trace("essai 1 : clic sur un lien refusé")
+            let click = "var a = document.createElement('a'); a.href = '/explore/'; a.textContent = 'essai';"
+                + " document.body.appendChild(a); a.click(); a.remove(); location.pathname"
+            let afterClick = await self.evaluate(click, in: .page)
+            self.trace("essai 1, adresse juste après : \(afterClick)")
+            try? await Task.sleep(nanoseconds: 4 * pause)
+            await self.probe("après l'essai 1")
+
+            self.trace("essai 2 : changement d'adresse sans rechargement")
+            let push = "history.pushState({}, '', '/explore/'); location.pathname"
+            let afterPush = await self.evaluate(push, in: .page)
+            self.trace("essai 2, adresse juste après : \(afterPush)")
+            try? await Task.sleep(nanoseconds: 4 * pause)
+            await self.probe("après l'essai 2")
+
+            self.trace("essai 3 : navigation par script")
+            _ = await self.evaluate("location.href = '/explore/'; 1", in: .page)
+            try? await Task.sleep(nanoseconds: 12 * pause)
+            await self.probe("après l'essai 3")
+
+            self.trace("essai terminé")
+        }
+    }
+
+    /// Résume l'état de la page vue par guard.js.
+    private func probe(_ label: String) async {
+        let script = """
+        (function () {
+          var hidden = Array.from(document.querySelectorAll('[data-justedm-hidden]')).map(function (e) {
+            return e.tagName.toLowerCase() + ' ' + (e.getAttribute('href') || '');
+          });
+          return JSON.stringify({
+            adresse: location.href,
+            titre: document.title,
+            navigateur: navigator.userAgent,
+            largeur: window.innerWidth,
+            liens: document.querySelectorAll('a[href]').length,
+            caches: hidden
+          });
+        })()
+        """
+        let summary = await evaluate(script, in: .defaultClient)
+        trace("\(label) : \(summary)")
+    }
+
+    private func evaluate(_ script: String, in world: WKContentWorld) async -> String {
+        await withCheckedContinuation { (continuation: CheckedContinuation<String, Never>) in
+            webView.evaluateJavaScript(script, in: nil, in: world) { result in
+                switch result {
+                case .success(let value):
+                    continuation.resume(returning: String(describing: value))
+                case .failure(let error):
+                    continuation.resume(returning: "erreur : \(error.localizedDescription)")
+                }
+            }
+        }
+    }
+}
+#endif

@@ -81,3 +81,50 @@ jobs:
           name: JusteDM-non-signe
           path: ${{ runner.temp }}/ipa/JusteDM-non-signe.ipa
           if-no-files-found: error
+
+  simulateur:
+    name: Lancement dans le simulateur
+    runs-on: macos-latest
+    timeout-minutes: 30
+    # Cet essai charge la vraie page de connexion du réseau. Il peut échouer pour une
+    # raison extérieure au code : il ne bloque donc pas le reste.
+    continue-on-error: true
+    defaults:
+      run:
+        working-directory: juste-dm
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Compilation pour le simulateur
+        run: |
+          set -o pipefail
+          xcodebuild \
+            -quiet \
+            -project JusteDM.xcodeproj \
+            -scheme JusteDM \
+            -configuration Debug \
+            -sdk iphonesimulator \
+            -destination 'generic/platform=iOS Simulator' \
+            -derivedDataPath "$RUNNER_TEMP/derived" \
+            build
+
+      - name: Lancement et essai automatique
+        run: |
+          scripts/simulator_smoke_test.sh \
+            "$RUNNER_TEMP/derived/Build/Products/Debug-iphonesimulator/JusteDM.app" \
+            "$RUNNER_TEMP/essai"
+
+      - name: Texte visible à l'écran
+        if: always()
+        run: |
+          for capture in "$RUNNER_TEMP"/essai/*.png; do
+            echo "===== $(basename "$capture") ====="
+            swift scripts/ocr.swift "$capture" || true
+          done
+
+      - uses: actions/upload-artifact@v7
+        if: always()
+        with:
+          name: essai-simulateur
+          path: ${{ runner.temp }}/essai
+          if-no-files-found: warn
