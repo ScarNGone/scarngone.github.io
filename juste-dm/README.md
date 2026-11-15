@@ -1,6 +1,6 @@
 # JusteDM
 
-Une app iPhone qui ouvre la messagerie d'Instagram et bloque le reste du site : fil, reels, recherche, profils. On y lit ses messages et on y répond, sans passer par le reste.
+Une app iPhone qui ouvre la messagerie d'Instagram et bloque le reste du site : fil, reels, recherche, profils. On y lit ses messages et on y répond, rien de plus.
 
 L'app est prévue pour accueillir d'autres réseaux plus tard. Pour l'instant, seul Instagram est décrit.
 
@@ -48,7 +48,7 @@ Apple n'autorise l'installation d'une app hors App Store que si elle est signée
 
 Chaque envoi de code sur GitHub compile l'app et produit un fichier `.ipa` non signé.
 
-1. Sur GitHub, ouvrir l'onglet **Actions**, cliquer sur la dernière exécution réussie de **JusteDM** et télécharger l'artefact **JusteDM-non-signe**. Le fichier `.zip` obtenu contient `JusteDM-non-signe.ipa`.
+1. Sur GitHub, connecté à son compte, ouvrir l'onglet **Actions**, cliquer sur la dernière exécution réussie de **JusteDM** et télécharger l'artefact **JusteDM-non-signe** en bas de la page. Le fichier `.zip` obtenu contient `JusteDM-non-signe.ipa`.
 2. Installer ce fichier sur l'iPhone depuis un PC Windows ou un Mac avec [Sideloadly](https://sideloadly.io) ou [AltStore](https://altstore.io). Ces deux outils signent l'app avec votre identifiant Apple puis l'installent. Leurs sites détaillent la marche à suivre.
 3. Sur l'iPhone, activer le mode développeur et faire confiance au certificat, comme à l'étape 6 ci-dessus.
 
