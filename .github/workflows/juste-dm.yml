@@ -1,0 +1,83 @@
+name: JusteDM
+
+# Teste les règles de navigation, compile l'app iPhone et publie un fichier .ipa non signé,
+# à installer avec Sideloadly ou AltStore quand on n'a pas de Mac.
+
+on:
+  push:
+    paths:
+      - 'juste-dm/**'
+      - '.github/workflows/juste-dm.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: juste-dm-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Tests et app iPhone
+    runs-on: macos-latest
+    timeout-minutes: 30
+    defaults:
+      run:
+        working-directory: juste-dm
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Outils disponibles
+        run: |
+          sw_vers
+          xcodebuild -version
+          swift --version
+          node --version
+
+      - name: Tests des règles (JavaScript)
+        run: node --test tests/*.test.js
+
+      - name: Tests des règles (Swift)
+        run: swift test --package-path Core
+
+      - name: Compilation de l'app
+        run: |
+          set -o pipefail
+          xcodebuild \
+            -quiet \
+            -project JusteDM.xcodeproj \
+            -scheme JusteDM \
+            -configuration Release \
+            -sdk iphoneos \
+            -destination 'generic/platform=iOS' \
+            -derivedDataPath "$RUNNER_TEMP/derived" \
+            CODE_SIGNING_ALLOWED=NO \
+            build 2>&1 | tee "$RUNNER_TEMP/build.log"
+
+      - name: Signatures des méthodes déléguées
+        run: |
+          # Une méthode déléguée dont la signature ne correspond plus au SDK n'est jamais
+          # appelée, sans erreur de compilation. Le compilateur le signale par cet avertissement.
+          if grep -n "nearly matches" "$RUNNER_TEMP/build.log"; then
+            echo "::error::Une méthode déléguée ne correspond plus au SDK"
+            exit 1
+          fi
+
+      - name: Fichier .ipa non signé
+        run: |
+          app="$RUNNER_TEMP/derived/Build/Products/Release-iphoneos/JusteDM.app"
+          test -d "$app"
+          test -f "$app/guard.js"
+          test -f "$app/services.json"
+          mkdir -p "$RUNNER_TEMP/ipa/Payload"
+          cp -R "$app" "$RUNNER_TEMP/ipa/Payload/"
+          cd "$RUNNER_TEMP/ipa"
+          zip -qry JusteDM-non-signe.ipa Payload
+          ls -la
+
+      - uses: actions/upload-artifact@v7
+        with:
+          name: JusteDM-non-signe
+          path: ${{ runner.temp }}/ipa/JusteDM-non-signe.ipa
+          if-no-files-found: error
