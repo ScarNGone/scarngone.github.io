@@ -74,15 +74,29 @@ Réglages disponibles :
 - **Masquer les menus du site** : cache les boutons d'Instagram qui mènent hors de la messagerie. À désactiver si un élément utile disparaît. Le blocage des pages reste actif dans les deux cas ;
 - **Se déconnecter** : efface les cookies et les données du site enregistrés dans l'app.
 
-Si Instagram renvoie plusieurs fois de suite vers une page bloquée (une étape de vérification inconnue des règles, par exemple), l'app s'arrête et affiche l'adresse en cause. Le bouton **Afficher quand même cette page** l'autorise jusqu'à la fermeture de l'app. Cette adresse est alors à ajouter dans `services.json`.
+Deux messages peuvent remplacer la page :
+
+- **« Instagram renvoie vers une autre page »** : le site insiste pour afficher une page bloquée, par exemple une étape de vérification inconnue des règles. L'app s'arrête et affiche l'adresse en cause. Le bouton **Afficher quand même cette page** l'autorise jusqu'à la fermeture de l'app. Cette adresse est alors à ajouter dans `services.json`.
+- **« La messagerie ne s'affiche pas »** : la page n'a pas pu se charger, ou Instagram a renvoyé une page vide. Cela arrive quand le site limite une connexion pendant quelques minutes, souvent derrière un VPN.
 
 ## Limites connues
 
 - **Pas de notifications.** Une app de ce type ne reçoit pas les notifications d'Instagram. On voit ses messages en ouvrant l'app.
-- **Testée sur une maquette, pas encore sur le vrai site.** Les règles de navigation sont vérifiées par des tests automatiques, et le script est testé dans un navigateur sur une page qui imite la structure d'Instagram. Le masquage des menus repose sur les adresses des liens d'Instagram : il peut demander un ajustement au premier essai réel.
+- **Pas encore essayée avec un compte connecté.** Le blocage des pages est vérifié automatiquement, y compris dans un simulateur d'iPhone face au vrai site (voir plus bas). Restent à voir sur un vrai téléphone : la connexion elle-même et le masquage des menus. Ce masquage repose sur les adresses des liens d'Instagram et a été mis au point sur une maquette : il peut demander un ajustement au premier essai réel.
 - **Dépendance au site d'Instagram.** Si Instagram change ses adresses ou son site mobile, il faudra adapter `services.json`.
 - **Fonctions du site mobile.** L'app offre ce que le site mobile d'Instagram offre dans un navigateur. Les appels et certains formats de message peuvent y être absents.
 - **App non officielle.** JusteDM n'est pas affiliée à Instagram ni à Meta.
+
+## Vérifications automatiques
+
+À chaque envoi de code, GitHub lance quatre vérifications :
+
+1. les règles de navigation passent une soixantaine de cas de test, en JavaScript et en Swift ;
+2. l'app est compilée pour iPhone ;
+3. chaque méthode que l'app fournit à iOS est reconnue par le SDK. Une méthode mal nommée serait ignorée sans erreur ; c'est arrivé une fois pendant l'écriture, pour l'accès au micro ;
+4. l'app est lancée dans un simulateur d'iPhone, face au vrai site et sans compte. Elle y tente quatre sorties de la messagerie, par un clic, par deux changements d'adresse sans rechargement et par une navigation en script. Chacune doit être arrêtée.
+
+Instagram répond par une page vide aux machines de GitHub (code 429). La quatrième vérification montre donc que les blocages tiennent dans le vrai moteur web d'iOS, sans montrer la page de connexion elle-même.
 
 ## Ajouter un réseau
 
@@ -126,6 +140,9 @@ swift test --package-path Core
 
 # Script dans un navigateur, sur la maquette (demande Playwright)
 node --test tests/browser/guard-browser.test.js
+
+# Essai dans un simulateur d'iPhone (macOS, après une compilation Debug pour le simulateur)
+scripts/simulator_smoke_test.sh chemin/vers/JusteDM.app dossier_de_sortie
 
 # Après avoir ajouté ou retiré un fichier source
 gem install xcodeproj

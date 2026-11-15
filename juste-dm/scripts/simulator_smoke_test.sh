@@ -29,7 +29,7 @@ echo "Simulateur choisi :"
 xcrun simctl list devices available | grep "$udid" || echo "$udid"
 
 xcrun simctl boot "$udid" || true
-xcrun simctl bootstatus "$udid" -b
+xcrun simctl bootstatus "$udid" -b > /dev/null
 xcrun simctl install "$udid" "$app"
 
 xcrun simctl launch --console-pty "$udid" "$bundle" \
@@ -39,7 +39,7 @@ launcher=$!
 
 sleep 15
 xcrun simctl io "$udid" screenshot "$out/1-ouverture.png"
-sleep 60
+sleep 70
 xcrun simctl io "$udid" screenshot "$out/2-apres-essai.png"
 
 xcrun simctl terminate "$udid" "$bundle" || true
@@ -50,7 +50,19 @@ echo "===== Journal de l'app ====="
 cat "$out/journal.txt"
 echo "===== Fin du journal ====="
 
-if ! grep -q "essai terminé" "$out/journal.txt"; then
-  echo "L'essai automatique n'est pas allé au bout."
-  exit 1
-fi
+# Chaque filet doit avoir laissé sa trace, quelle que soit la page servie par le site.
+failed=0
+expect() {
+  if grep -q "$1" "$out/journal.txt"; then
+    echo "OK      $2"
+  else
+    echo "ABSENT  $2"
+    failed=1
+  fi
+}
+expect "clic refusé par guard.js" "le script arrête un clic vers une page refusée"
+expect "retour à la page précédente" "un changement d'adresse sans rechargement est annulé"
+expect "demande https://www.instagram.com/explore/ : block" "une navigation par script est refusée"
+expect "retour forcé vers" "l'app revient d'elle-même sur une page autorisée"
+expect "essai terminé" "l'essai est allé au bout"
+exit "$failed"

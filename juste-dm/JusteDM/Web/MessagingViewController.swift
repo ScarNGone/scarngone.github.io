@@ -42,7 +42,8 @@ final class MessagingViewController: UIViewController {
     /// Chemins que l'utilisateur a choisi d'afficher malgré les règles, jusqu'à la fermeture de l'app.
     private var exceptions = Set<String>()
     private var lastRefused: URL?
-    private var lastHandledBlock: (url: URL, date: Date)?
+    /// Page refusée que l'app est en train de quitter.
+    private var leavingURL: URL?
     private var recentRecoveries: [Date] = []
     /// Code de réponse de la dernière page reçue.
     private var pageStatus: Int?
@@ -307,6 +308,9 @@ final class MessagingViewController: UIViewController {
     private func currentURLDidChange() {
         updateChrome()
         guard let url = webView.url else { return }
+        if url != leavingURL {
+            leavingURL = nil
+        }
         if url == pendingURL {
             // Chargement accepté et encore en cours : on attend qu'il aboutisse.
             if webView.isLoading { return }
@@ -332,16 +336,21 @@ final class MessagingViewController: UIViewController {
 
     /// Le site a changé d'adresse sans rechargement, vers une page refusée.
     private func leaveBlockedPage(_ url: URL) {
-        if let last = lastHandledBlock, last.url == url, Date().timeIntervalSince(last.date) < 2 {
-            return
-        }
-        lastHandledBlock = (url, Date())
+        // L'observation, didCommit et didFinish peuvent signaler la même page : une seule sortie.
+        if leavingURL == url { return }
+        leavingURL = url
         lastRefused = url
         toast.show(Self.blockedMessage)
 
         if let context, let back = webView.backForwardList.backItem, back.url == context {
             trace("retour à la page précédente")
             webView.goBack()
+            // Si le retour n'a pas eu lieu, on recharge une page sûre.
+            Task { [weak self] in
+                try? await Task.sleep(nanoseconds: 1_500_000_000)
+                guard let self, self.leavingURL == url, self.webView.url == url else { return }
+                self.recover()
+            }
         } else {
             recover()
         }
@@ -525,8 +534,9 @@ extension MessagingViewController: WKNavigationDelegate {
         case .block:
             if userInitiated {
                 toast.show(Self.blockedMessage)
-            } else if policy.ownsHost(of: url) {
+            } else if policy.ownsHost(of: url), leavingURL != url {
                 // Redirection du site vers une page refusée : la page courante n'est plus fiable.
+                // Si l'observation de l'adresse l'a vue en premier, la sortie est déjà engagée.
                 lastRefused = url
                 recover()
             }
@@ -689,7 +699,8 @@ extension MessagingViewController {
 #if DEBUG
 extension MessagingViewController {
     /// Essai automatique, lancé avec l'argument `-JusteDMSelfTest`. Il vérifie dans le vrai
-    /// moteur web que chacun des trois filets retient une navigation vers une page refusée.
+    /// moteur web que chacun des trois filets retient une navigation vers une page refusée :
+    /// un clic, deux changements d'adresse sans rechargement et une navigation par script.
     private func runSelfTestIfRequested() {
         guard !selfTestStarted, ProcessInfo.processInfo.arguments.contains("-JusteDMSelfTest") else { return }
         selfTestStarted = true
@@ -720,6 +731,13 @@ extension MessagingViewController {
             _ = await self.evaluate("location.href = '/explore/'; 1", in: .page)
             try? await Task.sleep(nanoseconds: 12 * pause)
             await self.probe("après l'essai 3")
+
+            self.trace("essai 4 : adresse remplacée sans rechargement")
+            let replace = "history.replaceState({}, '', '/reels/'); location.pathname"
+            let afterReplace = await self.evaluate(replace, in: .page)
+            self.trace("essai 4, adresse juste après : \(afterReplace)")
+            try? await Task.sleep(nanoseconds: 12 * pause)
+            await self.probe("après l'essai 4")
 
             self.trace("essai terminé")
         }
