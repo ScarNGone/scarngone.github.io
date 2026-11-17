@@ -1,7 +1,13 @@
-const DEPTS = {"01": "Ain", "03": "Allier", "07": "Ardèche", "15": "Cantal", "26": "Drôme", "38": "Isère", "42": "Loire", "43": "Haute-Loire", "63": "Puy-de-Dôme", "69": "Rhône", "73": "Savoie", "74": "Haute-Savoie"};
+const REGIONS = {
+  '84': {code:'84', short:'ARA', name:'Auvergne-Rhône-Alpes', depts:{"01": "Ain", "03": "Allier", "07": "Ardèche", "15": "Cantal", "26": "Drôme", "38": "Isère", "42": "Loire", "43": "Haute-Loire", "63": "Puy-de-Dôme", "69": "Rhône", "73": "Savoie", "74": "Haute-Savoie"}},
+  '11': {code:'11', short:'IDF', name:'Île-de-France', depts:{"75": "Paris", "77": "Seine-et-Marne", "78": "Yvelines", "91": "Essonne", "92": "Hauts-de-Seine", "93": "Seine-Saint-Denis", "94": "Val-de-Marne", "95": "Val-d'Oise"}},
+};
+const DEFAULT_REGION = '84';
+const REGION_LIST = ['84','11'].map(c => REGIONS[c]);
+const DEPTS = Object.assign({}, ...Object.values(REGIONS).map(r => r.depts));
+const DEPT_REGION = {}; Object.values(REGIONS).forEach(r => Object.keys(r.depts).forEach(d => DEPT_REGION[d] = r.code));
 let GEO = null;
 let COMMUNES = []; // [nom, dept, lat, lng, population]
-const REGION = {code:'84', name:'Auvergne-Rhône-Alpes'};
 
 const STYLE_GROUPS = [
   {key:'salsa', label:'Salsa', match:['salsa','salsa cubaine','salsa portoricaine','timba','son','rueda']},
@@ -53,7 +59,7 @@ function recLabel(r){
 /* ---------- état ---------- */
 const saved = load('clave.v1') || {};
 const state = {
-  loc: saved.loc || {mode:'region'},
+  loc: saved.loc || {mode:'region', region: DEFAULT_REGION},
   when: saved.when || '30j',
   styles: new Set(saved.styles || []),
   types: new Set(saved.types || []),
@@ -107,6 +113,11 @@ const REC_HORIZON = () => addDays(TODAY, 84);
 
 /* ---------- lieu ---------- */
 function cityKey(e){ return norm(e.city) + '|' + e.dept_code; }
+function locRegion(){
+  const L = state.loc;
+  const r = L.mode === 'dept' ? DEPT_REGION[L.dept] : (L.mode === 'city' && L.city) ? DEPT_REGION[L.city.d] : L.region;
+  return REGIONS[r] || REGIONS[DEFAULT_REGION];
+}
 function inLoc(ev){
   const L = state.loc;
   if(L.mode === 'dept') return ev.dept_code === L.dept;
@@ -115,13 +126,14 @@ function inLoc(ev){
     if(!L.radius) return (norm(ev.city) === norm(L.city.n) && ev.dept_code === L.city.d) || d < 1.5;
     return d <= L.radius;
   }
-  return true;
+  return DEPT_REGION[ev.dept_code] === locRegion().code;
 }
 function locLabel(){
   const L = state.loc;
   if(L.mode === 'dept') return {kind:'Département', name:`${DEPTS[L.dept]} (${L.dept})`, short: DEPTS[L.dept]};
   if(L.mode === 'city' && L.city) return {kind: L.radius ? `Ville + ${L.radius} km` : 'Ville', name: L.city.n, short: L.radius ? `${L.city.n} et ${L.radius} km autour` : L.city.n};
-  return {kind:'Région', name: REGION.name, short: REGION.name};
+  const R = locRegion();
+  return {kind:'Région', name: R.name, short: R.name};
 }
 
 /* ---------- filtrage ---------- */
@@ -296,11 +308,13 @@ function initMap(){
   deptLayer = L.geoJSON(GEO, {style: deptStyle, onEachFeature: (f, layer) => layer.on('click', () => { state.mapCity = null; renderCityPanel(); })}).addTo(map);
   map.createPane('labels'); map.getPane('labels').style.zIndex = 450; map.getPane('labels').style.pointerEvents = 'none';
   map.on('zoomend', drawBubbles);
-  GEO.features.filter(f => !f.properties.metro).forEach(f => L.marker(f.properties.lab, {pane:'labels', interactive:false, keyboard:false, icon: L.divIcon({className:'', html:`<div class="dept-label">${esc(f.properties.nom)}</div>`, iconSize:[0,0]})}).addTo(map));
+  const labels = GEO.features.filter(f => !f.properties.metro).map(f => ({z: f.properties.minz || 0, m: L.marker(f.properties.lab, {pane:'labels', interactive:false, keyboard:false, icon: L.divIcon({className:'', html:`<div class="dept-label">${esc(f.properties.nom)}</div>`, iconSize:[0,0]})}).addTo(map)}));
+  const showLabels = () => { const z = map.getZoom(); labels.forEach(x => x.m.setOpacity(z >= x.z ? 1 : 0)); };
+  map.on('zoomend', showLabels);
   extraLayer = L.layerGroup().addTo(map);
   bubbleLayer = L.layerGroup().addTo(map);
   map.setMaxBounds(deptLayer.getBounds().pad(0.35));
-  fitMap();
+  fitMap(); showLabels();
 }
 function fitMap(){
   if(!map) return;
@@ -312,7 +326,10 @@ function fitMap(){
   } else if(Lc.mode === 'dept'){
     const layers = []; deptLayer.eachLayer(l => { if(l.feature.properties.code === Lc.dept) layers.push(l); });
     if(layers.length) map.fitBounds(L.featureGroup(layers).getBounds(), {padding:[12,12]});
-  } else map.fitBounds(deptLayer.getBounds(), {padding:[8,8]});
+  } else {
+    const R = locRegion(), layers = []; deptLayer.eachLayer(l => { if(DEPT_REGION[l.feature.properties.code] === R.code) layers.push(l); });
+    map.fitBounds(layers.length ? L.featureGroup(layers).getBounds() : deptLayer.getBounds(), {padding:[8,8]});
+  }
 }
 function renderMap(){
   if(!map) return;
@@ -374,19 +391,23 @@ function counts(){
 }
 function renderLoc(){
   document.querySelectorAll('#modeSeg button').forEach(b => b.setAttribute('aria-pressed', b.dataset.mode === locMode));
-  const body = $('#locBody'), {byDept, byCity} = counts(), total = Object.values(byDept).reduce((a,b)=>a+b,0);
+  const body = $('#locBody'), {byDept, byCity} = counts(), cur = locRegion();
+  const regs = [cur, ...REGION_LIST.filter(r => r !== cur)];
+  const regTotal = r => Object.keys(r.depts).reduce((a,d) => a + (byDept[d]||0), 0);
   if(locMode === 'region'){
-    body.innerHTML = `<div class="list-btns"><button class="opt" data-pick-region aria-pressed="${state.loc.mode==='region'}"><span class="code">ARA</span><span class="nm">${REGION.name}<small>12 départements · ${plural(total,'événement','événements')} à venir</small></span></button></div><p class="note">D'autres régions arriveront ensuite.</p>`;
+    body.innerHTML = `<div class="list-btns">${REGION_LIST.map(r => `<button class="opt" data-pick-region="${r.code}" aria-pressed="${state.loc.mode==='region'&&cur===r}"><span class="code">${r.short}</span><span class="nm">${esc(r.name)}<small>${Object.keys(r.depts).length} départements · ${plural(regTotal(r),'événement','événements')} à venir</small></span></button>`).join('')}</div><p class="note">D'autres régions arriveront ensuite.</p>`;
   } else if(locMode === 'dept'){
-    const codes = Object.keys(DEPTS).sort((a,b) => DEPTS[a].localeCompare(DEPTS[b], 'fr'));
-    body.innerHTML = `<div class="list-btns">${codes.map(c => `<button class="opt" data-pick-dept="${c}" aria-pressed="${state.loc.mode==='dept'&&state.loc.dept===c}"><span class="code">${c}</span><span class="nm">${esc(DEPTS[c])}</span><span class="ct">${byDept[c]?plural(byDept[c],'événement','événements'):'aucun pour l\'instant'}</span></button>`).join('')}</div>`;
+    body.innerHTML = regs.map(r => {
+      const codes = Object.keys(r.depts).sort((a,b) => DEPTS[a].localeCompare(DEPTS[b], 'fr'));
+      return `<div><p class="lbl-sm" style="margin-bottom:8px">${esc(r.name)}</p><div class="list-btns">${codes.map(c => `<button class="opt" data-pick-dept="${c}" aria-pressed="${state.loc.mode==='dept'&&state.loc.dept===c}"><span class="code">${c}</span><span class="nm">${esc(DEPTS[c])}</span><span class="ct">${byDept[c]?plural(byDept[c],'événement','événements'):'aucun pour l\'instant'}</span></button>`).join('')}</div></div>`;
+    }).join('');
   } else {
     const r = state.radiusDraft;
     body.innerHTML = `
-      <label class="search" for="citySearch"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="citySearch" type="search" placeholder="Une commune : Vienne, Chambéry, Riom…" autocomplete="off"></label>
+      <label class="search" for="citySearch"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="citySearch" type="search" placeholder="Une commune : Vienne, Chambéry, Versailles…" autocomplete="off"></label>
       <div><p class="lbl-sm" style="margin-bottom:8px">Rayon autour de la ville</p><div class="seg" id="radiusSeg">${[0,10,25,50].map(v => `<button data-radius="${v}" aria-pressed="${r===v}">${v?v+' km':'Ville seule'}</button>`).join('')}</div></div>
       <div class="list-btns" id="cityResults" hidden></div>
-      <div id="cityQuick"><p class="lbl-sm" style="margin-bottom:8px">Villes avec des événements</p><div class="list-btns">${byCity.slice(0,12).map(c => `<button class="opt" data-pick-city="${esc(c.n)}|${c.d}" aria-pressed="${state.loc.mode==='city'&&state.loc.city&&norm(state.loc.city.n)===norm(c.n)}"><span class="code">${c.d}</span><span class="nm">${esc(c.n)}</span><span class="ct">${plural(c.c,'événement','événements')}</span></button>`).join('')}</div></div>`;
+      <div id="cityQuick"><p class="lbl-sm" style="margin-bottom:8px">Villes avec des événements en ${esc(cur.name)}</p><div class="list-btns">${byCity.filter(c => DEPT_REGION[c.d] === cur.code).slice(0,12).map(c => `<button class="opt" data-pick-city="${esc(c.n)}|${c.d}" aria-pressed="${state.loc.mode==='city'&&state.loc.city&&norm(state.loc.city.n)===norm(c.n)}"><span class="code">${c.d}</span><span class="nm">${esc(c.n)}</span><span class="ct">${plural(c.c,'événement','événements')}</span></button>`).join('')}</div></div>`;
   }
 }
 function findCommune(name, dept){
@@ -402,7 +423,7 @@ function searchCities(q){
   for(const r of COMMUNES){ const nn = norm(r[0]); const i = nn.indexOf(n); if(i === -1) continue; res.push({r, score: (i===0?0:1)*1e7 - r[4]}); }
   return res.sort((a,b)=>a.score-b.score).slice(0,8).map(x => x.r);
 }
-function setLoc(loc){ state.loc = loc; state.mapCity = null; persist(); closeSheets(); renderAll(); fitMap(); }
+function setLoc(loc){ if(!loc.region) loc.region = loc.mode === 'dept' ? DEPT_REGION[loc.dept] : loc.city ? DEPT_REGION[loc.city.d] : DEFAULT_REGION; state.loc = loc; state.mapCity = null; persist(); closeSheets(); renderAll(); fitMap(); }
 
 /* ---------- feuille événement ---------- */
 function openEvent(id, date){
@@ -490,7 +511,7 @@ document.addEventListener('click', e => {
   if(t.id === 'resetBtn'){ state.styles.clear(); state.types.clear(); state.oneoff = false; state.free = false; state.q = ''; $('#q').value = ''; persist(); renderAll(); return; }
   if(t.id === 'locBtn'){ openLoc(); return; }
   if(t.dataset.mode){ locMode = t.dataset.mode; renderLoc(); return; }
-  if(t.hasAttribute('data-pick-region')){ setLoc({mode:'region'}); return; }
+  if(t.hasAttribute('data-pick-region')){ setLoc({mode:'region', region: t.dataset.pickRegion || DEFAULT_REGION}); return; }
   if(t.dataset.pickDept){ setLoc({mode:'dept', dept:t.dataset.pickDept}); return; }
   if(t.dataset.pickCity){ const [n, d] = t.dataset.pickCity.split('|'); const c = findCommune(n, d); if(c) setLoc({mode:'city', city:c, radius: state.radiusDraft}); return; }
   if(t.dataset.radius !== undefined){ state.radiusDraft = Number(t.dataset.radius); document.querySelectorAll('#radiusSeg button').forEach(b => b.setAttribute('aria-pressed', Number(b.dataset.radius) === state.radiusDraft)); if(state.loc.mode === 'city'){ state.loc.radius = state.radiusDraft; persist(); renderHeader(); renderAll(); fitMap(); } return; }
@@ -507,7 +528,7 @@ document.addEventListener('input', e => {
   const res = searchCities(e.target.value), box = $('#cityResults'), quick = $('#cityQuick');
   box.hidden = !res.length; quick.hidden = !!e.target.value.trim();
   box.innerHTML = res.map(r => `<button class="opt" data-pick-city="${esc(r[0])}|${r[1]}"><span class="code">${r[1]}</span><span class="nm">${esc(r[0])}<small>${esc(DEPTS[r[1]])}</small></span></button>`).join('');
-  if(!res.length && norm(e.target.value).length >= 2){ box.hidden = false; box.innerHTML = '<div class="opt" style="color:var(--muted)">Aucune commune trouvée en Auvergne-Rhône-Alpes.</div>'; }
+  if(!res.length && norm(e.target.value).length >= 2){ box.hidden = false; box.innerHTML = '<div class="opt" style="color:var(--muted)">Aucune commune trouvée dans les régions couvertes (Auvergne-Rhône-Alpes, Île-de-France).</div>'; }
 });
 const mq = matchMedia('(prefers-color-scheme: dark)');
 const restyle = () => { if(deptLayer){ deptLayer.setStyle(deptStyle); fitMap(); } };
