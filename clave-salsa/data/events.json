@@ -28,105 +28,6 @@
   "added_on": "2026-10-12"
  },
  {
-  "title": "Les Lundis Salsa avec DJ Carlos",
-  "type": "soirée",
-  "styles": [
-   "salsa",
-   "rueda"
-  ],
-  "date": "2026-11-16",
-  "end_date": null,
-  "start_time": "20:00",
-  "recurrence": {
-   "freq": "weekly",
-   "weekday": 1
-  },
-  "venue": "Ninkasi Cordeliers",
-  "address": "1 rue du Président Carnot, 69002 Lyon",
-  "city": "Lyon",
-  "department": "Rhône",
-  "dept_code": "69",
-  "lat": 45.7485,
-  "lng": 4.8467,
-  "geo_precision": "ville",
-  "price": "3 €, vestiaire inclus",
-  "price_min": 3,
-  "organizer": "Salsaddict / Ninkasi Cordeliers",
-  "description": "Chaque lundi, soirée salsa de 20h à 1h avec DJ Carlos. Les cours de 19h sont réservés aux abonnés Salsaddict.",
-  "source_url": "https://www.ninkasi.fr/agenda/les-lundis-salsa-by-dj-carlos-100/",
-  "source_name": "Ninkasi",
-  "confidence": "haute",
-  "id": "les-lundis-salsa-avec-dj-carlos-lyon-rec",
-  "added_on": "2026-10-12",
-  "locked_fields": [
-   "price",
-   "price_min"
-  ]
- },
- {
-  "title": "Lundis bachata et kizomba avec Lionel Find",
-  "type": "initiation",
-  "styles": [
-   "bachata",
-   "kizomba"
-  ],
-  "date": "2026-11-16",
-  "end_date": null,
-  "start_time": "19:10",
-  "recurrence": {
-   "freq": "weekly",
-   "weekday": 1
-  },
-  "venue": "All In Country Club (Groupama Stadium, entrée P5)",
-  "address": "13 rue Marceau, 69150 Décines-Charpieu",
-  "city": "Décines-Charpieu",
-  "department": "Rhône",
-  "dept_code": "69",
-  "lat": 45.7687,
-  "lng": 4.9588,
-  "geo_precision": "lieu",
-  "price": "8 € le cours, 10 € de 2 à 4 cours",
-  "price_min": 8,
-  "organizer": "Lionel Find / L'Annex Events",
-  "description": "Quatre cours ouverts sans inscription ni abonnement, bachata puis kizomba en débutant et intermédiaire, payés sur place à l'unité.",
-  "source_url": "https://airdancia.com/event/tous-les-lundis-cours-bachata-kizomba-avec-lionel-find-all-in-country-club-decines-charpieu/",
-  "source_name": "AIRDancia",
-  "confidence": "haute",
-  "id": "lundis-bachata-et-kizomba-avec-lionel-find-decines-charpieu-rec",
-  "added_on": "2026-10-19"
- },
- {
-  "title": "Monday Kiz à L'Annex",
-  "type": "soirée",
-  "styles": [
-   "kizomba"
-  ],
-  "date": "2026-11-16",
-  "end_date": null,
-  "start_time": "19:30",
-  "recurrence": {
-   "freq": "weekly",
-   "weekday": 1
-  },
-  "venue": "L'Annex Dancing",
-  "address": "38 route de Brignais, 69230 Saint-Genis-Laval",
-  "city": "Saint-Genis-Laval",
-  "department": "Rhône",
-  "dept_code": "69",
-  "lat": 45.6954,
-  "lng": 4.7932,
-  "geo_precision": "ville",
-  "price": null,
-  "price_min": null,
-  "organizer": "L'Annex Dancing",
-  "description": "Trois cours de kizomba en enchaînement à partir de 19h30, puis soirée entièrement kizomba de 22h30 à 1h.",
-  "source_url": "https://www.lannex.fr/",
-  "source_name": "L'Annex Dancing",
-  "confidence": "haute",
-  "id": "monday-kiz-a-l-annex-saint-genis-laval-rec",
-  "added_on": "2026-10-12"
- },
- {
   "title": "Afterwork Tapas, cours salsa & bachata débutant et soirée",
   "type": "initiation",
   "styles": [
@@ -157,6 +58,71 @@
   "confidence": "haute",
   "id": "afterwork-tapas-cours-salsa-bachata-debutant-et-so-lyon-rec",
   "added_on": "2026-10-12"
+ },
+ {
+  "title": "Agua, cours et soirée latino sur la péniche",
+  "type": "soirée",
+  "styles": [
+   "salsa",
+   "bachata"
+  ],
+  "date": "2026-11-17",
+  "end_date": null,
+  "start_time": "19:00",
+  "recurrence": {
+   "freq": "weekly",
+   "weekday": 2
+  },
+  "venue": "Péniche Concorde Atlantique",
+  "address": "23 quai Anatole France (en face), 75007 Paris",
+  "city": "Paris",
+  "department": "Paris",
+  "dept_code": "75",
+  "lat": 48.8589,
+  "lng": 2.347,
+  "geo_precision": "lieu",
+  "price": "15 € sans conso, 20 € avec conso",
+  "price_min": 15,
+  "organizer": "Just Dancer (Agua)",
+  "description": "Tous les mardis : cours de salsa et bachata de 19h à 21h, puis soirée sur trois salles avec taxi danseurs pour les débutants.",
+  "source_url": "https://www.paris.fr/activites/agua-cours-de-danse-et-soiree-i-salsa-bachata-i-rencontres-i-fiesta-rooftop-118228",
+  "source_name": "Paris.fr (Que faire à Paris)",
+  "confidence": "haute",
+  "id": "agua-cours-et-soiree-latino-sur-la-peniche-paris-rec",
+  "added_on": "2026-11-17"
+ },
+ {
+  "title": "Instant Latino",
+  "type": "soirée",
+  "styles": [
+   "bachata",
+   "salsa",
+   "kizomba"
+  ],
+  "date": "2026-11-17",
+  "end_date": null,
+  "start_time": "20:30",
+  "recurrence": {
+   "freq": "weekly",
+   "weekday": 2
+  },
+  "venue": "Villa Beach",
+  "address": "13 rue des Pyrénées, 91090 Lisses",
+  "city": "Lisses",
+  "department": "Essonne",
+  "dept_code": "91",
+  "lat": 48.5935,
+  "lng": 2.4259,
+  "geo_precision": "lieu",
+  "price": "5 € la soirée, 10 € avec cours",
+  "price_min": 5,
+  "organizer": "Instant Latino",
+  "description": "Chaque mardi, cours de bachata débutant puis intermédiaire, et soirée salsa, bachata, kizomba de 22h30 à 2h.",
+  "source_url": "https://www.dance-events.fr/fr/event/9441",
+  "source_name": "Dance Events",
+  "confidence": "moyenne",
+  "id": "instant-latino-lisses-rec",
+  "added_on": "2026-11-17"
  },
  {
   "title": "Kiz Annex, cours et soirée 100 % kizomba",
@@ -264,6 +230,233 @@
   "added_on": "2026-10-19"
  },
  {
+  "title": "Mardi Salsa Dancing au Comptoir Général",
+  "type": "soirée",
+  "styles": [
+   "salsa",
+   "salsa cubaine",
+   "bachata"
+  ],
+  "date": "2026-11-17",
+  "end_date": null,
+  "start_time": "20:00",
+  "recurrence": {
+   "freq": "weekly",
+   "weekday": 2
+  },
+  "venue": "Le Comptoir Général",
+  "address": "84 quai de Jemmapes, 75010 Paris",
+  "city": "Paris",
+  "department": "Paris",
+  "dept_code": "75",
+  "lat": 48.8589,
+  "lng": 2.347,
+  "geo_precision": "lieu",
+  "price": "Gratuit",
+  "price_min": 0,
+  "organizer": "Le Comptoir Général",
+  "description": "Soirée gratuite du mardi au bord du canal Saint-Martin : initiation à 20h, puis danse sur salsa, timba, bachata et merengue.",
+  "source_url": "https://www.salsavida.com/fr/event/france/paris/mardi-salsa-dancing-at-le-comptoir-general/",
+  "source_name": "Salsa Vida",
+  "confidence": "haute",
+  "id": "mardi-salsa-dancing-au-comptoir-general-paris-rec",
+  "added_on": "2026-11-17"
+ },
+ {
+  "title": "Mardis bachata au Vendôme Club",
+  "type": "soirée",
+  "styles": [
+   "bachata"
+  ],
+  "date": "2026-11-17",
+  "end_date": null,
+  "start_time": "18:30",
+  "recurrence": {
+   "freq": "weekly",
+   "weekday": 2
+  },
+  "venue": "Vendôme Club",
+  "address": "9 rue Daunou, 75002 Paris",
+  "city": "Paris",
+  "department": "Paris",
+  "dept_code": "75",
+  "lat": 48.8589,
+  "lng": 2.347,
+  "geo_precision": "lieu",
+  "price": "10 à 12 €",
+  "price_min": 10,
+  "organizer": "Vendôme Club (Bachatime)",
+  "description": "Chaque mardi, soirée consacrée à la bachata près de l'Opéra, de 18h30 à 1h.",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20261117-47315",
+  "source_name": "Liste Salsa d'Olivier",
+  "confidence": "haute",
+  "id": "mardis-bachata-au-vendome-club-paris-rec",
+  "added_on": "2026-11-17"
+ },
+ {
+  "title": "Mardis salsa au Smile World Montparnasse",
+  "type": "soirée",
+  "styles": [
+   "salsa cubaine"
+  ],
+  "date": "2026-11-17",
+  "end_date": null,
+  "start_time": "19:30",
+  "recurrence": {
+   "freq": "weekly",
+   "weekday": 2
+  },
+  "venue": "Cabaret du Smile World (Les Ateliers Gaîté)",
+  "address": "11 rue du Commandant René Mouchotte, 75014 Paris",
+  "city": "Paris",
+  "department": "Paris",
+  "dept_code": "75",
+  "lat": 48.8589,
+  "lng": 2.347,
+  "geo_precision": "lieu",
+  "price": "Entrée libre, consommation obligatoire (environ 6 €)",
+  "price_min": 6,
+  "organizer": "Soirée Salsa Paris (DJ PieWO Suez)",
+  "description": "Cours de salsa pour débutants à 19h30, puis piste ouverte jusqu'à minuit avec salsa, un peu de bachata, konpa et zouk.",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20261117-47527",
+  "source_name": "Liste Salsa d'Olivier",
+  "confidence": "haute",
+  "id": "mardis-salsa-au-smile-world-montparnasse-paris-rec",
+  "added_on": "2026-11-17"
+ },
+ {
+  "title": "Mardis salsa SBK au Balajo",
+  "type": "soirée",
+  "styles": [
+   "salsa cubaine",
+   "bachata",
+   "kizomba"
+  ],
+  "date": "2026-11-17",
+  "end_date": null,
+  "start_time": "19:30",
+  "recurrence": {
+   "freq": "weekly",
+   "weekday": 2
+  },
+  "venue": "Le Balajo",
+  "address": "9 rue de Lappe, 75011 Paris",
+  "city": "Paris",
+  "department": "Paris",
+  "dept_code": "75",
+  "lat": 48.8589,
+  "lng": 2.347,
+  "geo_precision": "lieu",
+  "price": "10 € avec soft, 12 € avec alcool, vestiaire 2 €",
+  "price_min": 10,
+  "organizer": "Le Balajo (cours Herminio et Carole)",
+  "description": "Deux cours de salsa cubaine de 19h30 à 21h30, puis soirée salsa, bachata et kizomba jusqu'à 2h dans ce dancing historique de Bastille.",
+  "source_url": "https://www.balajo.fr/",
+  "source_name": "Le Balajo",
+  "confidence": "haute",
+  "id": "mardis-salsa-sbk-au-balajo-paris-rec",
+  "added_on": "2026-11-17"
+ },
+ {
+  "title": "Mardis SBK au Moulin de la Galette",
+  "type": "soirée",
+  "styles": [
+   "salsa",
+   "bachata",
+   "kizomba"
+  ],
+  "date": "2026-11-17",
+  "end_date": null,
+  "start_time": "20:00",
+  "recurrence": {
+   "freq": "weekly",
+   "weekday": 2
+  },
+  "venue": "Le Moulin de la Galette",
+  "address": "16 rue des Moulins, 95110 Sannois",
+  "city": "Sannois",
+  "department": "Val-d'Oise",
+  "dept_code": "95",
+  "lat": 48.9731,
+  "lng": 2.2509,
+  "geo_precision": "lieu",
+  "price": "10 € avec un soft",
+  "price_min": 10,
+  "organizer": "Julian Teran Production",
+  "description": "Chaque mardi, cours d'initiation salsa, bachata ou kizomba à 20h puis mix SBK de DJ Julian Teran face au panorama parisien.",
+  "source_url": "https://jteranproduction.fr/le-moulin-de-la-galette-sbk/",
+  "source_name": "Julian Teran Production",
+  "confidence": "haute",
+  "id": "mardis-sbk-au-moulin-de-la-galette-sannois-rec",
+  "added_on": "2026-11-17"
+ },
+ {
+  "title": "Noche Habanera, cours et soirée salsa cubaine",
+  "type": "soirée",
+  "styles": [
+   "salsa cubaine",
+   "timba"
+  ],
+  "date": "2026-11-17",
+  "end_date": null,
+  "start_time": "19:00",
+  "recurrence": {
+   "freq": "weekly",
+   "weekday": 2
+  },
+  "exdates": [
+   "2026-12-08"
+  ],
+  "venue": "JO&JOE Paris Gentilly",
+  "address": "89-93 avenue Paul Vaillant Couturier, 94250 Gentilly",
+  "city": "Gentilly",
+  "department": "Val-de-Marne",
+  "dept_code": "94",
+  "lat": 48.812,
+  "lng": 2.3426,
+  "geo_precision": "lieu",
+  "price": "Soirée gratuite, cours 8 € en prévente (12 € sur place)",
+  "price_min": 0,
+  "organizer": "Salsa Paris Night et Havana Social Paris",
+  "description": "Chaque mardi, cours de salsa cubaine à 19h30 avec KNZO Mendy puis sociale cubaine et timba jusqu'à 23h30, entrée libre.",
+  "source_url": "https://salsaparisnight.com/havana-social-paris/noche-habanera",
+  "source_name": "Salsa Paris Night",
+  "confidence": "haute",
+  "id": "noche-habanera-cours-et-soiree-salsa-cubaine-gentilly-rec",
+  "added_on": "2026-11-17"
+ },
+ {
+  "title": "Salsa ludique gratuite au Cubana Café",
+  "type": "initiation",
+  "styles": [
+   "salsa cubaine"
+  ],
+  "date": "2026-11-17",
+  "end_date": null,
+  "start_time": "20:00",
+  "recurrence": {
+   "freq": "weekly",
+   "weekday": 2
+  },
+  "venue": "Cubana Café",
+  "address": "45-47 rue Vavin, 75006 Paris",
+  "city": "Paris",
+  "department": "Paris",
+  "dept_code": "75",
+  "lat": 48.8589,
+  "lng": 2.347,
+  "geo_precision": "lieu",
+  "price": "Gratuit",
+  "price_min": 0,
+  "organizer": "Cubana Café",
+  "description": "Chaque mardi dès 20h, initiation à la salsa sans partenaire ni niveau requis dans ce bar-restaurant cubain de Montparnasse.",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20261117-46998",
+  "source_name": "Liste Salsa d'Olivier",
+  "confidence": "haute",
+  "id": "salsa-ludique-gratuite-au-cubana-cafe-paris-rec",
+  "added_on": "2026-11-17"
+ },
+ {
   "title": "SBRock Party au Markadas",
   "type": "soirée",
   "styles": [
@@ -294,6 +487,38 @@
   "confidence": "haute",
   "id": "sbrock-party-au-markadas-meyzieu-rec",
   "added_on": "2026-10-12"
+ },
+ {
+  "title": "Timba Night au Generator",
+  "type": "soirée",
+  "styles": [
+   "salsa cubaine",
+   "timba"
+  ],
+  "date": "2026-11-17",
+  "end_date": null,
+  "start_time": "19:30",
+  "recurrence": {
+   "freq": "weekly",
+   "weekday": 2
+  },
+  "venue": "Generator Paris",
+  "address": "9-11 place du Colonel Fabien, 75010 Paris",
+  "city": "Paris",
+  "department": "Paris",
+  "dept_code": "75",
+  "lat": 48.8589,
+  "lng": 2.347,
+  "geo_precision": "lieu",
+  "price": "5 €, cours, soirée et vestiaire compris",
+  "price_min": 5,
+  "organizer": "Somos Familia",
+  "description": "Cours intermédiaire à 19h30 puis mix à dominante cubaine jusqu'à minuit, avec un peu de bachata. Tout compris pour 5 euros.",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20261117-47916",
+  "source_name": "Liste Salsa d'Olivier",
+  "confidence": "haute",
+  "id": "timba-night-au-generator-paris-rec",
+  "added_on": "2026-11-17"
  },
  {
   "title": "Tuesday Party à Viviers-du-Lac",
@@ -386,6 +611,34 @@
   "added_on": "2026-10-12"
  },
  {
+  "title": "Bootcamp bachata débutants VueltaSol",
+  "type": "stage",
+  "styles": [
+   "bachata"
+  ],
+  "date": "2026-11-18",
+  "end_date": "2026-12-16",
+  "start_time": "19:00",
+  "recurrence": null,
+  "venue": "Académie Internationale de la Danse",
+  "address": "74 bis rue Lauriston, 75016 Paris",
+  "city": "Paris",
+  "department": "Paris",
+  "dept_code": "75",
+  "lat": 48.8589,
+  "lng": 2.347,
+  "geo_precision": "lieu",
+  "price": "129 € les cinq cours",
+  "price_min": 129,
+  "organizer": "VueltaSol",
+  "description": "Cinq mercredis de 1h30 jusqu'au 16 décembre pour apprendre les bases de la bachata sans partenaire, en petit groupe.",
+  "source_url": "https://www.paris.fr/evenements/bootcamp-bachata-pour-debutants-danser-en-un-mois-126543",
+  "source_name": "Paris.fr (Que faire à Paris)",
+  "confidence": "haute",
+  "id": "bootcamp-bachata-debutants-vueltasol-paris-2026-11-18",
+  "added_on": "2026-11-17"
+ },
+ {
   "title": "Cours spécial intro de bachata avec Roch et Coline",
   "type": "stage",
   "styles": [
@@ -412,6 +665,39 @@
   "confidence": "haute",
   "id": "cours-special-intro-de-bachata-avec-roch-et-coline-annecy-2026-11-18",
   "added_on": "2026-11-02"
+ },
+ {
+  "title": "Déj Salsa au CNIT",
+  "type": "soirée",
+  "styles": [
+   "salsa cubaine",
+   "salsa portoricaine",
+   "bachata"
+  ],
+  "date": "2026-11-18",
+  "end_date": null,
+  "start_time": "12:15",
+  "recurrence": {
+   "freq": "weekly",
+   "weekday": 3
+  },
+  "venue": "Westfield CNIT, niveau -2 face à Paul",
+  "address": "2 place de la Défense, 92092 Puteaux",
+  "city": "Puteaux",
+  "department": "Hauts-de-Seine",
+  "dept_code": "92",
+  "lat": 48.8824,
+  "lng": 2.2384,
+  "geo_precision": "lieu",
+  "price": "Gratuit",
+  "price_min": 0,
+  "organizer": "Déj Salsa CNIT",
+  "description": "Pause déjeuner dansante gratuite chaque mercredi de 12h15 à 14h au sous-sol du CNIT, ouverte aux danseurs de tous niveaux.",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20261118-48513",
+  "source_name": "Liste Salsa d'Olivier",
+  "confidence": "haute",
+  "id": "dej-salsa-au-cnit-puteaux-rec",
+  "added_on": "2026-11-17"
  },
  {
   "title": "Initiation salsa et soirée du mercredi au Barãgones",
@@ -552,6 +838,38 @@
   "added_on": "2026-11-02"
  },
  {
+  "title": "Mercredis salsa au People Nation",
+  "type": "soirée",
+  "styles": [
+   "salsa cubaine",
+   "bachata"
+  ],
+  "date": "2026-11-18",
+  "end_date": null,
+  "start_time": "19:30",
+  "recurrence": {
+   "freq": "weekly",
+   "weekday": 3
+  },
+  "venue": "People Paris Nation",
+  "address": "28 bis place de la Nation, 75012 Paris",
+  "city": "Paris",
+  "department": "Paris",
+  "dept_code": "75",
+  "lat": 48.8589,
+  "lng": 2.347,
+  "geo_precision": "lieu",
+  "price": "Entrée libre, consommation obligatoire (environ 5 €)",
+  "price_min": 5,
+  "organizer": "Soirée Salsa Paris (DJ PieWO Suez)",
+  "description": "Cours de salsa pour grands débutants en début de soirée, puis piste jusqu'à minuit avec surtout de la salsa et un peu de bachata.",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20261118-47183",
+  "source_name": "Liste Salsa d'Olivier",
+  "confidence": "haute",
+  "id": "mercredis-salsa-au-people-nation-paris-rec",
+  "added_on": "2026-11-17"
+ },
+ {
   "title": "Mercredis salsa et bachata à la Casa Barrio Latino",
   "type": "soirée",
   "styles": [
@@ -582,6 +900,105 @@
   "confidence": "moyenne",
   "id": "mercredis-salsa-et-bachata-a-la-casa-barrio-latino-echirolles-rec",
   "added_on": "2026-10-12"
+ },
+ {
+  "title": "Mercredis salsa et SBK au B&B Hôtel",
+  "type": "soirée",
+  "styles": [
+   "salsa cubaine",
+   "bachata",
+   "kizomba"
+  ],
+  "date": "2026-11-18",
+  "end_date": null,
+  "start_time": "20:00",
+  "recurrence": {
+   "freq": "weekly",
+   "weekday": 3
+  },
+  "venue": "Hôtel B&B Montigny-le-Bretonneux",
+  "address": "9 place Étienne-François Choiseul, 78180 Montigny-le-Bretonneux",
+  "city": "Montigny-le-Bretonneux",
+  "department": "Yvelines",
+  "dept_code": "78",
+  "lat": 48.7776,
+  "lng": 2.0252,
+  "geo_precision": "lieu",
+  "price": "10 € avec une consommation",
+  "price_min": 10,
+  "organizer": "JPK & Cynthia",
+  "description": "Cours de salsa cubaine débutant puis intermédiaire, et danse libre salsa, bachata, kizomba avec percussions live jusqu'à minuit.",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20261118-48051",
+  "source_name": "La Liste Salsa d'Olivier",
+  "confidence": "haute",
+  "id": "mercredis-salsa-et-sbk-au-b-b-hotel-montigny-le-bretonne-rec",
+  "added_on": "2026-11-17"
+ },
+ {
+  "title": "Mercredis SBK au Rev'Dance Club",
+  "type": "soirée",
+  "styles": [
+   "salsa",
+   "salsa portoricaine",
+   "bachata",
+   "kizomba"
+  ],
+  "date": "2026-11-18",
+  "end_date": null,
+  "start_time": "20:30",
+  "recurrence": {
+   "freq": "weekly",
+   "weekday": 3
+  },
+  "venue": "Rev'Dance Club",
+  "address": "19 rue Lavoisier, 95220 Herblay-sur-Seine",
+  "city": "Herblay-sur-Seine",
+  "department": "Val-d'Oise",
+  "dept_code": "95",
+  "lat": 49.0052,
+  "lng": 2.1556,
+  "geo_precision": "lieu",
+  "price": "10 € (12 € avec une boisson alcoolisée)",
+  "price_min": 10,
+  "organizer": "Rev'Dance Club",
+  "description": "Chaque mercredi, cours de salsa puis de bachata, ensuite soirée salsa, bachata, kizomba avec DJ Jeffito et DJ Piero, softs à volonté.",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20261118-47594",
+  "source_name": "La Liste Salsa d'Olivier",
+  "confidence": "haute",
+  "id": "mercredis-sbk-au-rev-dance-club-herblay-sur-seine-rec",
+  "added_on": "2026-11-17"
+ },
+ {
+  "title": "Mondo Latino à La Felicità",
+  "type": "soirée",
+  "styles": [
+   "salsa cubaine",
+   "bachata"
+  ],
+  "date": "2026-11-18",
+  "end_date": null,
+  "start_time": "19:00",
+  "recurrence": {
+   "freq": "weekly",
+   "weekday": 3
+  },
+  "venue": "La Felicità",
+  "address": "5 parvis Alan Turing, 75013 Paris",
+  "city": "Paris",
+  "department": "Paris",
+  "dept_code": "75",
+  "lat": 48.8589,
+  "lng": 2.347,
+  "geo_precision": "lieu",
+  "price": "Entrée libre",
+  "price_min": 0,
+  "organizer": "Joss Mendes et Anto Danse",
+  "description": "Le mercredi, cours débutant puis mix salsa et latino jusqu'à 23h30 au restaurant La Felicità, sauf fermeture ou privatisation.",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20261118-48367",
+  "source_name": "Liste Salsa d'Olivier",
+  "confidence": "haute",
+  "id": "mondo-latino-a-la-felicita-paris-rec",
+  "added_on": "2026-11-17"
  },
  {
   "title": "Salsa & Bachata à La Commune",
@@ -651,6 +1068,39 @@
   "added_on": "2026-10-12"
  },
  {
+  "title": "Soirée SBK du mercredi au Feeling Good",
+  "type": "soirée",
+  "styles": [
+   "salsa cubaine",
+   "bachata",
+   "kizomba"
+  ],
+  "date": "2026-11-18",
+  "end_date": null,
+  "start_time": "19:00",
+  "recurrence": {
+   "freq": "weekly",
+   "weekday": 3
+  },
+  "venue": "Feeling Good",
+  "address": "12 avenue Kléber, 92700 Colombes",
+  "city": "Colombes",
+  "department": "Hauts-de-Seine",
+  "dept_code": "92",
+  "lat": 48.9218,
+  "lng": 2.2469,
+  "geo_precision": "lieu",
+  "price": "Gratuit, cours offert, une consommation demandée",
+  "price_min": 0,
+  "organizer": "Somos Familia",
+  "description": "Chaque mercredi, cours de salsa et de kizomba offerts puis mix SBK avec DJ YugoBeats jusqu'à minuit dans un food court.",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20261118-47917",
+  "source_name": "Liste Salsa d'Olivier",
+  "confidence": "haute",
+  "id": "soiree-sbk-du-mercredi-au-feeling-good-colombes-rec",
+  "added_on": "2026-11-17"
+ },
+ {
   "title": "Afterwork Kiz Time Valence",
   "type": "stage",
   "styles": [
@@ -680,6 +1130,100 @@
   "confidence": "moyenne",
   "id": "afterwork-kiz-time-valence-valence-rec",
   "added_on": "2026-10-19"
+ },
+ {
+  "title": "Bootcamp salsa débutants VueltaSol",
+  "type": "stage",
+  "styles": [
+   "salsa portoricaine"
+  ],
+  "date": "2026-11-19",
+  "end_date": "2026-12-17",
+  "start_time": "19:00",
+  "recurrence": null,
+  "venue": "Académie Internationale de la Danse",
+  "address": "74 bis rue Lauriston, 75016 Paris",
+  "city": "Paris",
+  "department": "Paris",
+  "dept_code": "75",
+  "lat": 48.8589,
+  "lng": 2.347,
+  "geo_precision": "lieu",
+  "price": "129 € les cinq cours",
+  "price_min": 129,
+  "organizer": "VueltaSol",
+  "description": "Cinq jeudis de 1h30 jusqu'au 17 décembre pour débuter la salsa portoricaine sans partenaire, avec suivi en ligne.",
+  "source_url": "https://www.salsavida.com/fr/event/france/paris/beginner-salsa-bootcamp-with-vueltasol/",
+  "source_name": "Salsa Vida",
+  "confidence": "haute",
+  "id": "bootcamp-salsa-debutants-vueltasol-paris-2026-11-19",
+  "added_on": "2026-11-17"
+ },
+ {
+  "title": "Communale Salsa Party",
+  "type": "soirée",
+  "styles": [
+   "salsa cubaine",
+   "bachata",
+   "zouk"
+  ],
+  "date": "2026-11-19",
+  "end_date": null,
+  "start_time": "19:00",
+  "recurrence": {
+   "freq": "weekly",
+   "weekday": 4
+  },
+  "venue": "La Communale",
+  "address": "10 bis rue de l'Hippodrome, 93400 Saint-Ouen-sur-Seine",
+  "city": "Saint-Ouen-sur-Seine",
+  "department": "Seine-Saint-Denis",
+  "dept_code": "93",
+  "lat": 48.9118,
+  "lng": 2.3329,
+  "geo_precision": "lieu",
+  "price": "Cours 5 €, soirée en entrée libre",
+  "price_min": 0,
+  "organizer": "Somos Familia (Ibra)",
+  "description": "Le jeudi, initiation et cours évolutif de salsa avec Ibra, puis mix cubano, bachata et zouk de DJ YugoBeats jusqu'à minuit.",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20261119-47918",
+  "source_name": "Liste Salsa d'Olivier",
+  "confidence": "haute",
+  "id": "communale-salsa-party-saint-ouen-sur-seine-rec",
+  "added_on": "2026-11-17"
+ },
+ {
+  "title": "Côté Lac Latino",
+  "type": "soirée",
+  "styles": [
+   "bachata",
+   "salsa",
+   "kizomba"
+  ],
+  "date": "2026-11-19",
+  "end_date": null,
+  "start_time": "20:30",
+  "recurrence": {
+   "freq": "weekly",
+   "weekday": 4
+  },
+  "venue": "Restaurant Côté Lac",
+  "address": "Avenue d'Égly, 91340 Ollainville",
+  "city": "Ollainville",
+  "department": "Essonne",
+  "dept_code": "91",
+  "lat": 48.6068,
+  "lng": 2.2204,
+  "geo_precision": "lieu",
+  "price": "10 € avec une boisson",
+  "price_min": 10,
+  "organizer": "Côté Lac Latino",
+  "description": "Tous les jeudis au bord du lac : cours de bachata débutant puis intermédiaire, ensuite soirée BSK dès 22h30.",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20261119-47373",
+  "source_name": "La Liste Salsa d'Olivier",
+  "confidence": "haute",
+  "id": "cote-lac-latino-ollainville-rec",
+  "added_on": "2026-11-17"
  },
  {
   "title": "Danza Kizomba, soirée 100 % kiz",
@@ -775,6 +1319,141 @@
   "confidence": "haute",
   "id": "jeudi-fever-sbk-a-l-annex-saint-genis-laval-rec",
   "added_on": "2026-10-12"
+ },
+ {
+  "title": "Jeudis K'B'Sa à The Station",
+  "type": "soirée",
+  "styles": [
+   "kizomba",
+   "bachata"
+  ],
+  "date": "2026-11-19",
+  "end_date": null,
+  "start_time": "19:30",
+  "recurrence": {
+   "freq": "weekly",
+   "weekday": 4
+  },
+  "exdates": [
+   "2026-12-24",
+   "2026-12-31"
+  ],
+  "venue": "The Station (1er étage)",
+  "address": "96 boulevard de Clichy, 75018 Paris",
+  "city": "Paris",
+  "department": "Paris",
+  "dept_code": "75",
+  "lat": 48.8589,
+  "lng": 2.347,
+  "geo_precision": "lieu",
+  "price": "Soirée en entrée libre, cours réservés aux adhérents",
+  "price_min": 0,
+  "organizer": "Mambo Salsa (DJ Cisco Delavega)",
+  "description": "Soirée kizomba et bachata en entrée libre de 21h30 à minuit, précédée de cours. Pas de soirée pendant les vacances de Noël.",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20261119-46913",
+  "source_name": "Liste Salsa d'Olivier",
+  "confidence": "haute",
+  "id": "jeudis-k-b-sa-a-the-station-paris-rec",
+  "added_on": "2026-11-17"
+ },
+ {
+  "title": "Jeudis salsa et clubbing au Balajo",
+  "type": "soirée",
+  "styles": [
+   "salsa cubaine",
+   "bachata",
+   "kizomba",
+   "rueda"
+  ],
+  "date": "2026-11-19",
+  "end_date": null,
+  "start_time": "19:30",
+  "recurrence": {
+   "freq": "weekly",
+   "weekday": 4
+  },
+  "venue": "Le Balajo",
+  "address": "9 rue de Lappe, 75011 Paris",
+  "city": "Paris",
+  "department": "Paris",
+  "dept_code": "75",
+  "lat": 48.8589,
+  "lng": 2.347,
+  "geo_precision": "lieu",
+  "price": "10 € entrée, cours et conso, vestiaire 2 €",
+  "price_min": 10,
+  "organizer": "Le Balajo (cours Herminio et Carole)",
+  "description": "Cours de salsa cubaine en rueda puis intermédiaire, soirée salsa, bachata et kizomba jusqu'à 0h30, avant le clubbing.",
+  "source_url": "https://www.balajo.fr/",
+  "source_name": "Le Balajo",
+  "confidence": "haute",
+  "id": "jeudis-salsa-et-clubbing-au-balajo-paris-rec",
+  "added_on": "2026-11-17"
+ },
+ {
+  "title": "Jeudis SBK au Calaluna",
+  "type": "soirée",
+  "styles": [
+   "salsa",
+   "bachata",
+   "kizomba"
+  ],
+  "date": "2026-11-19",
+  "end_date": null,
+  "start_time": "20:30",
+  "recurrence": {
+   "freq": "weekly",
+   "weekday": 4
+  },
+  "venue": "Restaurant Calaluna",
+  "address": "293 avenue Roger Guichard, 95610 Éragny",
+  "city": "Éragny-sur-Oise",
+  "department": "Val-d'Oise",
+  "dept_code": "95",
+  "lat": 49.0224,
+  "lng": 2.1002,
+  "geo_precision": "lieu",
+  "price": "Entrée gratuite, consommation de rigueur",
+  "price_min": 0,
+  "organizer": "Restaurant Calaluna",
+  "description": "Tous les jeudis dans un restaurant italien : cours de salsa débutant et intermédiaire, puis soirée salsa, bachata, kizomba jusqu'à 1h.",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20261119-47623",
+  "source_name": "La Liste Salsa d'Olivier",
+  "confidence": "haute",
+  "id": "jeudis-sbk-au-calaluna-eragny-sur-oise-rec",
+  "added_on": "2026-11-17"
+ },
+ {
+  "title": "Les jeudis salsa au Palladium",
+  "type": "soirée",
+  "styles": [
+   "salsa cubaine",
+   "salsa portoricaine"
+  ],
+  "date": "2026-11-19",
+  "end_date": null,
+  "start_time": "20:15",
+  "recurrence": {
+   "freq": "weekly",
+   "weekday": 4
+  },
+  "venue": "Le Palladium",
+  "address": "2 avenue du Gendarme Castermant, 77500 Chelles",
+  "city": "Chelles",
+  "department": "Seine-et-Marne",
+  "dept_code": "77",
+  "lat": 48.8845,
+  "lng": 2.5954,
+  "geo_precision": "lieu",
+  "price": "Non communiqué",
+  "price_min": null,
+  "organizer": "Philippe Gomis (Los Ases de la Timba)",
+  "description": "École de danse sociale le jeudi : cours de salsa cubaine ouverts aux non-adhérents, de l'initiation à l'intermédiaire, puis pratique sur place.",
+  "source_url": "https://allevents.in/chelles/les-jeudis-salsa-au-palladium/200030907815151",
+  "source_name": "AllEvents",
+  "confidence": "moyenne",
+  "id": "les-jeudis-salsa-au-palladium-chelles-rec",
+  "added_on": "2026-11-17"
  },
  {
   "title": "Manggia balla salsa, afterwork du jeudi",
@@ -877,6 +1556,39 @@
   "added_on": "2026-10-26"
  },
  {
+  "title": "Soirée latino du jeudi au Riverside",
+  "type": "soirée",
+  "styles": [
+   "salsa",
+   "bachata",
+   "kizomba"
+  ],
+  "date": "2026-11-19",
+  "end_date": null,
+  "start_time": "20:30",
+  "recurrence": {
+   "freq": "weekly",
+   "weekday": 4
+  },
+  "venue": "Le Riverside",
+  "address": "9 place Lafayette, 77100 Meaux",
+  "city": "Meaux",
+  "department": "Seine-et-Marne",
+  "dept_code": "77",
+  "lat": 48.9573,
+  "lng": 2.9035,
+  "geo_precision": "lieu",
+  "price": "Non communiqué",
+  "price_min": null,
+  "organizer": "Le Riverside",
+  "description": "Chaque jeudi dès 20h30, le pub-restaurant propose des cours de salsa, kizomba et bachata suivis d'une ambiance latino.",
+  "source_url": "https://riverside-pub-meaux.fr/",
+  "source_name": "Le Riverside",
+  "confidence": "moyenne",
+  "id": "soiree-latino-du-jeudi-au-riverside-meaux-rec",
+  "added_on": "2026-11-17"
+ },
+ {
   "title": "Soirée Mix Latino du jeudi au Cabana Café",
   "type": "soirée",
   "styles": [
@@ -945,6 +1657,36 @@
   "confidence": "haute",
   "id": "afterwork-party-sbk-au-bailando-3e-vendredi-bourg-les-valence-rec",
   "added_on": "2026-10-12"
+ },
+ {
+  "title": "Avinciia Night, Fluo Party SBK",
+  "type": "soirée",
+  "styles": [
+   "salsa cubaine",
+   "bachata",
+   "kizomba"
+  ],
+  "date": "2026-11-20",
+  "end_date": null,
+  "start_time": "20:30",
+  "recurrence": null,
+  "venue": "Restaurant Les Machines",
+  "address": "254 avenue de la Division Leclerc, 92290 Châtenay-Malabry",
+  "city": "Châtenay-Malabry",
+  "department": "Hauts-de-Seine",
+  "dept_code": "92",
+  "lat": 48.7697,
+  "lng": 2.2603,
+  "geo_precision": "lieu",
+  "price": "10 €",
+  "price_min": 10,
+  "organizer": "Avinciia Danse",
+  "description": "Soirée SBK sur le thème fluo : cours de kizomba avec Rodrigue à 20h30, puis DJ Arma aux platines jusqu'à 1h.",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20261120-48481",
+  "source_name": "Liste Salsa d'Olivier",
+  "confidence": "haute",
+  "id": "avinciia-night-fluo-party-sbk-chatenay-malabry-2026-11-20",
+  "added_on": "2026-11-17"
  },
  {
   "title": "Clermont Latino Festival, 1re édition",
@@ -1031,6 +1773,158 @@
   "confidence": "haute",
   "id": "diosa-stages-kizomba-et-semba-soiree-sbk-et-rock-pont-eveque-2026-11-20",
   "added_on": "2026-10-19"
+ },
+ {
+  "title": "Eva SBK, les vendredis",
+  "type": "soirée",
+  "styles": [
+   "salsa cubaine",
+   "salsa portoricaine",
+   "bachata",
+   "kizomba"
+  ],
+  "date": "2026-11-20",
+  "end_date": null,
+  "start_time": "20:00",
+  "recurrence": {
+   "freq": "weekly",
+   "weekday": 5
+  },
+  "venue": "EVA Les Mureaux",
+  "address": "13 rue Antoine Becquerel, 78130 Les Mureaux",
+  "city": "Les Mureaux",
+  "department": "Yvelines",
+  "dept_code": "78",
+  "lat": 48.9877,
+  "lng": 1.911,
+  "geo_precision": "lieu",
+  "price": "10 €",
+  "price_min": 10,
+  "organizer": "EVA SBK avec Ciidz Inhoo",
+  "description": "Soirée SBK devenue hebdomadaire : cours avec plusieurs professeurs invités, puis DJ jusqu'à 1h30. Grande salle, bar et parking gratuit.",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20261120-47033",
+  "source_name": "La Liste Salsa d'Olivier",
+  "confidence": "haute",
+  "id": "eva-sbk-les-vendredis-les-mureaux-rec",
+  "added_on": "2026-11-17"
+ },
+ {
+  "title": "Friday Folies, édition Black November",
+  "type": "soirée",
+  "styles": [
+   "salsa",
+   "bachata",
+   "kizomba"
+  ],
+  "date": "2026-11-20",
+  "end_date": null,
+  "start_time": "20:00",
+  "recurrence": null,
+  "venue": "Studio des Rigoles",
+  "address": "46 rue des Rigoles, 75020 Paris",
+  "city": "Paris",
+  "department": "Paris",
+  "dept_code": "75",
+  "lat": 48.8589,
+  "lng": 2.347,
+  "geo_precision": "lieu",
+  "price": "15 €",
+  "price_min": 15,
+  "organizer": "SalsaNueva",
+  "description": "Afterwork latino avec animations salsa cubaine et bachata dès 20h, show, puis soirée latino généraliste jusqu'à 2h. Dress code tout en noir.",
+  "source_url": "https://salsanueva.fr/lecole/les-soirees-salsa-bachata/",
+  "source_name": "SalsaNueva",
+  "confidence": "haute",
+  "id": "friday-folies-edition-black-november-paris-2026-11-20",
+  "added_on": "2026-11-17"
+ },
+ {
+  "title": "Gingado Kiz'Kompa à La Défense",
+  "type": "soirée",
+  "styles": [
+   "kizomba"
+  ],
+  "date": "2026-11-20",
+  "end_date": null,
+  "start_time": "17:00",
+  "recurrence": null,
+  "venue": "Gargalou",
+  "address": "155 Jardins de l'Arche, 92000 Nanterre",
+  "city": "Nanterre",
+  "department": "Hauts-de-Seine",
+  "dept_code": "92",
+  "lat": 48.8974,
+  "lng": 2.2018,
+  "geo_precision": "lieu",
+  "price": "12 € en prévente, 15 € sur place",
+  "price_min": 12,
+  "organizer": "Gingado (STEX Event)",
+  "description": "Afterwork dès 17h, workshop de 20h à 22h avec Claudio Dolk, Kinglion et Jodance, puis kizomba, urban kiz et kompa jusqu'à 2h.",
+  "source_url": "https://www.bizouk.com/events/details/gingado-kiz-kompa-paris-la-defense/133591",
+  "source_name": "Bizouk",
+  "confidence": "haute",
+  "id": "gingado-kiz-kompa-a-la-defense-nanterre-2026-11-20",
+  "added_on": "2026-11-17"
+ },
+ {
+  "title": "Kiz at the Station",
+  "type": "soirée",
+  "styles": [
+   "kizomba"
+  ],
+  "date": "2026-11-20",
+  "end_date": null,
+  "start_time": "20:00",
+  "recurrence": {
+   "freq": "weekly",
+   "weekday": 5
+  },
+  "venue": "The Station (salle à l'étage)",
+  "address": "96 boulevard de Clichy, 75018 Paris",
+  "city": "Paris",
+  "department": "Paris",
+  "dept_code": "75",
+  "lat": 48.8589,
+  "lng": 2.347,
+  "geo_precision": "lieu",
+  "price": "2 € la sociale, 6 € avec les cours",
+  "price_min": 2,
+  "organizer": "soireedanse.com",
+  "description": "Le vendredi, cours de kizomba débutant puis intermédiaire orienté urbankiz, suivis d'une sociale 100 % kizomba jusqu'à 1h.",
+  "source_url": "https://soireedanse.com/index.php/kiz-at-the-station-kizomba/",
+  "source_name": "soireedanse.com",
+  "confidence": "haute",
+  "id": "kiz-at-the-station-paris-rec",
+  "added_on": "2026-11-17"
+ },
+ {
+  "title": "La Kreyola #2, zouk, kompa et salsa",
+  "type": "soirée",
+  "styles": [
+   "zouk",
+   "salsa"
+  ],
+  "date": "2026-11-20",
+  "end_date": null,
+  "start_time": "21:00",
+  "recurrence": null,
+  "venue": "Paris Epicentre",
+  "address": "28 rue Antoine-Julien Hénard, 75012 Paris",
+  "city": "Paris",
+  "department": "Paris",
+  "dept_code": "75",
+  "lat": 48.8589,
+  "lng": 2.347,
+  "geo_precision": "lieu",
+  "price": "9 à 12 €, 10 € après minuit",
+  "price_min": 9,
+  "organizer": "La Kreyola",
+  "description": "Grande salle de 400 m² pour danser zouk, kompa et salsa de 21h à 2h avec les DJ Dreams et Joss. Softs offerts.",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20261120-48432",
+  "source_name": "Liste Salsa d'Olivier",
+  "confidence": "haute",
+  "id": "la-kreyola-2-zouk-kompa-et-salsa-paris-2026-11-20",
+  "added_on": "2026-11-17"
  },
  {
   "title": "La Mensuelle KBS au Goolfy",
@@ -1195,6 +2089,63 @@
   "added_on": "2026-10-12"
  },
  {
+  "title": "Mensuelle Callesol 100 % cubaine",
+  "type": "soirée",
+  "styles": [
+   "salsa cubaine",
+   "timba"
+  ],
+  "date": "2026-11-20",
+  "end_date": null,
+  "start_time": "20:00",
+  "recurrence": null,
+  "venue": "Salle Colonne",
+  "address": "94 boulevard Auguste Blanqui, 75013 Paris",
+  "city": "Paris",
+  "department": "Paris",
+  "dept_code": "75",
+  "lat": 48.8589,
+  "lng": 2.347,
+  "geo_precision": "lieu",
+  "price": "14 € la soirée, 16 € avec cours, 10 € après minuit",
+  "price_min": 10,
+  "organizer": "Callesol",
+  "description": "Cours de pasitos et de timba avec Ed, puis soirée cubaine de 22h à 2h avec les DJ Didi El Ciclón et Jack El Calvo.",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20261120-48638",
+  "source_name": "Liste Salsa d'Olivier",
+  "confidence": "haute",
+  "id": "mensuelle-callesol-100-cubaine-paris-2026-11-20",
+  "added_on": "2026-11-17"
+ },
+ {
+  "title": "Paris Kizomba Congress 2026",
+  "type": "festival",
+  "styles": [
+   "kizomba"
+  ],
+  "date": "2026-11-20",
+  "end_date": "2026-11-22",
+  "start_time": "20:00",
+  "recurrence": null,
+  "venue": "Hilton Paris Charles de Gaulle",
+  "address": "8 rue de Rome, 93290 Tremblay-en-France",
+  "city": "Tremblay-en-France",
+  "department": "Seine-Saint-Denis",
+  "dept_code": "93",
+  "lat": 48.9744,
+  "lng": 2.5481,
+  "geo_precision": "lieu",
+  "price": "Billetterie en ligne",
+  "price_min": null,
+  "organizer": "Cocktail Dance",
+  "description": "Congrès de kizomba à l'hôtel Hilton de Roissy avec ateliers et soirées, précédé d'une pre-party le 19 novembre dans un lieu à préciser.",
+  "source_url": "https://my.weezevent.com/paris-kizomba-congress-2026",
+  "source_name": "Weezevent",
+  "confidence": "haute",
+  "id": "paris-kizomba-congress-2026-tremblay-en-france-2026-11-20",
+  "added_on": "2026-11-17"
+ },
+ {
   "title": "SBK et Latino Afro Urban au Zanzibar avec DJ Manouk",
   "type": "soirée",
   "styles": [
@@ -1255,6 +2206,36 @@
   "confidence": "haute",
   "id": "soiree-eritaj-100-konpa-zouk-et-gouyad-3e-vendredi-bourg-de-peage-rec",
   "added_on": "2026-11-09"
+ },
+ {
+  "title": "Soirée SBK au Globo Dancing",
+  "type": "soirée",
+  "styles": [
+   "bachata",
+   "kizomba",
+   "salsa"
+  ],
+  "date": "2026-11-20",
+  "end_date": null,
+  "start_time": "20:30",
+  "recurrence": null,
+  "venue": "Globo Dancing",
+  "address": "4 rue Johannes Kepler, 78190 Trappes",
+  "city": "Trappes",
+  "department": "Yvelines",
+  "dept_code": "78",
+  "lat": 48.7738,
+  "lng": 1.9964,
+  "geo_precision": "lieu",
+  "price": "10 € avec une consommation",
+  "price_min": 10,
+  "organizer": "JPK & Cynthia",
+  "description": "Cours de bachata puis de kizomba évolutifs, ensuite set SBK accompagné de percussions live jusqu'à 2h.",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20261120-46972",
+  "source_name": "La Liste Salsa d'Olivier",
+  "confidence": "haute",
+  "id": "soiree-sbk-au-globo-dancing-trappes-2026-11-20",
+  "added_on": "2026-11-17"
  },
  {
   "title": "Training Latino avec Yami",
@@ -1456,6 +2437,37 @@
   "added_on": "2026-11-02"
  },
  {
+  "title": "Bachamia, soirée bachata",
+  "type": "soirée",
+  "styles": [
+   "bachata"
+  ],
+  "date": "2026-11-21",
+  "end_date": null,
+  "start_time": "20:00",
+  "recurrence": {
+   "freq": "weekly",
+   "weekday": 6
+  },
+  "venue": "Sensation Dance School",
+  "address": "105 rue de Tolbiac, 75013 Paris",
+  "city": "Paris",
+  "department": "Paris",
+  "dept_code": "75",
+  "lat": 48.8589,
+  "lng": 2.347,
+  "geo_precision": "lieu",
+  "price": "13 € cours et soirée, vestiaire 2 €",
+  "price_min": 13,
+  "organizer": "Bachamia",
+  "description": "Chaque samedi, cours d'initiation à intermédiaire puis deux salles 100 % bachata jusqu'à 2h, softs et grignotage compris.",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20261121-37723",
+  "source_name": "Liste Salsa d'Olivier",
+  "confidence": "moyenne",
+  "id": "bachamia-soiree-bachata-paris-rec",
+  "added_on": "2026-11-17"
+ },
+ {
   "title": "Clubbing Latino du samedi au Cabana Café",
   "type": "soirée",
   "styles": [
@@ -1519,6 +2531,62 @@
   "added_on": "2026-10-19"
  },
  {
+  "title": "Cours de bachata dominicaine à l'unité",
+  "type": "initiation",
+  "styles": [
+   "bachata"
+  ],
+  "date": "2026-11-21",
+  "end_date": null,
+  "start_time": "10:30",
+  "recurrence": null,
+  "venue": "Studio Bleu Paris 12",
+  "address": "10 rue Érard, 75012 Paris",
+  "city": "Paris",
+  "department": "Paris",
+  "dept_code": "75",
+  "lat": 48.8589,
+  "lng": 2.347,
+  "geo_precision": "lieu",
+  "price": "8 € adhérents, 10 € non-adhérents",
+  "price_min": 8,
+  "organizer": "La Bachata Dominicana Paris",
+  "description": "Matinée de bachata dominicaine : cours débutant à 10h30 puis intermédiaire à 11h45, payables à l'unité.",
+  "source_url": "https://www.salsavida.com/fr/event/france/paris/dominican-bachata-classes-with-la-bachata-dominicana-paris/",
+  "source_name": "Salsa Vida",
+  "confidence": "haute",
+  "id": "cours-de-bachata-dominicaine-a-l-unite-paris-2026-11-21",
+  "added_on": "2026-11-17"
+ },
+ {
+  "title": "CUBHAïTi, soirée 100 % salsa et konpa",
+  "type": "soirée",
+  "styles": [
+   "salsa cubaine"
+  ],
+  "date": "2026-11-21",
+  "end_date": null,
+  "start_time": "20:00",
+  "recurrence": null,
+  "venue": "Birdie's Café",
+  "address": "26 rue de Valmy, 93100 Montreuil",
+  "city": "Montreuil",
+  "department": "Seine-Saint-Denis",
+  "dept_code": "93",
+  "lat": 48.8637,
+  "lng": 2.4491,
+  "geo_precision": "lieu",
+  "price": "5 €, ou 10 € avec une boisson (espèces)",
+  "price_min": 5,
+  "organizer": "CUBHAïTi",
+  "description": "Soirée moitié musique cubaine, moitié konpa haïtien avec DJ L'Duro, de 20h à 1h, restauration possible sur place.",
+  "source_url": "https://allevents.in/montreuil/cubha%C3%AFti-la-soir%C3%A9e-100-salsa-konpa/200030961027534",
+  "source_name": "AllEvents",
+  "confidence": "haute",
+  "id": "cubhaiti-soiree-100-salsa-et-konpa-montreuil-2026-11-21",
+  "added_on": "2026-11-17"
+ },
+ {
   "title": "Dominicain Flow avec Juan Pablo Paredes",
   "type": "stage",
   "styles": [
@@ -1578,6 +2646,36 @@
   "added_on": "2026-10-26"
  },
  {
+  "title": "Guantanamera, tu fiesta salsera",
+  "type": "soirée",
+  "styles": [
+   "salsa",
+   "salsa cubaine",
+   "son"
+  ],
+  "date": "2026-11-21",
+  "end_date": null,
+  "start_time": "20:00",
+  "recurrence": null,
+  "venue": "Val Café",
+  "address": "39 boulevard de Port-Royal, 75013 Paris",
+  "city": "Paris",
+  "department": "Paris",
+  "dept_code": "75",
+  "lat": 48.8589,
+  "lng": 2.347,
+  "geo_precision": "lieu",
+  "price": "2 € pour le DJ, consommation obligatoire",
+  "price_min": 2,
+  "organizer": "DJ El Principito",
+  "description": "Soirée sans chichi de 20h à 0h45, tous niveaux : salsa, son, timba et touches de bachata et merengue.",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20261121-48643",
+  "source_name": "Liste Salsa d'Olivier",
+  "confidence": "haute",
+  "id": "guantanamera-tu-fiesta-salsera-paris-2026-11-21",
+  "added_on": "2026-11-17"
+ },
+ {
   "title": "Havana Noche au Pap's House",
   "type": "soirée",
   "styles": [
@@ -1634,6 +2732,102 @@
   "confidence": "haute",
   "id": "initiation-et-soiree-latino-bks-a-la-bamba-magneux-haute-rive-2026-11-21",
   "added_on": "2026-11-09"
+ },
+ {
+  "title": "K&S Experience SBK",
+  "type": "soirée",
+  "styles": [
+   "salsa cubaine",
+   "salsa portoricaine",
+   "bachata",
+   "kizomba"
+  ],
+  "date": "2026-11-21",
+  "end_date": null,
+  "start_time": "20:45",
+  "recurrence": {
+   "freq": "weekly",
+   "weekday": 6
+  },
+  "exdates": [
+   "2026-12-26",
+   "2027-01-02"
+  ],
+  "venue": "GIET Studio",
+  "address": "3 rue Gaston Monmousseau, 94200 Ivry-sur-Seine",
+  "city": "Ivry-sur-Seine",
+  "department": "Val-de-Marne",
+  "dept_code": "94",
+  "lat": 48.8125,
+  "lng": 2.3872,
+  "geo_precision": "lieu",
+  "price": "9 € en prévente, 10 € ensuite, softs inclus",
+  "price_min": 9,
+  "organizer": "Salsa Paris Night",
+  "description": "Le samedi, cours de salsa et bachata dès 20h45 puis trois salles salsa, bachata et kizomba jusqu'à 2h30.",
+  "source_url": "https://salsaparisnight.com/ks-experience",
+  "source_name": "Salsa Paris Night",
+  "confidence": "haute",
+  "id": "k-s-experience-sbk-ivry-sur-seine-rec",
+  "added_on": "2026-11-17"
+ },
+ {
+  "title": "L'Auberge Latine",
+  "type": "soirée",
+  "styles": [
+   "salsa cubaine",
+   "bachata"
+  ],
+  "date": "2026-11-21",
+  "end_date": null,
+  "start_time": "20:00",
+  "recurrence": null,
+  "venue": "Auberge de jeunesse Yves Robert",
+  "address": "20 esplanade Nathalie Sarraute, 75018 Paris",
+  "city": "Paris",
+  "department": "Paris",
+  "dept_code": "75",
+  "lat": 48.8589,
+  "lng": 2.347,
+  "geo_precision": "lieu",
+  "price": "Entrée gratuite, vestiaire 2 €",
+  "price_min": 2,
+  "organizer": "El Paso Baile et DJ Joss",
+  "description": "Cours de salsa à 20h avec El Paso Baile, puis DJ set cubain avec congas en live jusqu'à 2h, terrasse sur place.",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20261121-48257",
+  "source_name": "Liste Salsa d'Olivier",
+  "confidence": "haute",
+  "id": "l-auberge-latine-paris-2026-11-21",
+  "added_on": "2026-11-17"
+ },
+ {
+  "title": "La Tremenda à La Java",
+  "type": "soirée",
+  "styles": [
+   "salsa cubaine",
+   "timba"
+  ],
+  "date": "2026-11-21",
+  "end_date": null,
+  "start_time": "19:30",
+  "recurrence": null,
+  "venue": "La Java",
+  "address": "105 rue du Faubourg du Temple, 75010 Paris",
+  "city": "Paris",
+  "department": "Paris",
+  "dept_code": "75",
+  "lat": 48.8589,
+  "lng": 2.347,
+  "geo_precision": "lieu",
+  "price": "10 € en prévente, 12 € sur place",
+  "price_min": 10,
+  "organizer": "La Tremenda",
+  "description": "Retour de La Tremenda dans un nouveau lieu : soirée 100 % timba de 19h30 à 23h45 avec DJ Tom NKA et DJ Jimi Jacks.",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20261121-48532",
+  "source_name": "Liste Salsa d'Olivier",
+  "confidence": "haute",
+  "id": "la-tremenda-a-la-java-paris-2026-11-21",
+  "added_on": "2026-11-17"
  },
  {
   "title": "Lady Styling Kiz avec Audrey",
@@ -1698,6 +2892,36 @@
   "added_on": "2026-10-12"
  },
  {
+  "title": "One Place Latino, 3 salles",
+  "type": "soirée",
+  "styles": [
+   "salsa cubaine",
+   "bachata",
+   "kizomba"
+  ],
+  "date": "2026-11-21",
+  "end_date": null,
+  "start_time": "20:30",
+  "recurrence": null,
+  "venue": "One Place",
+  "address": "2 place de l'Équerre, 94150 Rungis",
+  "city": "Rungis",
+  "department": "Val-de-Marne",
+  "dept_code": "94",
+  "lat": 48.7493,
+  "lng": 2.3499,
+  "geo_precision": "lieu",
+  "price": "12 €, vestiaire 1 €",
+  "price_min": 12,
+  "organizer": "One Place Latino",
+  "description": "Cours de bachata, kizomba et salsa cubaine dès 20h30, puis soirée dans trois salles avec DJ Mo, DJ PG et DJ Didi.",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20261121-48569",
+  "source_name": "Liste Salsa d'Olivier",
+  "confidence": "haute",
+  "id": "one-place-latino-3-salles-rungis-2026-11-21",
+  "added_on": "2026-11-17"
+ },
+ {
   "title": "Prat' Rock'n'roll et SBK du 3e samedi au JCC",
   "type": "soirée",
   "styles": [
@@ -1730,6 +2954,41 @@
   "confidence": "haute",
   "id": "prat-rock-n-roll-et-sbk-du-3e-samedi-au-jcc-portes-les-valence-rec",
   "added_on": "2026-11-02"
+ },
+ {
+  "title": "Salsa Noche au restaurant La Batterie",
+  "type": "soirée",
+  "styles": [
+   "salsa cubaine",
+   "rueda",
+   "bachata",
+   "kizomba"
+  ],
+  "date": "2026-11-21",
+  "end_date": null,
+  "start_time": "20:00",
+  "recurrence": {
+   "freq": "monthly",
+   "weekday": 6,
+   "nth": 3
+  },
+  "venue": "Restaurant La Batterie",
+  "address": "1 rue de la Redoute, 78280 Guyancourt",
+  "city": "Guyancourt",
+  "department": "Yvelines",
+  "dept_code": "78",
+  "lat": 48.7735,
+  "lng": 2.0745,
+  "geo_precision": "lieu",
+  "price": "12 € avec une consommation",
+  "price_min": 12,
+  "organizer": "Salsa con Fuego et DJ Tiruso",
+  "description": "Chaque troisième samedi, rueda de casino puis soirée à dominante salsa cubaine, avec bachata, kizomba et kompa. Parking et vestiaire gratuits.",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20261121-46980",
+  "source_name": "La Liste Salsa d'Olivier",
+  "confidence": "haute",
+  "id": "salsa-noche-au-restaurant-la-batterie-guyancourt-rec",
+  "added_on": "2026-11-17"
  },
  {
   "title": "Samedi Bodega : stages et soirée BKS'R by FABE",
@@ -1800,6 +3059,38 @@
   "added_on": "2026-10-19"
  },
  {
+  "title": "Samedis salsa au Triangle de Bercy Village",
+  "type": "soirée",
+  "styles": [
+   "salsa cubaine",
+   "bachata"
+  ],
+  "date": "2026-11-21",
+  "end_date": null,
+  "start_time": "20:15",
+  "recurrence": {
+   "freq": "weekly",
+   "weekday": 6
+  },
+  "venue": "Le Triangle",
+  "address": "22 rue François Truffaut, 75012 Paris",
+  "city": "Paris",
+  "department": "Paris",
+  "dept_code": "75",
+  "lat": 48.8589,
+  "lng": 2.347,
+  "geo_precision": "lieu",
+  "price": "Soirée gratuite, cours avec conso dès 8 €",
+  "price_min": 0,
+  "organizer": "Soirée Salsa Paris (DJ PieWO Suez)",
+  "description": "Cours pour débutants à 20h15 puis danse libre et gratuite de 21h30 à 0h30, salsa avec bachata et konpa.",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20261121-47836",
+  "source_name": "Liste Salsa d'Olivier",
+  "confidence": "haute",
+  "id": "samedis-salsa-au-triangle-de-bercy-village-paris-rec",
+  "added_on": "2026-11-17"
+ },
+ {
   "title": "SBK Xperience à la Shine Académie",
   "type": "soirée",
   "styles": [
@@ -1860,6 +3151,36 @@
   "added_on": "2026-10-19"
  },
  {
+  "title": "Soirée Latin Tropical à l'école SalsaDanse",
+  "type": "soirée",
+  "styles": [
+   "salsa cubaine",
+   "bachata",
+   "kizomba"
+  ],
+  "date": "2026-11-21",
+  "end_date": null,
+  "start_time": "20:00",
+  "recurrence": null,
+  "venue": "École SalsaDanse",
+  "address": "40 rue de Cîteaux, 75012 Paris",
+  "city": "Paris",
+  "department": "Paris",
+  "dept_code": "75",
+  "lat": 48.8589,
+  "lng": 2.347,
+  "geo_precision": "lieu",
+  "price": "14 € (12 € adhérents)",
+  "price_min": 12,
+  "organizer": "SalsaDanse (Isis Figaro)",
+  "description": "Soirée mensuelle de l'école : deux heures de cours puis trois salles salsa, bachata et kizomba jusqu'à 2h, softs compris.",
+  "source_url": "https://www.salsadanse.com/soirees-dansantes-ecole/",
+  "source_name": "SalsaDanse",
+  "confidence": "haute",
+  "id": "soiree-latin-tropical-a-l-ecole-salsadanse-paris-2026-11-21",
+  "added_on": "2026-11-17"
+ },
+ {
   "title": "Soirée pratique du Mambo Rock (3e samedi)",
   "type": "soirée",
   "styles": [
@@ -1892,6 +3213,36 @@
   "confidence": "haute",
   "id": "soiree-pratique-du-mambo-rock-3e-samedi-barberaz-rec",
   "added_on": "2026-10-19"
+ },
+ {
+  "title": "Soirée Rock et Swing avec salle SBK",
+  "type": "soirée",
+  "styles": [
+   "salsa cubaine",
+   "bachata",
+   "kizomba"
+  ],
+  "date": "2026-11-21",
+  "end_date": null,
+  "start_time": "21:00",
+  "recurrence": null,
+  "venue": "Infini Danse",
+  "address": "6 avenue Jean d'Alembert, 78190 Trappes",
+  "city": "Trappes",
+  "department": "Yvelines",
+  "dept_code": "78",
+  "lat": 48.7738,
+  "lng": 1.9964,
+  "geo_precision": "lieu",
+  "price": "13 € (10 € adhérents)",
+  "price_min": 10,
+  "organizer": "Infini Danse",
+  "description": "Deux salles : rock et swing d'un côté, SBK de l'autre avec cours de salsa cubaine intermédiaire à 21h, puis danse jusqu'à 1h30.",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20261121-48336",
+  "source_name": "La Liste Salsa d'Olivier",
+  "confidence": "haute",
+  "id": "soiree-rock-et-swing-avec-salle-sbk-trappes-2026-11-21",
+  "added_on": "2026-11-17"
  },
  {
   "title": "Soirée Rock'n Swing / SBK / West Coast au Ballroom",
@@ -2016,6 +3367,36 @@
   "confidence": "moyenne",
   "id": "soiree-sbk-avec-initiation-au-saint-jean-saint-jean-de-soudai-2026-11-21",
   "added_on": "2026-11-16"
+ },
+ {
+  "title": "Soirée SBK Latina Fusion",
+  "type": "soirée",
+  "styles": [
+   "salsa",
+   "bachata",
+   "kizomba"
+  ],
+  "date": "2026-11-21",
+  "end_date": null,
+  "start_time": "19:30",
+  "recurrence": null,
+  "venue": "14 avenue de l'Europe",
+  "address": "14 avenue de l'Europe, 95600 Eaubonne",
+  "city": "Eaubonne",
+  "department": "Val-d'Oise",
+  "dept_code": "95",
+  "lat": 48.9912,
+  "lng": 2.2781,
+  "geo_precision": "lieu",
+  "price": "10 €, boissons à volonté et grignotages",
+  "price_min": 10,
+  "organizer": "Latina Fusion",
+  "description": "Retour de la Latina Fusion : cours de kizomba puis de bachata, et soirée SBK dès 21h30 avec boissons à volonté.",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20261121-48637",
+  "source_name": "La Liste Salsa d'Olivier",
+  "confidence": "haute",
+  "id": "soiree-sbk-latina-fusion-eaubonne-2026-11-21",
+  "added_on": "2026-11-17"
  },
  {
   "title": "Soirée SBKR d'Interdance à Donzère",
@@ -2252,6 +3633,66 @@
   "added_on": "2026-10-19"
  },
  {
+  "title": "The Mambo Station, soirée salsa portoricaine",
+  "type": "soirée",
+  "styles": [
+   "salsa portoricaine"
+  ],
+  "date": "2026-11-21",
+  "end_date": null,
+  "start_time": "20:00",
+  "recurrence": {
+   "freq": "weekly",
+   "weekday": 6
+  },
+  "venue": "The Station (salle à l'étage)",
+  "address": "96 boulevard de Clichy, 75018 Paris",
+  "city": "Paris",
+  "department": "Paris",
+  "dept_code": "75",
+  "lat": 48.8589,
+  "lng": 2.347,
+  "geo_precision": "lieu",
+  "price": "2 € la sociale, 6 € avec les cours",
+  "price_min": 2,
+  "organizer": "soireedanse.com",
+  "description": "Chaque samedi, deux cours de salsa portoricaine on1 puis sociale 100 % salsa de 22h20 à 1h.",
+  "source_url": "https://soireedanse.com/soiree-salsa-porto-the-mambo-station-paris-18/",
+  "source_name": "soireedanse.com",
+  "confidence": "haute",
+  "id": "the-mambo-station-soiree-salsa-portoricaine-paris-rec",
+  "added_on": "2026-11-17"
+ },
+ {
+  "title": "Workshops Kevin Cano, Geysa Martínez et Royma Román",
+  "type": "stage",
+  "styles": [
+   "salsa cubaine",
+   "son"
+  ],
+  "date": "2026-11-21",
+  "end_date": null,
+  "start_time": "14:00",
+  "recurrence": null,
+  "venue": "Studio Re-Corps",
+  "address": "16A boulevard de Reuilly, 75012 Paris",
+  "city": "Paris",
+  "department": "Paris",
+  "dept_code": "75",
+  "lat": 48.8589,
+  "lng": 2.347,
+  "geo_precision": "lieu",
+  "price": "18 € l'heure, 60 € les quatre heures",
+  "price_min": 18,
+  "organizer": "La Cubanía Paris",
+  "description": "Quatre heures d'ateliers niveau intermédiaire : afro yoruba, son cubano, rumba guaguancó et salsa avec afro et rumba.",
+  "source_url": "https://allevents.in/paris/workshop-keviny-geysa-royma-la-cubania-par%C3%8Ds/200030879867548",
+  "source_name": "AllEvents",
+  "confidence": "moyenne",
+  "id": "workshops-kevin-cano-geysa-martinez-et-royma-roman-paris-2026-11-21",
+  "added_on": "2026-11-17"
+ },
+ {
   "title": "Annex Training Social Club, spécial bachata",
   "type": "soirée",
   "styles": [
@@ -2310,6 +3751,63 @@
   "added_on": "2026-10-19"
  },
  {
+  "title": "Atelier bachata et bachazouk en couple",
+  "type": "stage",
+  "styles": [
+   "bachata",
+   "zouk"
+  ],
+  "date": "2026-11-22",
+  "end_date": null,
+  "start_time": "16:00",
+  "recurrence": null,
+  "venue": "Sensation Dance School",
+  "address": "105 rue de Tolbiac, 75013 Paris",
+  "city": "Paris",
+  "department": "Paris",
+  "dept_code": "75",
+  "lat": 48.8589,
+  "lng": 2.347,
+  "geo_precision": "lieu",
+  "price": "15 € solo, 20 € le couple",
+  "price_min": 15,
+  "organizer": "Salsa Swing",
+  "description": "Stage limité à trois couples de niveau intermédiaire : enchaînements de bachata, expression corporelle et connexion en bachazouk.",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20261122-48642",
+  "source_name": "Liste Salsa d'Olivier",
+  "confidence": "haute",
+  "id": "atelier-bachata-et-bachazouk-en-couple-paris-2026-11-22",
+  "added_on": "2026-11-17"
+ },
+ {
+  "title": "Bachata styling avec Maeliss et Mata",
+  "type": "stage",
+  "styles": [
+   "bachata"
+  ],
+  "date": "2026-11-22",
+  "end_date": null,
+  "start_time": "14:00",
+  "recurrence": null,
+  "venue": "Espace Danse Gambetta (École Kim Kan)",
+  "address": "64 rue Orfila, 75020 Paris",
+  "city": "Paris",
+  "department": "Paris",
+  "dept_code": "75",
+  "lat": 48.8589,
+  "lng": 2.347,
+  "geo_precision": "lieu",
+  "price": "35 € en prévente, 40 € puis 45 €",
+  "price_min": 35,
+  "organizer": "ShineByYourself",
+  "description": "Atelier de trois heures sur le styling bachata : technique corporelle, jeu de pieds, musicalité et chorégraphie.",
+  "source_url": "https://www.salsavida.com/fr/event/france/paris/bachata-styling-with-maeliss-and-mata-in-paris/",
+  "source_name": "Salsa Vida",
+  "confidence": "haute",
+  "id": "bachata-styling-avec-maeliss-et-mata-paris-2026-11-22",
+  "added_on": "2026-11-17"
+ },
+ {
   "title": "Challenge chorégraphique bachata",
   "type": "stage",
   "styles": [
@@ -2336,6 +3834,37 @@
   "confidence": "haute",
   "id": "challenge-choregraphique-bachata-lyon-2026-11-22",
   "added_on": "2026-11-09"
+ },
+ {
+  "title": "Cinq stages afro-cubain, angolais et SBK",
+  "type": "stage",
+  "styles": [
+   "salsa cubaine",
+   "rueda",
+   "kizomba",
+   "bachata"
+  ],
+  "date": "2026-11-22",
+  "end_date": null,
+  "start_time": "13:00",
+  "recurrence": null,
+  "venue": "Maison de quartier du Plateau du Moulin",
+  "address": "27 bis rue du Plateau du Moulin, 78700 Conflans-Sainte-Honorine",
+  "city": "Conflans-Sainte-Honorine",
+  "department": "Yvelines",
+  "dept_code": "78",
+  "lat": 49.0016,
+  "lng": 2.0992,
+  "geo_precision": "lieu",
+  "price": "À partir de 10 € le stage, sur réservation",
+  "price_min": 10,
+  "organizer": "Julian Teran Production",
+  "description": "Après-midi de stages avec Salha, Eddy et Dilson : afro angolais, kizomba, salsa afro-cubaine, rueda de casino débutant et bachata.",
+  "source_url": "https://jteranproduction.fr/stages-de-danse-latine-par-julian-teran-production/",
+  "source_name": "Julian Teran Production",
+  "confidence": "haute",
+  "id": "cinq-stages-afro-cubain-angolais-et-sbk-conflans-sainte-hono-2026-11-22",
+  "added_on": "2026-11-17"
  },
  {
   "title": "Danse ton dimanche",
@@ -2488,6 +4017,135 @@
   "added_on": "2026-10-19"
  },
  {
+  "title": "Les dimanches SalsaO'Sulli",
+  "type": "soirée",
+  "styles": [
+   "salsa portoricaine"
+  ],
+  "date": "2026-11-22",
+  "end_date": null,
+  "start_time": "18:00",
+  "recurrence": {
+   "freq": "weekly",
+   "weekday": 0
+  },
+  "venue": "O'Sullivans by the Mill",
+  "address": "92 boulevard de Clichy, 75018 Paris",
+  "city": "Paris",
+  "department": "Paris",
+  "dept_code": "75",
+  "lat": 48.8589,
+  "lng": 2.347,
+  "geo_precision": "lieu",
+  "price": "13 €",
+  "price_min": 13,
+  "organizer": "SalsaO'Sulli",
+  "description": "Rendez-vous salsa depuis plus de vingt ans : deux cours on2 de 18h à 20h, puis soirée salsa portoricaine jusqu'à 1h.",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20261122-47683",
+  "source_name": "Liste Salsa d'Olivier",
+  "confidence": "haute",
+  "id": "les-dimanches-salsao-sulli-paris-rec",
+  "added_on": "2026-11-17"
+ },
+ {
+  "title": "Les dimanches SBK au Rosa Bonheur à l'Ouest",
+  "type": "soirée",
+  "styles": [
+   "salsa portoricaine",
+   "bachata",
+   "kizomba"
+  ],
+  "date": "2026-11-22",
+  "end_date": null,
+  "start_time": "17:30",
+  "recurrence": {
+   "freq": "weekly",
+   "weekday": 0
+  },
+  "venue": "Rosa Bonheur à l'Ouest",
+  "address": "20 quai du Docteur Dervaux, 92600 Asnières-sur-Seine",
+  "city": "Asnières-sur-Seine",
+  "department": "Hauts-de-Seine",
+  "dept_code": "92",
+  "lat": 48.9181,
+  "lng": 2.2935,
+  "geo_precision": "lieu",
+  "price": "Entrée et cours gratuits, consommation obligatoire",
+  "price_min": 0,
+  "organizer": "Baky Salsa Dance",
+  "description": "Sur la péniche, initiation à 17h30, cours à thème à 19h, puis danse libre salsa, bachata et kizomba avec DJ Karl jusqu'à 22h.",
+  "source_url": "https://www.bakysalsadance.com/cours-soir%C3%A9e-sbk/",
+  "source_name": "Baky Salsa Dance",
+  "confidence": "haute",
+  "id": "les-dimanches-sbk-au-rosa-bonheur-a-l-ouest-asnieres-sur-seine-rec",
+  "added_on": "2026-11-17"
+ },
+ {
+  "title": "Open Your Dance au Café Oz Denfert",
+  "type": "soirée",
+  "styles": [
+   "kizomba",
+   "salsa",
+   "bachata"
+  ],
+  "date": "2026-11-22",
+  "end_date": null,
+  "start_time": "16:00",
+  "recurrence": {
+   "freq": "weekly",
+   "weekday": 0
+  },
+  "venue": "Café Oz Denfert",
+  "address": "3 place Denfert-Rochereau, 75014 Paris",
+  "city": "Paris",
+  "department": "Paris",
+  "dept_code": "75",
+  "lat": 48.8589,
+  "lng": 2.347,
+  "geo_precision": "lieu",
+  "price": "Entrée libre, consommation obligatoire",
+  "price_min": null,
+  "organizer": "Open Your Dance",
+  "description": "Chaque dimanche, courts cours de kizomba, salsa et bachata en deux niveaux, puis DJ set SBK jusqu'à 21h.",
+  "source_url": "https://cafe-oz.com/evenement-oz/open-your-dance-tous-les-dimanches-5/",
+  "source_name": "Café Oz",
+  "confidence": "haute",
+  "id": "open-your-dance-au-cafe-oz-denfert-paris-rec",
+  "added_on": "2026-11-17"
+ },
+ {
+  "title": "Para Bailar Casino au Vendôme Club",
+  "type": "soirée",
+  "styles": [
+   "salsa cubaine",
+   "rueda"
+  ],
+  "date": "2026-11-22",
+  "end_date": null,
+  "start_time": "17:00",
+  "recurrence": {
+   "freq": "weekly",
+   "weekday": 0
+  },
+  "venue": "Vendôme Club",
+  "address": "9 rue Daunou, 75002 Paris",
+  "city": "Paris",
+  "department": "Paris",
+  "dept_code": "75",
+  "lat": 48.8589,
+  "lng": 2.347,
+  "geo_precision": "lieu",
+  "price": "12 €, 8 € étudiants",
+  "price_min": 8,
+  "organizer": "Roberto El Cubano et DJ Jack El Calvo",
+  "description": "Le dimanche, cours évolutif de casino et rueda avec Roberto El Cubano, puis soirée cubaine jusqu'à minuit.",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20261122-46812",
+  "source_name": "Liste Salsa d'Olivier",
+  "confidence": "haute",
+  "id": "para-bailar-casino-au-vendome-club-paris-rec",
+  "added_on": "2026-11-17"
+ },
+ {
   "title": "Rock Salsa Bachata Party à Ferney-Voltaire",
   "type": "soirée",
   "styles": [
@@ -2517,6 +4175,152 @@
   "added_on": "2026-10-12"
  },
  {
+  "title": "Salsa au Froggy",
+  "type": "soirée",
+  "styles": [
+   "salsa cubaine"
+  ],
+  "date": "2026-11-22",
+  "end_date": null,
+  "start_time": "19:30",
+  "recurrence": null,
+  "venue": "Le Froggy",
+  "address": "26 rue de Lappe, 75011 Paris",
+  "city": "Paris",
+  "department": "Paris",
+  "dept_code": "75",
+  "lat": 48.8589,
+  "lng": 2.347,
+  "geo_precision": "lieu",
+  "price": null,
+  "price_min": null,
+  "organizer": "Evento Paris Latino",
+  "description": "Dimanche soir 100 % salsa cubaine à Bastille avec DJ Jak, de 19h30 à minuit. Offre trois entrées pour le prix de deux.",
+  "source_url": "https://allevents.in/paris/salsa-au-froggy/200030949456715",
+  "source_name": "AllEvents",
+  "confidence": "haute",
+  "id": "salsa-au-froggy-paris-2026-11-22",
+  "added_on": "2026-11-17"
+ },
+ {
+  "title": "Salsa Sundays au Café Oz Grands Boulevards",
+  "type": "soirée",
+  "styles": [
+   "salsa cubaine",
+   "bachata"
+  ],
+  "date": "2026-11-22",
+  "end_date": null,
+  "start_time": "17:30",
+  "recurrence": {
+   "freq": "weekly",
+   "weekday": 0
+  },
+  "venue": "Café Oz Grands Boulevards",
+  "address": "8 boulevard Montmartre, 75009 Paris",
+  "city": "Paris",
+  "department": "Paris",
+  "dept_code": "75",
+  "lat": 48.8589,
+  "lng": 2.347,
+  "geo_precision": "lieu",
+  "price": "Entrée libre, consommation obligatoire",
+  "price_min": null,
+  "organizer": "Café Oz / Soirée Salsa Paris",
+  "description": "Tous les dimanches, cours de salsa de 17h30 à 19h puis grande soirée jusqu'à minuit sur les Grands Boulevards.",
+  "source_url": "https://cafe-oz.com/evenement-oz/salsa-sundays-3/",
+  "source_name": "Café Oz",
+  "confidence": "haute",
+  "id": "salsa-sundays-au-cafe-oz-grands-boulevards-paris-rec",
+  "added_on": "2026-11-17"
+ },
+ {
+  "title": "Soirée latino au Sept Lieux",
+  "type": "soirée",
+  "styles": [
+   "bachata",
+   "salsa",
+   "kizomba"
+  ],
+  "date": "2026-11-22",
+  "end_date": null,
+  "start_time": "18:00",
+  "recurrence": null,
+  "venue": "Le Sept Lieux",
+  "address": "3 avenue de Paris, 78000 Versailles",
+  "city": "Versailles",
+  "department": "Yvelines",
+  "dept_code": "78",
+  "lat": 48.8039,
+  "lng": 2.1191,
+  "geo_precision": "lieu",
+  "price": "Gratuit",
+  "price_min": 0,
+  "organizer": "Le Sept Lieux",
+  "description": "Dimanche gratuit : initiation bachata à 18h, puis soirée salsa et bachata avec DJ Selecta Eliaz dès 19h30. Planches et pizzas sur place.",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20261122-48387",
+  "source_name": "La Liste Salsa d'Olivier",
+  "confidence": "haute",
+  "id": "soiree-latino-au-sept-lieux-versailles-2026-11-22",
+  "added_on": "2026-11-17"
+ },
+ {
+  "title": "Stage de lady styling avec Cygy",
+  "type": "stage",
+  "styles": [
+   "salsa cubaine"
+  ],
+  "date": "2026-11-22",
+  "end_date": null,
+  "start_time": "16:00",
+  "recurrence": null,
+  "venue": "Maison des associations",
+  "address": "41 rue Raymond du Temple, 94300 Vincennes",
+  "city": "Vincennes",
+  "department": "Val-de-Marne",
+  "dept_code": "94",
+  "lat": 48.8471,
+  "lng": 2.4383,
+  "geo_precision": "lieu",
+  "price": "35 €",
+  "price_min": 35,
+  "organizer": "Africa Korazon",
+  "description": "Trois heures de lady styling pour danseuses de salsa cubaine : bras, lignes du corps, isolations et musicalité.",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20261122-48401",
+  "source_name": "Liste Salsa d'Olivier",
+  "confidence": "haute",
+  "id": "stage-de-lady-styling-avec-cygy-vincennes-2026-11-22",
+  "added_on": "2026-11-17"
+ },
+ {
+  "title": "Stage de salsa suelta avec Isaac Bationon",
+  "type": "stage",
+  "styles": [
+   "salsa cubaine"
+  ],
+  "date": "2026-11-22",
+  "end_date": null,
+  "start_time": "14:30",
+  "recurrence": null,
+  "venue": "Centre Mendès-France",
+  "address": "59 rue de la Solidarité, 93100 Montreuil",
+  "city": "Montreuil",
+  "department": "Seine-Saint-Denis",
+  "dept_code": "93",
+  "lat": 48.8637,
+  "lng": 2.4491,
+  "geo_precision": "lieu",
+  "price": "30 €",
+  "price_min": 30,
+  "organizer": "Cuba sin Fronteras",
+  "description": "Une heure de musicalité, tiempo et contratiempo, puis deux heures de salsa suelta. Niveau requis : deux ans de salsa cubaine.",
+  "source_url": "https://allevents.in/montreuil/stage-de-salsa-suelta-avec-isaac/200030542956107",
+  "source_name": "AllEvents",
+  "confidence": "haute",
+  "id": "stage-de-salsa-suelta-avec-isaac-bationon-montreuil-2026-11-22",
+  "added_on": "2026-11-17"
+ },
+ {
   "title": "Stage découverte kizomba pour débutants",
   "type": "stage",
   "styles": [
@@ -2543,6 +4347,38 @@
   "confidence": "haute",
   "id": "stage-decouverte-kizomba-pour-debutants-grenoble-2026-11-22",
   "added_on": "2026-11-09"
+ },
+ {
+  "title": "Stage intensif de bachata débutant du dimanche",
+  "type": "stage",
+  "styles": [
+   "bachata"
+  ],
+  "date": "2026-11-22",
+  "end_date": null,
+  "start_time": "14:00",
+  "recurrence": {
+   "freq": "weekly",
+   "weekday": 0,
+   "until": "2026-12-06"
+  },
+  "venue": "Centre Barbara",
+  "address": "1 rue Fleury, 75018 Paris",
+  "city": "Paris",
+  "department": "Paris",
+  "dept_code": "75",
+  "lat": 48.8589,
+  "lng": 2.347,
+  "geo_precision": "lieu",
+  "price": "20 € la séance",
+  "price_min": 20,
+  "organizer": "Salsa Con Ti",
+  "description": "Cycle évolutif de deux heures le dimanche : pas de base, tours, ondulations et musicalité. Inscription obligatoire, dernière séance le 6 décembre.",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20261122-48346",
+  "source_name": "Liste Salsa d'Olivier",
+  "confidence": "haute",
+  "id": "stage-intensif-de-bachata-debutant-du-dimanche-paris-rec",
+  "added_on": "2026-11-17"
  },
  {
   "title": "Stage intensif salsa et kizomba à l'All In Country Club",
@@ -2664,6 +4500,324 @@
   "added_on": "2026-10-12"
  },
  {
+  "title": "Konpa'Chata au Café Oz Denfert",
+  "type": "soirée",
+  "styles": [
+   "bachata"
+  ],
+  "date": "2026-11-23",
+  "end_date": null,
+  "start_time": "20:30",
+  "recurrence": {
+   "freq": "weekly",
+   "weekday": 1
+  },
+  "venue": "Café Oz Denfert",
+  "address": "3 place Denfert-Rochereau, 75014 Paris",
+  "city": "Paris",
+  "department": "Paris",
+  "dept_code": "75",
+  "lat": 48.8589,
+  "lng": 2.347,
+  "geo_precision": "lieu",
+  "price": "11 € avec une conso",
+  "price_min": 11,
+  "organizer": "Café Oz Denfert",
+  "description": "Chaque lundi, deux salles : cours puis soirée bachata d'un côté, konpa de l'autre, à partir de 20h30.",
+  "source_url": "https://cafe-oz.com/evenement-oz/konpachata-2/",
+  "source_name": "Café Oz",
+  "confidence": "haute",
+  "id": "konpa-chata-au-cafe-oz-denfert-paris-rec",
+  "added_on": "2026-11-17"
+ },
+ {
+  "title": "La Station Latine, afterwork salsa",
+  "type": "soirée",
+  "styles": [
+   "salsa cubaine"
+  ],
+  "date": "2026-11-23",
+  "end_date": null,
+  "start_time": "20:00",
+  "recurrence": {
+   "freq": "weekly",
+   "weekday": 1
+  },
+  "venue": "La Station Porte des Lilas",
+  "address": "2 place du Maquis du Vercors, 75020 Paris",
+  "city": "Paris",
+  "department": "Paris",
+  "dept_code": "75",
+  "lat": 48.8589,
+  "lng": 2.347,
+  "geo_precision": "lieu",
+  "price": "Entrée gratuite, vestiaire 2 € et conso obligatoires",
+  "price_min": 2,
+  "organizer": "La Station Latine (DJ Jak)",
+  "description": "Nouveau rendez-vous du lundi : salsa 100 % cubaine avec DJ Jak de 20h à minuit sur un grand parquet.",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20261123-48596",
+  "source_name": "Liste Salsa d'Olivier",
+  "confidence": "moyenne",
+  "id": "la-station-latine-afterwork-salsa-paris-rec",
+  "added_on": "2026-11-17"
+ },
+ {
+  "title": "Les Lundis Salsa avec DJ Carlos",
+  "type": "soirée",
+  "styles": [
+   "salsa",
+   "rueda"
+  ],
+  "date": "2026-11-23",
+  "end_date": null,
+  "start_time": "20:00",
+  "recurrence": {
+   "freq": "weekly",
+   "weekday": 1
+  },
+  "venue": "Ninkasi Cordeliers",
+  "address": "1 rue du Président Carnot, 69002 Lyon",
+  "city": "Lyon",
+  "department": "Rhône",
+  "dept_code": "69",
+  "lat": 45.7485,
+  "lng": 4.8467,
+  "geo_precision": "ville",
+  "price": "3 €, vestiaire inclus",
+  "price_min": 3,
+  "organizer": "Salsaddict / Ninkasi Cordeliers",
+  "description": "Chaque lundi, soirée salsa de 20h à 1h avec DJ Carlos. Les cours de 19h sont réservés aux abonnés Salsaddict.",
+  "source_url": "https://www.ninkasi.fr/agenda/les-lundis-salsa-by-dj-carlos-100/",
+  "source_name": "Ninkasi",
+  "confidence": "haute",
+  "id": "les-lundis-salsa-avec-dj-carlos-lyon-rec",
+  "added_on": "2026-10-12",
+  "locked_fields": [
+   "price",
+   "price_min"
+  ]
+ },
+ {
+  "title": "Lundis bachata et kizomba avec Lionel Find",
+  "type": "initiation",
+  "styles": [
+   "bachata",
+   "kizomba"
+  ],
+  "date": "2026-11-23",
+  "end_date": null,
+  "start_time": "19:10",
+  "recurrence": {
+   "freq": "weekly",
+   "weekday": 1
+  },
+  "venue": "All In Country Club (Groupama Stadium, entrée P5)",
+  "address": "13 rue Marceau, 69150 Décines-Charpieu",
+  "city": "Décines-Charpieu",
+  "department": "Rhône",
+  "dept_code": "69",
+  "lat": 45.7687,
+  "lng": 4.9588,
+  "geo_precision": "lieu",
+  "price": "8 € le cours, 10 € de 2 à 4 cours",
+  "price_min": 8,
+  "organizer": "Lionel Find / L'Annex Events",
+  "description": "Quatre cours ouverts sans inscription ni abonnement, bachata puis kizomba en débutant et intermédiaire, payés sur place à l'unité.",
+  "source_url": "https://airdancia.com/event/tous-les-lundis-cours-bachata-kizomba-avec-lionel-find-all-in-country-club-decines-charpieu/",
+  "source_name": "AIRDancia",
+  "confidence": "haute",
+  "id": "lundis-bachata-et-kizomba-avec-lionel-find-decines-charpieu-rec",
+  "added_on": "2026-10-19"
+ },
+ {
+  "title": "Lundis salsa au TiTi Palacio",
+  "type": "soirée",
+  "styles": [
+   "salsa cubaine"
+  ],
+  "date": "2026-11-23",
+  "end_date": null,
+  "start_time": "19:30",
+  "recurrence": {
+   "freq": "weekly",
+   "weekday": 1
+  },
+  "venue": "TiTi Palacio",
+  "address": "17 boulevard Morland, 75004 Paris",
+  "city": "Paris",
+  "department": "Paris",
+  "dept_code": "75",
+  "lat": 48.8589,
+  "lng": 2.347,
+  "geo_precision": "lieu",
+  "price": "Entrée libre, consommation obligatoire (environ 5 €)",
+  "price_min": 5,
+  "organizer": "Soirée Salsa Paris (DJ PieWO Suez)",
+  "description": "Le lundi sauf privatisation, cours de salsa pour débutants puis danse jusqu'à minuit sous une grande véranda.",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20261123-48162",
+  "source_name": "Liste Salsa d'Olivier",
+  "confidence": "haute",
+  "id": "lundis-salsa-au-titi-palacio-paris-rec",
+  "added_on": "2026-11-17"
+ },
+ {
+  "title": "Lunes de Mambo au Cirque",
+  "type": "soirée",
+  "styles": [
+   "salsa portoricaine",
+   "bachata"
+  ],
+  "date": "2026-11-23",
+  "end_date": null,
+  "start_time": "19:00",
+  "recurrence": {
+   "freq": "weekly",
+   "weekday": 1
+  },
+  "venue": "Le Cirque (1er étage)",
+  "address": "141 rue Saint-Martin, 75004 Paris",
+  "city": "Paris",
+  "department": "Paris",
+  "dept_code": "75",
+  "lat": 48.8589,
+  "lng": 2.347,
+  "geo_precision": "lieu",
+  "price": "8 €, cours et soirée",
+  "price_min": 8,
+  "organizer": "Lunes de Mambo (DJ Milton Cevichero)",
+  "description": "Chaque lundi en face du Centre Pompidou, deux cours de salsa portoricaine puis soirée mambo, bachata et touches de kizomba jusqu'à minuit.",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20261123-47440",
+  "source_name": "Liste Salsa d'Olivier",
+  "confidence": "haute",
+  "id": "lunes-de-mambo-au-cirque-paris-rec",
+  "added_on": "2026-11-17"
+ },
+ {
+  "title": "Monday Kiz à L'Annex",
+  "type": "soirée",
+  "styles": [
+   "kizomba"
+  ],
+  "date": "2026-11-23",
+  "end_date": null,
+  "start_time": "19:30",
+  "recurrence": {
+   "freq": "weekly",
+   "weekday": 1
+  },
+  "venue": "L'Annex Dancing",
+  "address": "38 route de Brignais, 69230 Saint-Genis-Laval",
+  "city": "Saint-Genis-Laval",
+  "department": "Rhône",
+  "dept_code": "69",
+  "lat": 45.6954,
+  "lng": 4.7932,
+  "geo_precision": "ville",
+  "price": null,
+  "price_min": null,
+  "organizer": "L'Annex Dancing",
+  "description": "Trois cours de kizomba en enchaînement à partir de 19h30, puis soirée entièrement kizomba de 22h30 à 1h.",
+  "source_url": "https://www.lannex.fr/",
+  "source_name": "L'Annex Dancing",
+  "confidence": "haute",
+  "id": "monday-kiz-a-l-annex-saint-genis-laval-rec",
+  "added_on": "2026-10-12"
+ },
+ {
+  "title": "Festival International de Bachata Zouk",
+  "type": "festival",
+  "styles": [
+   "bachata",
+   "zouk"
+  ],
+  "date": "2026-11-26",
+  "end_date": "2026-11-29",
+  "start_time": "19:45",
+  "recurrence": null,
+  "venue": "The Lyna Shows",
+  "address": "23 rue Léon Geffroy, 94400 Vitry-sur-Seine",
+  "city": "Vitry-sur-Seine",
+  "department": "Val-de-Marne",
+  "dept_code": "94",
+  "lat": 48.7893,
+  "lng": 2.3951,
+  "geo_precision": "lieu",
+  "price": "Pass soirées 49 €, full pass 99 €",
+  "price_min": 49,
+  "organizer": "Karim",
+  "description": "Quatre jours d'ateliers de bachata et de zouk brésilien, concours Jack & Jill et soirées dans deux salles séparées.",
+  "source_url": "https://www.salsavida.com/fr/event/france/paris/international-bachata-zouk-festival/",
+  "source_name": "Salsavida",
+  "confidence": "haute",
+  "id": "festival-international-de-bachata-zouk-vitry-sur-seine-2026-11-26",
+  "added_on": "2026-11-17"
+ },
+ {
+  "title": "Les Jeudis SBK de Coulommiers",
+  "type": "soirée",
+  "styles": [
+   "bachata",
+   "salsa",
+   "kizomba"
+  ],
+  "date": "2026-11-26",
+  "end_date": null,
+  "start_time": "20:00",
+  "recurrence": {
+   "freq": "monthly",
+   "weekday": 4,
+   "nth": 4
+  },
+  "venue": "6 rue des Margats",
+  "address": "6 rue des Margats, 77120 Coulommiers",
+  "city": "Coulommiers",
+  "department": "Seine-et-Marne",
+  "dept_code": "77",
+  "lat": 48.8096,
+  "lng": 3.0918,
+  "geo_precision": "lieu",
+  "price": "Gratuit",
+  "price_min": 0,
+  "organizer": "DJ Abdelito",
+  "description": "Quatrième jeudi du mois : cours de bachata puis de salsa, suivis d'une soirée SBK avec DJ Abdelito, entièrement gratuite.",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20261126-42882",
+  "source_name": "La Liste Salsa d'Olivier",
+  "confidence": "moyenne",
+  "id": "les-jeudis-sbk-de-coulommiers-coulommiers-rec",
+  "added_on": "2026-11-17"
+ },
+ {
+  "title": "Paris Latino au Café Oz Châtelet",
+  "type": "soirée",
+  "styles": [
+   "salsa cubaine"
+  ],
+  "date": "2026-11-26",
+  "end_date": null,
+  "start_time": "20:00",
+  "recurrence": {
+   "freq": "weekly",
+   "weekday": 4
+  },
+  "venue": "Café Oz Châtelet",
+  "address": "18 rue Saint-Denis, 75001 Paris",
+  "city": "Paris",
+  "department": "Paris",
+  "dept_code": "75",
+  "lat": 48.8589,
+  "lng": 2.347,
+  "geo_precision": "lieu",
+  "price": "Entrée gratuite",
+  "price_min": 0,
+  "organizer": "Paris Latino / Café Oz",
+  "description": "Chaque jeudi, deux cours de salsa cubaine à 20h et 20h45, puis soirée cubaine. Relâche le 19 novembre pour privatisation.",
+  "source_url": "https://cafe-oz.com/evenement-oz/paris-latino-4/",
+  "source_name": "Café Oz",
+  "confidence": "haute",
+  "id": "paris-latino-au-cafe-oz-chatelet-paris-rec",
+  "added_on": "2026-11-17"
+ },
+ {
   "title": "Pop up class salsa porto On1 : guidage et réceptivité",
   "type": "stage",
   "styles": [
@@ -2746,6 +4900,65 @@
   "confidence": "haute",
   "id": "bcm-salsa-par-johan-cours-et-pratique-guidee-lyon-2026-11-27",
   "added_on": "2026-11-16"
+ },
+ {
+  "title": "Circo Latino, anniversaire de DJ Chan Chan",
+  "type": "soirée",
+  "styles": [
+   "salsa cubaine",
+   "bachata",
+   "merengue"
+  ],
+  "date": "2026-11-27",
+  "end_date": null,
+  "start_time": "20:30",
+  "recurrence": null,
+  "venue": "Le Cirque",
+  "address": "141 rue Saint-Martin, 75004 Paris",
+  "city": "Paris",
+  "department": "Paris",
+  "dept_code": "75",
+  "lat": 48.8589,
+  "lng": 2.347,
+  "geo_precision": "lieu",
+  "price": "10 €, consommation non comprise",
+  "price_min": 10,
+  "organizer": "Paris Latino",
+  "description": "Deux salles : cours puis soirée salsa cubaine avec DJ Chan Chan, et bachata, merengue et salsa romántica avec DJ Dread.",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20261127-48462",
+  "source_name": "Liste Salsa d'Olivier",
+  "confidence": "haute",
+  "id": "circo-latino-anniversaire-de-dj-chan-chan-paris-2026-11-27",
+  "added_on": "2026-11-17"
+ },
+ {
+  "title": "Cubaila #201, salsa cubaine",
+  "type": "soirée",
+  "styles": [
+   "salsa cubaine",
+   "rueda"
+  ],
+  "date": "2026-11-27",
+  "end_date": null,
+  "start_time": "19:15",
+  "recurrence": null,
+  "venue": "Paris Epicentre",
+  "address": "28 rue Antoine-Julien Hénard, 75012 Paris",
+  "city": "Paris",
+  "department": "Paris",
+  "dept_code": "75",
+  "lat": 48.8589,
+  "lng": 2.347,
+  "geo_precision": "lieu",
+  "price": "9 à 14 € selon formule, 10 € après minuit",
+  "price_min": 9,
+  "organizer": "Cubaila",
+  "description": "Cours de casino à 19h30 et 20h15, soirée 100 % cubaine avec G.Tumbao et Yugobeats, rueda à 23h05, jusqu'à 2h.",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20261127-48433",
+  "source_name": "Liste Salsa d'Olivier",
+  "confidence": "haute",
+  "id": "cubaila-201-salsa-cubaine-paris-2026-11-27",
+  "added_on": "2026-11-17"
  },
  {
   "title": "Evi'Dance Party, workshops et soirée 3 salles",
@@ -2899,6 +5112,66 @@
   "added_on": "2026-11-02"
  },
  {
+  "title": "Rendez-vous SBK au Brasarte",
+  "type": "soirée",
+  "styles": [
+   "bachata",
+   "kizomba",
+   "salsa"
+  ],
+  "date": "2026-11-27",
+  "end_date": null,
+  "start_time": "20:30",
+  "recurrence": null,
+  "venue": "Brasarte",
+  "address": "100 route nationale 10, 78310 Coignières",
+  "city": "Coignières",
+  "department": "Yvelines",
+  "dept_code": "78",
+  "lat": 48.7506,
+  "lng": 1.9178,
+  "geo_precision": "lieu",
+  "price": "Consommation minimum 10 €",
+  "price_min": 10,
+  "organizer": "JPK & Cynthia",
+  "description": "Cours de bachata et de kizomba évolutifs au restaurant, puis sociale SBK avec percussions live jusqu'à 2h.",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20261127-47021",
+  "source_name": "La Liste Salsa d'Olivier",
+  "confidence": "haute",
+  "id": "rendez-vous-sbk-au-brasarte-coignieres-2026-11-27",
+  "added_on": "2026-11-17"
+ },
+ {
+  "title": "Salsa Pappa à la terrasse de L'Isle-Adam",
+  "type": "soirée",
+  "styles": [
+   "salsa",
+   "bachata",
+   "kizomba"
+  ],
+  "date": "2026-11-27",
+  "end_date": null,
+  "start_time": "20:00",
+  "recurrence": null,
+  "venue": "La Terrasse",
+  "address": "3 rue du Pâtis, 95290 L'Isle-Adam",
+  "city": "L'Isle-Adam",
+  "department": "Val-d'Oise",
+  "dept_code": "95",
+  "lat": 49.1078,
+  "lng": 2.2352,
+  "geo_precision": "lieu",
+  "price": "Entrée libre",
+  "price_min": 0,
+  "organizer": "Salsa Pappa",
+  "description": "Cours de bachata offert par l'association Salsa Pappa à 20h, puis soirée SBK animée par DJ Seb jusqu'à minuit, restauration sur place.",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20261127-48217",
+  "source_name": "La Liste Salsa d'Olivier",
+  "confidence": "haute",
+  "id": "salsa-pappa-a-la-terrasse-de-l-isle-adam-l-isle-adam-2026-11-27",
+  "added_on": "2026-11-17"
+ },
+ {
   "title": "Soirée latino et rock'n'roll à l'Espace l'Améthyste",
   "type": "soirée",
   "styles": [
@@ -3032,6 +5305,36 @@
   "confidence": "haute",
   "id": "soirees-sbk-rock-et-wcs-de-1001-danses-dernier-ven-saint-paul-trois-cha-rec",
   "added_on": "2026-11-16"
+ },
+ {
+  "title": "Timba Cerra, deuxième édition",
+  "type": "soirée",
+  "styles": [
+   "timba",
+   "son",
+   "salsa cubaine"
+  ],
+  "date": "2026-11-27",
+  "end_date": null,
+  "start_time": "19:30",
+  "recurrence": null,
+  "venue": "Jo&Joe Paris Nation",
+  "address": "61 rue de Buzenval, 75020 Paris",
+  "city": "Paris",
+  "department": "Paris",
+  "dept_code": "75",
+  "lat": 48.8589,
+  "lng": 2.347,
+  "geo_precision": "lieu",
+  "price": "5 € (30 premières places), puis 8 €",
+  "price_min": 5,
+  "organizer": "Timba Cerra",
+  "description": "Soirée son et timba de 19h30 à 23h45 avec DJ Didi El Ciclón et DJ Sheguey, avec animations.",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20261127-48464",
+  "source_name": "Liste Salsa d'Olivier",
+  "confidence": "haute",
+  "id": "timba-cerra-deuxieme-edition-paris-2026-11-27",
+  "added_on": "2026-11-17"
  },
  {
   "title": "Alors on danse ? Cours, boum et soirées à Tiny Danse",
@@ -3250,6 +5553,70 @@
   "added_on": "2026-11-16"
  },
  {
+  "title": "Let's Party by Latine Team",
+  "type": "soirée",
+  "styles": [
+   "salsa",
+   "bachata",
+   "kizomba",
+   "zouk"
+  ],
+  "date": "2026-11-28",
+  "end_date": null,
+  "start_time": "21:30",
+  "recurrence": {
+   "freq": "monthly",
+   "weekday": 6,
+   "nth": 4
+  },
+  "venue": "Studio Anwa Dance",
+  "address": "9 chaussée Jules César, 95520 Osny",
+  "city": "Osny",
+  "department": "Val-d'Oise",
+  "dept_code": "95",
+  "lat": 49.0668,
+  "lng": 2.0618,
+  "geo_precision": "lieu",
+  "price": "13 € avec un soft",
+  "price_min": 13,
+  "organizer": "Latine Team",
+  "description": "Le quatrième samedi du mois, nuit SBK et tropicale avec deux DJ jusqu'à 3h : salsa, bachata, kizomba, konpa, zouk et plus.",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20261128-47499",
+  "source_name": "La Liste Salsa d'Olivier",
+  "confidence": "haute",
+  "id": "let-s-party-by-latine-team-osny-rec",
+  "added_on": "2026-11-17"
+ },
+ {
+  "title": "Salsa Especial avec Adonis Llerena y La Diferencia",
+  "type": "concert",
+  "styles": [
+   "salsa cubaine",
+   "timba"
+  ],
+  "date": "2026-11-28",
+  "end_date": null,
+  "start_time": "19:00",
+  "recurrence": null,
+  "venue": "La Marbrerie",
+  "address": "21 rue Alexis Lepère, 93100 Montreuil",
+  "city": "Montreuil",
+  "department": "Seine-Saint-Denis",
+  "dept_code": "93",
+  "lat": 48.8637,
+  "lng": 2.4491,
+  "geo_precision": "lieu",
+  "price": "15 € en prévente, 18 € sur place, réduit 12 €",
+  "price_min": 12,
+  "organizer": "Salsa Especial",
+  "description": "Concert de timba pour la sortie d'album d'Adonis Llerena, cours de salsa avec Andrea Cuadro et DJ set de Roberto El Cubano.",
+  "source_url": "https://lamarbrerie.fr/salse-especial-avec-adonis-y-la-diferencia-release-party/",
+  "source_name": "La Marbrerie",
+  "confidence": "haute",
+  "id": "salsa-especial-avec-adonis-llerena-y-la-diferencia-montreuil-2026-11-28",
+  "added_on": "2026-11-17"
+ },
+ {
   "title": "Soirée BKS à l'Académie",
   "type": "soirée",
   "styles": [
@@ -3367,6 +5734,35 @@
   "added_on": "2026-10-19"
  },
  {
+  "title": "Soirée salsa sur la péniche Annette K",
+  "type": "soirée",
+  "styles": [
+   "salsa cubaine",
+   "rueda"
+  ],
+  "date": "2026-11-28",
+  "end_date": null,
+  "start_time": "19:45",
+  "recurrence": null,
+  "venue": "Péniche Annette K",
+  "address": "Port de Javel Bas, 75015 Paris",
+  "city": "Paris",
+  "department": "Paris",
+  "dept_code": "75",
+  "lat": 48.8589,
+  "lng": 2.347,
+  "geo_precision": "lieu",
+  "price": "6 €",
+  "price_min": 6,
+  "organizer": "Soirée Salsa Paris (DJ PieWO Suez)",
+  "description": "Date unique sur le bateau : cours de salsa à 19h45, puis danse jusqu'à minuit avec vue sur la Seine.",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20261128-47963",
+  "source_name": "Liste Salsa d'Olivier",
+  "confidence": "haute",
+  "id": "soiree-salsa-sur-la-peniche-annette-k-paris-2026-11-28",
+  "added_on": "2026-11-17"
+ },
+ {
   "title": "Stage intensif Moioli : salsa, bachata, rock, WCS",
   "type": "stage",
   "styles": [
@@ -3482,6 +5878,34 @@
   "added_on": "2026-11-09"
  },
  {
+  "title": "Atelier de salsa suelta cubaine",
+  "type": "stage",
+  "styles": [
+   "salsa cubaine"
+  ],
+  "date": "2026-11-29",
+  "end_date": null,
+  "start_time": "15:00",
+  "recurrence": null,
+  "venue": "Studio Bleu, studio Marceau",
+  "address": "10 rue Érard, 75012 Paris",
+  "city": "Paris",
+  "department": "Paris",
+  "dept_code": "75",
+  "lat": 48.8589,
+  "lng": 2.347,
+  "geo_precision": "lieu",
+  "price": "25 €, 21 € adhérents",
+  "price_min": 21,
+  "organizer": "Dancing Queer",
+  "description": "Atelier tous niveaux de deux heures en solo : bases de la suelta, musicalité, style et petite chorégraphie avec Élodie.",
+  "source_url": "https://www.salsavida.com/fr/event/france/paris/cuban-salsa-suelta-workshop-with-dancing-queer/",
+  "source_name": "Salsa Vida",
+  "confidence": "haute",
+  "id": "atelier-de-salsa-suelta-cubaine-paris-2026-11-29",
+  "added_on": "2026-11-17"
+ },
+ {
   "title": "Kiz Time Valence : la Pratique du 29 novembre",
   "type": "soirée",
   "styles": [
@@ -3536,6 +5960,65 @@
   "confidence": "haute",
   "id": "salsa-cubaine-avec-yami-styling-et-connexion-abrest-2026-11-29",
   "added_on": "2026-11-16"
+ },
+ {
+  "title": "Sociale Latin Queer solidaire",
+  "type": "soirée",
+  "styles": [
+   "salsa",
+   "bachata",
+   "kizomba"
+  ],
+  "date": "2026-11-29",
+  "end_date": null,
+  "start_time": "18:00",
+  "recurrence": null,
+  "venue": "Le Tango",
+  "address": "11 rue au Maire, 75003 Paris",
+  "city": "Paris",
+  "department": "Paris",
+  "dept_code": "75",
+  "lat": 48.8589,
+  "lng": 2.347,
+  "geo_precision": "lieu",
+  "price": "Entrée et initiation offertes, bénéfices reversés à SoliMove",
+  "price_min": 0,
+  "organizer": "Role Rotation Latin School",
+  "description": "Initiation bachata à 18h puis sociale SBK sans rôles imposés jusqu'à 23h, au profit d'une association de soutien aux femmes.",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20261129-48552",
+  "source_name": "Liste Salsa d'Olivier",
+  "confidence": "haute",
+  "id": "sociale-latin-queer-solidaire-paris-2026-11-29",
+  "added_on": "2026-11-17"
+ },
+ {
+  "title": "Stages avec Laura Del Vecchio",
+  "type": "stage",
+  "styles": [
+   "salsa cubaine",
+   "timba"
+  ],
+  "date": "2026-11-29",
+  "end_date": null,
+  "start_time": "16:00",
+  "recurrence": null,
+  "venue": "Vendôme Club",
+  "address": "9 rue Daunou, 75002 Paris",
+  "city": "Paris",
+  "department": "Paris",
+  "dept_code": "75",
+  "lat": 48.8589,
+  "lng": 2.347,
+  "geo_precision": "lieu",
+  "price": "25 € un stage, 45 € les deux, soirée incluse",
+  "price_min": 25,
+  "organizer": "PBC (Roberto El Cubano)",
+  "description": "Body movement à 16h et musicalité timba à 17h15, ouverts à tous, puis soirée Para Bailar Casino incluse.",
+  "source_url": "https://allevents.in/paris/pbc-x-laura-delvecchio-stages-de-salsa-cubaine-%C3%A0-paris/200030900083915",
+  "source_name": "AllEvents",
+  "confidence": "haute",
+  "id": "stages-avec-laura-del-vecchio-paris-2026-11-29",
+  "added_on": "2026-11-17"
  },
  {
   "title": "Mardi Kiz, la mensuelle du Lydo",
@@ -3639,6 +6122,72 @@
   "added_on": "2026-11-02"
  },
  {
+  "title": "Initiation bachata du premier jeudi au Cubana Café",
+  "type": "initiation",
+  "styles": [
+   "bachata"
+  ],
+  "date": "2026-12-03",
+  "end_date": null,
+  "start_time": "20:00",
+  "recurrence": {
+   "freq": "monthly",
+   "weekday": 4,
+   "nth": 1
+  },
+  "venue": "Cubana Café",
+  "address": "45-47 rue Vavin, 75006 Paris",
+  "city": "Paris",
+  "department": "Paris",
+  "dept_code": "75",
+  "lat": 48.8589,
+  "lng": 2.347,
+  "geo_precision": "lieu",
+  "price": "Gratuit",
+  "price_min": 0,
+  "organizer": "Cubana Café",
+  "description": "Le premier jeudi du mois, initiation gratuite à la bachata ouverte à tous, avec possibilité de dîner sur place.",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20261203-47454",
+  "source_name": "Liste Salsa d'Olivier",
+  "confidence": "haute",
+  "id": "initiation-bachata-du-premier-jeudi-au-cubana-cafe-paris-rec",
+  "added_on": "2026-11-17"
+ },
+ {
+  "title": "Jeudi salsa et SBK au B&B Hôtel",
+  "type": "soirée",
+  "styles": [
+   "salsa cubaine",
+   "bachata",
+   "kizomba"
+  ],
+  "date": "2026-12-03",
+  "end_date": null,
+  "start_time": "20:00",
+  "recurrence": {
+   "freq": "monthly",
+   "weekday": 4,
+   "nth": 1
+  },
+  "venue": "Hôtel B&B Montigny-le-Bretonneux",
+  "address": "9 place Étienne-François Choiseul, 78180 Montigny-le-Bretonneux",
+  "city": "Montigny-le-Bretonneux",
+  "department": "Yvelines",
+  "dept_code": "78",
+  "lat": 48.7776,
+  "lng": 2.0252,
+  "geo_precision": "lieu",
+  "price": "10 € avec une consommation",
+  "price_min": 10,
+  "organizer": "JPK & Cynthia",
+  "description": "Premier jeudi du mois : deux cours de salsa cubaine, débutant et intermédiaire, puis mix SBK de 22h à minuit.",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20261203-47686",
+  "source_name": "La Liste Salsa d'Olivier",
+  "confidence": "haute",
+  "id": "jeudi-salsa-et-sbk-au-b-b-hotel-montigny-le-bretonne-rec",
+  "added_on": "2026-11-17"
+ },
+ {
   "title": "La Mensuelle bachata tradicional avec Marlon",
   "type": "soirée",
   "styles": [
@@ -3671,6 +6220,35 @@
   "added_on": "2026-10-19"
  },
  {
+  "title": "Soirée salsa live avec Suena Cuba",
+  "type": "concert",
+  "styles": [
+   "salsa cubaine",
+   "salsa"
+  ],
+  "date": "2026-12-03",
+  "end_date": null,
+  "start_time": "20:00",
+  "recurrence": null,
+  "venue": "Punk Paradise",
+  "address": "44 rue de la Folie-Méricourt, 75011 Paris",
+  "city": "Paris",
+  "department": "Paris",
+  "dept_code": "75",
+  "lat": 48.8589,
+  "lng": 2.347,
+  "geo_precision": "lieu",
+  "price": "8 € en prévente, 10 € sur place",
+  "price_min": 8,
+  "organizer": "Paris Mambo",
+  "description": "Initiation à la salsa à 20h, puis concert de Suena Cuba en deux sets et DJ Pascualito jusqu'à 1h.",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20261203-48467",
+  "source_name": "Liste Salsa d'Olivier",
+  "confidence": "haute",
+  "id": "soiree-salsa-live-avec-suena-cuba-paris-2026-12-03",
+  "added_on": "2026-11-17"
+ },
+ {
   "title": "After multidanses au Bobo",
   "type": "soirée",
   "styles": [
@@ -3701,6 +6279,40 @@
   "added_on": "2026-11-09"
  },
  {
+  "title": "Camino Pa' Cuba",
+  "type": "soirée",
+  "styles": [
+   "salsa cubaine",
+   "son",
+   "timba"
+  ],
+  "date": "2026-12-04",
+  "end_date": null,
+  "start_time": "20:00",
+  "recurrence": {
+   "freq": "monthly",
+   "weekday": 5,
+   "nth": 1
+  },
+  "venue": "Sensation Dance School",
+  "address": "105 rue de Tolbiac, 75013 Paris",
+  "city": "Paris",
+  "department": "Paris",
+  "dept_code": "75",
+  "lat": 48.8589,
+  "lng": 2.347,
+  "geo_precision": "lieu",
+  "price": "10 € early bird, 12 à 14 € en prévente, 14 à 16 € sur place",
+  "price_min": 10,
+  "organizer": "Baila Cubano",
+  "description": "Le premier vendredi du mois : cours de salsa cubaine, stage avec musiciens, concert et soirée 100 % cubaine jusqu'à 2h.",
+  "source_url": "https://bailacubano.com/caminopacuba",
+  "source_name": "Baila Cubano",
+  "confidence": "haute",
+  "id": "camino-pa-cuba-paris-rec",
+  "added_on": "2026-11-17"
+ },
+ {
   "title": "Golden Kiz spécial Je veux juste danser 4",
   "type": "soirée",
   "styles": [
@@ -3727,6 +6339,40 @@
   "confidence": "haute",
   "id": "golden-kiz-special-je-veux-juste-danser-4-saint-priest-2026-12-04",
   "added_on": "2026-10-26"
+ },
+ {
+  "title": "Onda, la mensuelle SBK²",
+  "type": "soirée",
+  "styles": [
+   "salsa cubaine",
+   "bachata",
+   "kizomba"
+  ],
+  "date": "2026-12-04",
+  "end_date": null,
+  "start_time": "20:30",
+  "recurrence": {
+   "freq": "monthly",
+   "weekday": 5,
+   "nth": 1
+  },
+  "venue": "Bartō Fraté",
+  "address": "16 avenue Émile Baudot, 91120 Palaiseau",
+  "city": "Palaiseau",
+  "department": "Essonne",
+  "dept_code": "91",
+  "lat": 48.7155,
+  "lng": 2.2293,
+  "geo_precision": "lieu",
+  "price": "8 à 13 €",
+  "price_min": 8,
+  "organizer": "Passo A Passo Linda Dança",
+  "description": "Premier vendredi du mois : cours débutant de salsa cubaine et de konpa, puis deux salles, salsa-bachata et kizomba-konpa.",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20261204-47366",
+  "source_name": "La Liste Salsa d'Olivier",
+  "confidence": "moyenne",
+  "id": "onda-la-mensuelle-sbk2-palaiseau-rec",
+  "added_on": "2026-11-17"
  },
  {
   "title": "Slaï en showcase à EVA Valence",
@@ -3852,6 +6498,36 @@
   "confidence": "moyenne",
   "id": "soiree-salsayiti-au-triplefive-1er-vendredi-bourg-de-peage-rec",
   "added_on": "2026-11-02"
+ },
+ {
+  "title": "Soirée SBK au Globo Dancing",
+  "type": "soirée",
+  "styles": [
+   "bachata",
+   "kizomba",
+   "salsa"
+  ],
+  "date": "2026-12-04",
+  "end_date": null,
+  "start_time": "20:30",
+  "recurrence": null,
+  "venue": "Globo Dancing",
+  "address": "4 rue Johannes Kepler, 78190 Trappes",
+  "city": "Trappes",
+  "department": "Yvelines",
+  "dept_code": "78",
+  "lat": 48.7738,
+  "lng": 1.9964,
+  "geo_precision": "lieu",
+  "price": "10 € avec une consommation",
+  "price_min": 10,
+  "organizer": "JPK & Cynthia",
+  "description": "Nouvelle édition au Globo Dancing : bachata et kizomba évolutifs en cours, puis soirée SBK avec percussions jusqu'à 2h.",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20261204-46973",
+  "source_name": "La Liste Salsa d'Olivier",
+  "confidence": "haute",
+  "id": "soiree-sbk-au-globo-dancing-trappes-2026-12-04",
+  "added_on": "2026-11-17"
  },
  {
   "title": "Soirée SBK de VB Danse à El Cubanito",
@@ -4006,6 +6682,40 @@
   "added_on": "2026-10-12"
  },
  {
+  "title": "100% SBK, la mensuelle",
+  "type": "soirée",
+  "styles": [
+   "salsa",
+   "bachata",
+   "kizomba"
+  ],
+  "date": "2026-12-05",
+  "end_date": null,
+  "start_time": "20:30",
+  "recurrence": {
+   "freq": "monthly",
+   "weekday": 6,
+   "nth": 1
+  },
+  "venue": "Mdanse 78",
+  "address": "132 rue de la Louvière, 78120 Rambouillet",
+  "city": "Rambouillet",
+  "department": "Yvelines",
+  "dept_code": "78",
+  "lat": 48.6538,
+  "lng": 1.8339,
+  "geo_precision": "lieu",
+  "price": "12 € (vestiaire 1 €)",
+  "price_min": 12,
+  "organizer": "SC Danse",
+  "description": "Premier samedi du mois sur parquet : deux cours de bachata puis soirée SBK avec DJ Karl Conklass jusqu'à 3h.",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20261205-47736",
+  "source_name": "La Liste Salsa d'Olivier",
+  "confidence": "haute",
+  "id": "100-sbk-la-mensuelle-rambouillet-rec",
+  "added_on": "2026-11-17"
+ },
+ {
   "title": "Après-midi spécial débutants salsa et bachata",
   "type": "stage",
   "styles": [
@@ -4033,6 +6743,63 @@
   "confidence": "haute",
   "id": "apres-midi-special-debutants-salsa-et-bachata-villeurbanne-2026-12-05",
   "added_on": "2026-11-02"
+ },
+ {
+  "title": "Atelier de bachata dominicaine, style et couple",
+  "type": "stage",
+  "styles": [
+   "bachata"
+  ],
+  "date": "2026-12-05",
+  "end_date": null,
+  "start_time": "11:30",
+  "recurrence": null,
+  "venue": "Studio Bleu Paris 12",
+  "address": "10 rue Érard, 75012 Paris",
+  "city": "Paris",
+  "department": "Paris",
+  "dept_code": "75",
+  "lat": 48.8589,
+  "lng": 2.347,
+  "geo_precision": "lieu",
+  "price": "20 € adhérents, 25 € non-adhérents",
+  "price_min": 20,
+  "organizer": "La Bachata Dominicana Paris",
+  "description": "Cours de style avec Sania et Alexis à 11h30, puis travail en couple jusqu'à 14h.",
+  "source_url": "https://www.salsavida.com/fr/event/france/paris/dominican-bachata-partnerwork-and-flow-workshop/",
+  "source_name": "Salsa Vida",
+  "confidence": "haute",
+  "id": "atelier-de-bachata-dominicaine-style-et-couple-paris-2026-12-05",
+  "added_on": "2026-11-17"
+ },
+ {
+  "title": "Atelier salsa femmes avec La Tomassa",
+  "type": "stage",
+  "styles": [
+   "salsa",
+   "salsa cubaine"
+  ],
+  "date": "2026-12-05",
+  "end_date": null,
+  "start_time": "14:00",
+  "recurrence": null,
+  "venue": "Studio Re-Corps",
+  "address": "16A boulevard de Reuilly, 75012 Paris",
+  "city": "Paris",
+  "department": "Paris",
+  "dept_code": "75",
+  "lat": 48.8589,
+  "lng": 2.347,
+  "geo_precision": "lieu",
+  "price": "15 € l'heure, 40 € les trois heures en prévente",
+  "price_min": 15,
+  "organizer": "Obinisa",
+  "description": "Trois heures pour les danseuses : mouvement corporel, salsa, puis fusion on2 et cubaine.",
+  "source_url": "https://www.salsavida.com/fr/event/france/paris/salsa-workshop-with-la-tomassa-and-obinisa/",
+  "source_name": "Salsa Vida",
+  "confidence": "haute",
+  "id": "atelier-salsa-femmes-avec-la-tomassa-paris-2026-12-05",
+  "added_on": "2026-11-17"
  },
  {
   "title": "Bachata Familyon Night",
@@ -4182,6 +6949,34 @@
   "added_on": "2026-10-12"
  },
  {
+  "title": "La Rumba, édition Feria de Cali",
+  "type": "soirée",
+  "styles": [
+   "salsa"
+  ],
+  "date": "2026-12-05",
+  "end_date": null,
+  "start_time": "22:00",
+  "recurrence": null,
+  "venue": "Cabaret Sauvage",
+  "address": "59 boulevard Macdonald, 75019 Paris",
+  "city": "Paris",
+  "department": "Paris",
+  "dept_code": "75",
+  "lat": 48.8589,
+  "lng": 2.347,
+  "geo_precision": "lieu",
+  "price": "15 € early bird, puis 19 € et 24 €",
+  "price_min": 15,
+  "organizer": "La Rumba",
+  "description": "Nuit salsa caleña : cours, défilé des écoles de Paris, concert de Jim Lopez et son orchestre, puis DJ colombiens.",
+  "source_url": "https://www.cabaretsauvage.com/work/la-rumba-edition-speciale-feria-de-cali",
+  "source_name": "Cabaret Sauvage",
+  "confidence": "haute",
+  "id": "la-rumba-edition-feria-de-cali-paris-2026-12-05",
+  "added_on": "2026-11-17"
+ },
+ {
   "title": "LET'SBK Event 2026 à Danse Avenue",
   "type": "stage",
   "styles": [
@@ -4245,6 +7040,72 @@
   "confidence": "moyenne",
   "id": "mas-salsa-que-pescao-avec-el-che-amigos-lyon-rec",
   "added_on": "2026-11-09"
+ },
+ {
+  "title": "Salsa party au Moxy Bastille",
+  "type": "soirée",
+  "styles": [
+   "salsa cubaine",
+   "bachata"
+  ],
+  "date": "2026-12-05",
+  "end_date": null,
+  "start_time": "20:00",
+  "recurrence": {
+   "freq": "monthly",
+   "weekday": 6,
+   "nth": 1
+  },
+  "venue": "Moxy Paris Bastille",
+  "address": "34-36 rue Saint-Sabin, 75011 Paris",
+  "city": "Paris",
+  "department": "Paris",
+  "dept_code": "75",
+  "lat": 48.8589,
+  "lng": 2.347,
+  "geo_precision": "lieu",
+  "price": "Entrée libre",
+  "price_min": 0,
+  "organizer": "Joss Mendes",
+  "description": "Cours de salsa à 20h puis mix cubain, konpa et plus jusqu'à 1h. L'organisateur évoque aussi certains troisièmes samedis.",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20261205-47072",
+  "source_name": "Liste Salsa d'Olivier",
+  "confidence": "moyenne",
+  "id": "salsa-party-au-moxy-bastille-paris-rec",
+  "added_on": "2026-11-17"
+ },
+ {
+  "title": "Salsa y Sabor, cours, DJ et orchestre",
+  "type": "soirée",
+  "styles": [
+   "salsa portoricaine",
+   "salsa"
+  ],
+  "date": "2026-12-05",
+  "end_date": null,
+  "start_time": "20:00",
+  "recurrence": {
+   "freq": "monthly",
+   "weekday": 6,
+   "nth": 1
+  },
+  "venue": "Les 2 Pianos",
+  "address": "136 rue de Lourmel, 75015 Paris",
+  "city": "Paris",
+  "department": "Paris",
+  "dept_code": "75",
+  "lat": 48.8589,
+  "lng": 2.347,
+  "geo_precision": "lieu",
+  "price": "12 € la soirée, 15 € avec cours (réductions élèves)",
+  "price_min": 10,
+  "organizer": "Salsa y Sabor et SalsAlianza",
+  "description": "Le premier samedi du mois : cours débutant, trois sets live entrecoupés de DJ et descarga jusqu'à 1h30. Paiement en espèces.",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20261205-47468",
+  "source_name": "Liste Salsa d'Olivier",
+  "confidence": "haute",
+  "id": "salsa-y-sabor-cours-dj-et-orchestre-paris-rec",
+  "added_on": "2026-11-17"
  },
  {
   "title": "SBK Swing Party au Markadas",
@@ -4376,6 +7237,41 @@
   "added_on": "2026-10-19"
  },
  {
+  "title": "Soirée salsa cubaine Au Bout du Bar",
+  "type": "soirée",
+  "styles": [
+   "salsa cubaine",
+   "salsa",
+   "bachata",
+   "kizomba"
+  ],
+  "date": "2026-12-05",
+  "end_date": null,
+  "start_time": "20:00",
+  "recurrence": {
+   "freq": "monthly",
+   "weekday": 6,
+   "nth": 1
+  },
+  "venue": "Au Bout du Bar",
+  "address": "111 avenue Paul Vaillant-Couturier, 95100 Argenteuil",
+  "city": "Argenteuil",
+  "department": "Val-d'Oise",
+  "dept_code": "95",
+  "lat": 48.9501,
+  "lng": 2.2478,
+  "geo_precision": "lieu",
+  "price": "Entrée libre, consommations payantes",
+  "price_min": 0,
+  "organizer": "Cuba sin Fronteras",
+  "description": "Initiation à la salsa cubaine avec un professeur cubain à 20h, puis soirée SBK au bar-restaurant jusqu'à 1h. Rythme mensuel ou bimestriel.",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20261205-46402",
+  "source_name": "La Liste Salsa d'Olivier",
+  "confidence": "moyenne",
+  "id": "soiree-salsa-cubaine-au-bout-du-bar-argenteuil-rec",
+  "added_on": "2026-11-17"
+ },
+ {
   "title": "Stage de Tangokiz à Annecy",
   "type": "stage",
   "styles": [
@@ -4462,6 +7358,97 @@
   "added_on": "2026-11-16"
  },
  {
+  "title": "Zouk Klas, cours de zouk et soirée",
+  "type": "soirée",
+  "styles": [
+   "zouk"
+  ],
+  "date": "2026-12-05",
+  "end_date": null,
+  "start_time": "21:00",
+  "recurrence": null,
+  "venue": "Guest Live",
+  "address": "36 rue Marcel Dassault, 93140 Bondy",
+  "city": "Bondy",
+  "department": "Seine-Saint-Denis",
+  "dept_code": "93",
+  "lat": 48.9036,
+  "lng": 2.4846,
+  "geo_precision": "lieu",
+  "price": "15 € (cours, soirée et vestiaire)",
+  "price_min": 15,
+  "organizer": "Ewing Prod.",
+  "description": "Édition Black : cours de zouk en couple suivi d'une soirée dansante, pass incluant le vestiaire.",
+  "source_url": "https://www.bizouk.com/events/details/zouk-klas-cours-de-zouk-soiree/134436",
+  "source_name": "Bizouk",
+  "confidence": "haute",
+  "id": "zouk-klas-cours-de-zouk-et-soiree-bondy-2026-12-05",
+  "added_on": "2026-11-17"
+ },
+ {
+  "title": "Bailar N La Ciudad, música cubana",
+  "type": "soirée",
+  "styles": [
+   "salsa cubaine",
+   "son",
+   "timba"
+  ],
+  "date": "2026-12-06",
+  "end_date": null,
+  "start_time": "15:00",
+  "recurrence": {
+   "freq": "monthly",
+   "weekday": 0,
+   "nth": 1
+  },
+  "venue": "Studio A",
+  "address": "51 boulevard de la Liberté, 92320 Châtillon",
+  "city": "Châtillon",
+  "department": "Hauts-de-Seine",
+  "dept_code": "92",
+  "lat": 48.8031,
+  "lng": 2.2887,
+  "geo_precision": "lieu",
+  "price": "Soirée 10 à 15 €, cours + soirée 30 €",
+  "price_min": 10,
+  "organizer": "DJ Jim et DJ Pastaguero",
+  "description": "Le premier dimanche du mois, cours de son et de casino avec Farès et Chrys Telle, puis fiesta cubana de 17h à 22h.",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20261206-47311",
+  "source_name": "Liste Salsa d'Olivier",
+  "confidence": "haute",
+  "id": "bailar-n-la-ciudad-musica-cubana-chatillon-rec",
+  "added_on": "2026-11-17"
+ },
+ {
+  "title": "CubArte #01, expos, concert de son et danse",
+  "type": "concert",
+  "styles": [
+   "son",
+   "salsa cubaine"
+  ],
+  "date": "2026-12-06",
+  "end_date": null,
+  "start_time": "14:00",
+  "recurrence": null,
+  "venue": "Espace MVG",
+  "address": "36 rue Falguière, 75015 Paris",
+  "city": "Paris",
+  "department": "Paris",
+  "dept_code": "75",
+  "lat": 48.8589,
+  "lng": 2.347,
+  "geo_precision": "lieu",
+  "price": "7 €",
+  "price_min": 7,
+  "organizer": "Baila Cubano et Fares Shanguito",
+  "description": "Après-midi cubain : deux expositions photo, concert de son en live à 16h, puis initiation et danse jusqu'à 22h.",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20261206-48442",
+  "source_name": "Liste Salsa d'Olivier",
+  "confidence": "haute",
+  "id": "cubarte-01-expos-concert-de-son-et-danse-paris-2026-12-06",
+  "added_on": "2026-11-17"
+ },
+ {
   "title": "Flow ton dimanche",
   "type": "soirée",
   "styles": [
@@ -4490,6 +7477,40 @@
   "confidence": "haute",
   "id": "flow-ton-dimanche-bourgoin-jallieu-2026-12-06",
   "added_on": "2026-10-26"
+ },
+ {
+  "title": "La Bahiana SBK, la mensuelle de Port Cergy",
+  "type": "soirée",
+  "styles": [
+   "salsa",
+   "bachata",
+   "kizomba"
+  ],
+  "date": "2026-12-06",
+  "end_date": null,
+  "start_time": "15:00",
+  "recurrence": {
+   "freq": "monthly",
+   "weekday": 0,
+   "nth": 1
+  },
+  "venue": "La Bahiana Café",
+  "address": "2-4 place du Grand Hunier, Port Cergy, 95000 Cergy",
+  "city": "Cergy",
+  "department": "Val-d'Oise",
+  "dept_code": "95",
+  "lat": 49.0373,
+  "lng": 2.0455,
+  "geo_precision": "lieu",
+  "price": "Entrée gratuite, consommation de rigueur",
+  "price_min": 0,
+  "organizer": "Julian Teran Production",
+  "description": "Après-midi dansant au bord de l'eau le premier dimanche du mois : initiation SBK avec Salha puis DJ Julian Teran jusqu'à 19h.",
+  "source_url": "https://jteranproduction.fr/la-bahiana-sbk/",
+  "source_name": "Julian Teran Production",
+  "confidence": "haute",
+  "id": "la-bahiana-sbk-la-mensuelle-de-port-cergy-cergy-rec",
+  "added_on": "2026-11-17"
  },
  {
   "title": "Salsa Days : Temps & Contre-temps",
@@ -4548,6 +7569,67 @@
   "confidence": "haute",
   "id": "sociale-sbkr-de-decembre-abrest-2026-12-06",
   "added_on": "2026-10-12"
+ },
+ {
+  "title": "Before Night Salsa au CNIT",
+  "type": "soirée",
+  "styles": [
+   "salsa"
+  ],
+  "date": "2026-12-07",
+  "end_date": null,
+  "start_time": "18:00",
+  "recurrence": {
+   "freq": "monthly",
+   "weekday": 1,
+   "nth": 1
+  },
+  "venue": "Westfield CNIT, niveau -2 face à Paul",
+  "address": "2 place de la Défense, 92092 Puteaux",
+  "city": "Puteaux",
+  "department": "Hauts-de-Seine",
+  "dept_code": "92",
+  "lat": 48.8824,
+  "lng": 2.2384,
+  "geo_precision": "lieu",
+  "price": "Gratuit",
+  "price_min": 0,
+  "organizer": "Déj Salsa CNIT",
+  "description": "Afterwork salsa gratuit de 18h à 21h, en général le premier lundi du mois, débutants et confirmés sur la même piste.",
+  "source_url": "https://www.paris-friendly.fr/before-night-salsa-afterwork-la-defense.html",
+  "source_name": "Paris Friendly",
+  "confidence": "moyenne",
+  "id": "before-night-salsa-au-cnit-puteaux-rec",
+  "added_on": "2026-11-17"
+ },
+ {
+  "title": "Noche Habanera exceptionnelle du lundi",
+  "type": "soirée",
+  "styles": [
+   "salsa cubaine",
+   "timba"
+  ],
+  "date": "2026-12-07",
+  "end_date": null,
+  "start_time": "19:00",
+  "recurrence": null,
+  "venue": "JO&JOE Paris Gentilly",
+  "address": "89-93 avenue Paul Vaillant Couturier, 94250 Gentilly",
+  "city": "Gentilly",
+  "department": "Val-de-Marne",
+  "dept_code": "94",
+  "lat": 48.812,
+  "lng": 2.3426,
+  "geo_precision": "lieu",
+  "price": "Soirée gratuite, cours 8 € en prévente",
+  "price_min": 0,
+  "organizer": "Salsa Paris Night et Havana Social Paris",
+  "description": "Cette semaine la Noche Habanera passe au lundi : cours de salsa cubaine à 19h30, puis soirée cubaine gratuite.",
+  "source_url": "https://salsaparisnight.com/evenements",
+  "source_name": "Salsa Paris Night",
+  "confidence": "haute",
+  "id": "noche-habanera-exceptionnelle-du-lundi-gentilly-2026-12-07",
+  "added_on": "2026-11-17"
  },
  {
   "title": "Soirée bachata mensuelle au Coco Bar",
@@ -4641,6 +7723,38 @@
   "added_on": "2026-11-16"
  },
  {
+  "title": "Bakido Salsa Party",
+  "type": "soirée",
+  "styles": [
+   "salsa portoricaine"
+  ],
+  "date": "2026-12-11",
+  "end_date": null,
+  "start_time": "20:30",
+  "recurrence": {
+   "freq": "monthly",
+   "weekday": 5,
+   "nth": 2
+  },
+  "venue": "Sensation Dance School",
+  "address": "105 rue de Tolbiac, 75013 Paris",
+  "city": "Paris",
+  "department": "Paris",
+  "dept_code": "75",
+  "lat": 48.8589,
+  "lng": 2.347,
+  "geo_precision": "lieu",
+  "price": "12 € avec cours, 10 € après 22h",
+  "price_min": 10,
+  "organizer": "Bakido (Mouaze Konaté)",
+  "description": "Soirée salsa avec cours tous niveaux à 20h30, DJ invité et show, de 22h à 2h. Annonce ancienne à confirmer.",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20261211-33891",
+  "source_name": "Liste Salsa d'Olivier",
+  "confidence": "moyenne",
+  "id": "bakido-salsa-party-paris-rec",
+  "added_on": "2026-11-17"
+ },
+ {
   "title": "Bal débutant rock et salsa chez Moioli",
   "type": "soirée",
   "styles": [
@@ -4667,6 +7781,34 @@
   "confidence": "haute",
   "id": "bal-debutant-rock-et-salsa-chez-moioli-la-motte-servolex-2026-12-11",
   "added_on": "2026-10-19"
+ },
+ {
+  "title": "Initiation à la salsa cubaine entre célibataires",
+  "type": "initiation",
+  "styles": [
+   "salsa cubaine"
+  ],
+  "date": "2026-12-11",
+  "end_date": null,
+  "start_time": "19:45",
+  "recurrence": null,
+  "venue": "L'Imprimerie Hôtel",
+  "address": "15 rue Victor Méric, 92110 Clichy",
+  "city": "Clichy",
+  "department": "Hauts-de-Seine",
+  "dept_code": "92",
+  "lat": 48.9041,
+  "lng": 2.3041,
+  "geo_precision": "lieu",
+  "price": "23 à 26 €",
+  "price_min": 23,
+  "organizer": "Emmanuel",
+  "description": "Soirée rencontre pour célibataires autour d'une initiation à la salsa cubaine et d'un verre, de 19h45 à 22h30.",
+  "source_url": "https://allevents.in/clichy/salsa-cubaine-initiation-entre-c%C3%A9libataires/100002003907002789",
+  "source_name": "AllEvents",
+  "confidence": "moyenne",
+  "id": "initiation-a-la-salsa-cubaine-entre-celibataires-clichy-2026-12-11",
+  "added_on": "2026-11-17"
  },
  {
   "title": "Latina Session by DJ Alfredo",
@@ -4955,6 +8097,34 @@
   "added_on": "2026-10-12"
  },
  {
+  "title": "Vendredi salsa au Cabaret Gaîté",
+  "type": "soirée",
+  "styles": [
+   "salsa cubaine"
+  ],
+  "date": "2026-12-11",
+  "end_date": null,
+  "start_time": "19:30",
+  "recurrence": null,
+  "venue": "Cabaret Gaîté (Smile World)",
+  "address": "80 avenue du Maine, 75014 Paris",
+  "city": "Paris",
+  "department": "Paris",
+  "dept_code": "75",
+  "lat": 48.8589,
+  "lng": 2.347,
+  "geo_precision": "lieu",
+  "price": "Consommation obligatoire (environ 8 €)",
+  "price_min": 8,
+  "organizer": "Soirée Salsa Paris (DJ PieWO Suez)",
+  "description": "Cours de salsa pour débutants à 19h30, puis danse jusqu'à 1h avec salsa, konpa, bachata et zouk.",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20261211-48435",
+  "source_name": "Liste Salsa d'Olivier",
+  "confidence": "haute",
+  "id": "vendredi-salsa-au-cabaret-gaite-paris-2026-12-11",
+  "added_on": "2026-11-17"
+ },
+ {
   "title": "Honey Kiz, 100 % ghetto zouk (Winter Edition)",
   "type": "soirée",
   "styles": [
@@ -5012,6 +8182,41 @@
   "confidence": "haute",
   "id": "noche-latina-au-ballroom-cranves-sales-2026-12-12",
   "added_on": "2026-10-12"
+ },
+ {
+  "title": "SBK Party by Latine Team",
+  "type": "soirée",
+  "styles": [
+   "salsa",
+   "bachata",
+   "kizomba",
+   "zouk"
+  ],
+  "date": "2026-12-12",
+  "end_date": null,
+  "start_time": "21:00",
+  "recurrence": {
+   "freq": "monthly",
+   "weekday": 6,
+   "nth": 2
+  },
+  "venue": "Studio Anwa Dance",
+  "address": "9 chaussée Jules César, 95520 Osny",
+  "city": "Osny",
+  "department": "Val-d'Oise",
+  "dept_code": "95",
+  "lat": 49.0668,
+  "lng": 2.0618,
+  "geo_precision": "lieu",
+  "price": "13 €",
+  "price_min": 13,
+  "organizer": "Latine Team",
+  "description": "Soirée du deuxième samedi du mois : un cours d'ouverture accessible à tous puis session SBK et tropicale jusqu'à 3h.",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20261212-47226",
+  "source_name": "La Liste Salsa d'Olivier",
+  "confidence": "moyenne",
+  "id": "sbk-party-by-latine-team-osny-rec",
+  "added_on": "2026-11-17"
  },
  {
   "title": "Soirée 100 % salsa, Noël des Alpes",
@@ -5281,6 +8486,36 @@
   "added_on": "2026-10-12"
  },
  {
+  "title": "Fiesta de Navidad, Noël cubain et latino",
+  "type": "soirée",
+  "styles": [
+   "salsa cubaine",
+   "merengue",
+   "son"
+  ],
+  "date": "2026-12-13",
+  "end_date": null,
+  "start_time": "15:00",
+  "recurrence": null,
+  "venue": "L'Élan Sportif de Montreuil",
+  "address": "21 rue Émile Zola, 93100 Montreuil",
+  "city": "Montreuil",
+  "department": "Seine-Saint-Denis",
+  "dept_code": "93",
+  "lat": 48.8637,
+  "lng": 2.4491,
+  "geo_precision": "lieu",
+  "price": "20 € stages + soirée, 10 € soirée seule",
+  "price_min": 10,
+  "organizer": "AJMCD et Cuba Danse et Culture",
+  "description": "Stages de merengue, cumbia, reparto et son à partir de 15h, puis fiesta latina avec DJ Didi de 17h à 21h et buffet partagé.",
+  "source_url": "https://allevents.in/montreuil/un-no%C3%ABl-cubain-latino/200031019893459",
+  "source_name": "AllEvents",
+  "confidence": "haute",
+  "id": "fiesta-de-navidad-noel-cubain-et-latino-montreuil-2026-12-13",
+  "added_on": "2026-11-17"
+ },
+ {
   "title": "Bachata Challenge",
   "type": "stage",
   "styles": [
@@ -5307,6 +8542,36 @@
   "confidence": "moyenne",
   "id": "bachata-challenge-villeurbanne-2026-12-16",
   "added_on": "2026-10-26"
+ },
+ {
+  "title": "Bonsoir Bonsoir, fête de fin d'année de La Casita",
+  "type": "soirée",
+  "styles": [
+   "salsa",
+   "bachata",
+   "kizomba"
+  ],
+  "date": "2026-12-18",
+  "end_date": null,
+  "start_time": "19:00",
+  "recurrence": null,
+  "venue": "Le Cirque",
+  "address": "141 rue Saint-Martin, 75004 Paris",
+  "city": "Paris",
+  "department": "Paris",
+  "dept_code": "75",
+  "lat": 48.8589,
+  "lng": 2.347,
+  "geo_precision": "lieu",
+  "price": "10 € adhérents, 12 € prévente, 15 €",
+  "price_min": 10,
+  "organizer": "La Casita Paris",
+  "description": "Cours de salsa fusion tous niveaux à 19h, puis sociale salsa, bachata et kizomba jusqu'à 1h pour fêter la fin d'année.",
+  "source_url": "https://www.salsavida.com/fr/event/france/paris/bonsoir-bonsoir-by-la-casita/",
+  "source_name": "Salsa Vida",
+  "confidence": "haute",
+  "id": "bonsoir-bonsoir-fete-de-fin-d-annee-de-la-casita-paris-2026-12-18",
+  "added_on": "2026-11-17"
  },
  {
   "title": "Christmas Party rock et SBK chez Moioli",
@@ -5367,6 +8632,35 @@
   "added_on": "2026-10-26"
  },
  {
+  "title": "La Kreyola #3, zouk, kompa et salsa",
+  "type": "soirée",
+  "styles": [
+   "zouk",
+   "salsa"
+  ],
+  "date": "2026-12-18",
+  "end_date": null,
+  "start_time": "21:00",
+  "recurrence": null,
+  "venue": "Paris Epicentre",
+  "address": "28 rue Antoine-Julien Hénard, 75012 Paris",
+  "city": "Paris",
+  "department": "Paris",
+  "dept_code": "75",
+  "lat": 48.8589,
+  "lng": 2.347,
+  "geo_precision": "lieu",
+  "price": "9 à 12 €, 10 € après minuit",
+  "price_min": 9,
+  "organizer": "La Kreyola",
+  "description": "Troisième édition de la saison : zouk, kompa et salsa de 21h à 2h sur un grand parquet de 400 m².",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20261120-48432",
+  "source_name": "Liste Salsa d'Olivier",
+  "confidence": "haute",
+  "id": "la-kreyola-3-zouk-kompa-et-salsa-paris-2026-12-18",
+  "added_on": "2026-11-17"
+ },
+ {
   "title": "Mensuelle 100% Salsa au Lydo",
   "type": "soirée",
   "styles": [
@@ -5395,6 +8689,36 @@
   "confidence": "moyenne",
   "id": "mensuelle-100-salsa-au-lydo-villeurbanne-2026-12-18",
   "added_on": "2026-10-26"
+ },
+ {
+  "title": "Rendez-vous SBK au Brasarte",
+  "type": "soirée",
+  "styles": [
+   "bachata",
+   "kizomba",
+   "salsa"
+  ],
+  "date": "2026-12-18",
+  "end_date": null,
+  "start_time": "20:30",
+  "recurrence": null,
+  "venue": "Brasarte",
+  "address": "109 route nationale 10, 78310 Coignières",
+  "city": "Coignières",
+  "department": "Yvelines",
+  "dept_code": "78",
+  "lat": 48.7506,
+  "lng": 1.9178,
+  "geo_precision": "lieu",
+  "price": "Consommation minimum 10 €",
+  "price_min": 10,
+  "organizer": "JPK & Cynthia",
+  "description": "Nouvelle date au Brasarte : bachata puis kizomba en cours évolutifs, ensuite mix SBK et percussions jusqu'à 2h.",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20261218-47022",
+  "source_name": "La Liste Salsa d'Olivier",
+  "confidence": "haute",
+  "id": "rendez-vous-sbk-au-brasarte-coignieres-2026-12-18",
+  "added_on": "2026-11-17"
  },
  {
   "title": "Soirée SBK, rock et WCS de Noël à 1001 Danses",
@@ -5926,6 +9250,120 @@
   "added_on": "2026-10-12"
  },
  {
+  "title": "Cubaila #202, salsa cubaine de Noël",
+  "type": "soirée",
+  "styles": [
+   "salsa cubaine",
+   "rueda"
+  ],
+  "date": "2026-12-25",
+  "end_date": null,
+  "start_time": "19:15",
+  "recurrence": null,
+  "venue": "Paris Epicentre",
+  "address": "28 rue Antoine-Julien Hénard, 75012 Paris",
+  "city": "Paris",
+  "department": "Paris",
+  "dept_code": "75",
+  "lat": 48.8589,
+  "lng": 2.347,
+  "geo_precision": "lieu",
+  "price": "9 à 14 € selon formule, 10 € après minuit",
+  "price_min": 9,
+  "organizer": "Cubaila",
+  "description": "Le soir de Noël, cours de casino, soirée 100 % cubaine, tirage au sort et rueda, jusqu'à 2h.",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20261127-48433",
+  "source_name": "Liste Salsa d'Olivier",
+  "confidence": "haute",
+  "id": "cubaila-202-salsa-cubaine-de-noel-paris-2026-12-25",
+  "added_on": "2026-11-17"
+ },
+ {
+  "title": "Salsa party au Moxy Bastille",
+  "type": "soirée",
+  "styles": [
+   "salsa cubaine",
+   "bachata"
+  ],
+  "date": "2026-12-26",
+  "end_date": null,
+  "start_time": "20:00",
+  "recurrence": null,
+  "venue": "Moxy Paris Bastille",
+  "address": "34 rue Saint-Sabin, 75011 Paris",
+  "city": "Paris",
+  "department": "Paris",
+  "dept_code": "75",
+  "lat": 48.8589,
+  "lng": 2.347,
+  "geo_precision": "lieu",
+  "price": "Entrée libre",
+  "price_min": 0,
+  "organizer": "Joss Mendes",
+  "description": "Édition de fin d'année : cours de salsa à 20h avec Adel Martinez ou Anto Danse, puis mix cubain et konpa jusqu'à 1h.",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20261226-47998",
+  "source_name": "Liste Salsa d'Olivier",
+  "confidence": "haute",
+  "id": "salsa-party-au-moxy-bastille-paris-2026-12-26",
+  "added_on": "2026-11-17"
+ },
+ {
+  "title": "Soirée salsa au Cabaret Gaîté",
+  "type": "soirée",
+  "styles": [
+   "salsa cubaine"
+  ],
+  "date": "2026-12-26",
+  "end_date": null,
+  "start_time": "19:30",
+  "recurrence": null,
+  "venue": "Cabaret Gaîté (Smile World)",
+  "address": "80 avenue du Maine, 75014 Paris",
+  "city": "Paris",
+  "department": "Paris",
+  "dept_code": "75",
+  "lat": 48.8589,
+  "lng": 2.347,
+  "geo_precision": "lieu",
+  "price": "Consommation obligatoire (environ 8 €)",
+  "price_min": 8,
+  "organizer": "Soirée Salsa Paris (DJ PieWO Suez)",
+  "description": "Cours de salsa pour débutants puis danse jusqu'à 1h. Annoncée un samedi alors que le titre parle de vendredi.",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20261226-48436",
+  "source_name": "Liste Salsa d'Olivier",
+  "confidence": "moyenne",
+  "id": "soiree-salsa-au-cabaret-gaite-paris-2026-12-26",
+  "added_on": "2026-11-17"
+ },
+ {
+  "title": "Havana Prestige, Full Black Edition",
+  "type": "soirée",
+  "styles": [
+   "salsa cubaine"
+  ],
+  "date": "2026-12-30",
+  "end_date": null,
+  "start_time": "19:30",
+  "recurrence": null,
+  "venue": "Hôtel Mercure Paris Vaugirard Porte de Versailles",
+  "address": "69 boulevard Victor, 75015 Paris",
+  "city": "Paris",
+  "department": "Paris",
+  "dept_code": "75",
+  "lat": 48.8589,
+  "lng": 2.347,
+  "geo_precision": "lieu",
+  "price": "12 € jusqu'au 30/11, puis 14 €, 16 € et 18 € sur place",
+  "price_min": 12,
+  "organizer": "Salsa Paris Night",
+  "description": "Veille du réveillon tout en noir : cours de salsa cubaine à 19h30, puis soirée jusqu'à 2h avec quatre DJ dont Chanchan et Didi.",
+  "source_url": "https://salsaparisnight.com/havana-prestige",
+  "source_name": "Salsa Paris Night",
+  "confidence": "haute",
+  "id": "havana-prestige-full-black-edition-paris-2026-12-30",
+  "added_on": "2026-11-17"
+ },
+ {
   "title": "Lyon New Year Celebration, édition 3",
   "type": "festival",
   "styles": [
@@ -5952,6 +9390,38 @@
   "confidence": "moyenne",
   "id": "lyon-new-year-celebration-edition-3-meyzieu-2026-12-30",
   "added_on": "2026-10-12"
+ },
+ {
+  "title": "K&S Experience SBK, réveillon du Nouvel An",
+  "type": "soirée",
+  "styles": [
+   "salsa cubaine",
+   "salsa portoricaine",
+   "timba",
+   "bachata",
+   "kizomba"
+  ],
+  "date": "2026-12-31",
+  "end_date": null,
+  "start_time": "21:30",
+  "recurrence": null,
+  "venue": "GIET Studio",
+  "address": "3 rue Gaston Monmousseau, 94200 Ivry-sur-Seine",
+  "city": "Ivry-sur-Seine",
+  "department": "Val-de-Marne",
+  "dept_code": "94",
+  "lat": 48.8125,
+  "lng": 2.3872,
+  "geo_precision": "lieu",
+  "price": "23 € en prévente 1 (jusqu'au 30 novembre), softs inclus",
+  "price_min": 23,
+  "organizer": "Salsa Paris Night",
+  "description": "Réveillon dansant jusqu'à 5h dans trois salles : cubaine et timba, portoricaine et mambo, bachata et kizomba. Coupe de champagne à minuit.",
+  "source_url": "https://salsaparisnight.com/ks-experience",
+  "source_name": "Salsa Paris Night",
+  "confidence": "haute",
+  "id": "k-s-experience-sbk-reveillon-du-nouvel-an-ivry-sur-seine-2026-12-31",
+  "added_on": "2026-11-17"
  },
  {
   "title": "Réveillon 2027 avec Dime Que Sí",
@@ -6291,6 +9761,63 @@
   "added_on": "2026-10-26"
  },
  {
+  "title": "Cubaila #203, salsa cubaine",
+  "type": "soirée",
+  "styles": [
+   "salsa cubaine",
+   "rueda"
+  ],
+  "date": "2027-01-08",
+  "end_date": null,
+  "start_time": "19:15",
+  "recurrence": null,
+  "venue": "Paris Epicentre",
+  "address": "28 rue Antoine-Julien Hénard, 75012 Paris",
+  "city": "Paris",
+  "department": "Paris",
+  "dept_code": "75",
+  "lat": 48.8589,
+  "lng": 2.347,
+  "geo_precision": "lieu",
+  "price": "9 à 14 € selon formule, 10 € après minuit",
+  "price_min": 9,
+  "organizer": "Cubaila",
+  "description": "Cours de casino débutant et intermédiaire, soirée 100 % salsa cubaine avec rueda, jusqu'à 2h.",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20261127-48433",
+  "source_name": "Liste Salsa d'Olivier",
+  "confidence": "haute",
+  "id": "cubaila-203-salsa-cubaine-paris-2027-01-08",
+  "added_on": "2026-11-17"
+ },
+ {
+  "title": "Vendredi salsa au Cabaret Gaîté",
+  "type": "soirée",
+  "styles": [
+   "salsa cubaine"
+  ],
+  "date": "2027-01-08",
+  "end_date": null,
+  "start_time": "19:30",
+  "recurrence": null,
+  "venue": "Cabaret Gaîté (Smile World)",
+  "address": "80 avenue du Maine, 75014 Paris",
+  "city": "Paris",
+  "department": "Paris",
+  "dept_code": "75",
+  "lat": 48.8589,
+  "lng": 2.347,
+  "geo_precision": "lieu",
+  "price": "Consommation obligatoire (environ 8 €)",
+  "price_min": 8,
+  "organizer": "Soirée Salsa Paris (DJ PieWO Suez)",
+  "description": "Cours de salsa pour débutants à 19h30, puis piste jusqu'à 1h avec salsa, konpa, bachata et zouk.",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20270108-48437",
+  "source_name": "Liste Salsa d'Olivier",
+  "confidence": "haute",
+  "id": "vendredi-salsa-au-cabaret-gaite-paris-2027-01-08",
+  "added_on": "2026-11-17"
+ },
+ {
   "title": "Atelier musicalité Musica y baile, cycle son avec instruments",
   "type": "stage",
   "styles": [
@@ -6446,6 +9973,34 @@
   "added_on": "2026-11-16"
  },
  {
+  "title": "Soirée salsera du Weekender Obinisa",
+  "type": "soirée",
+  "styles": [
+   "salsa cubaine"
+  ],
+  "date": "2027-01-09",
+  "end_date": null,
+  "start_time": "21:00",
+  "recurrence": null,
+  "venue": "Studio Re-Corps",
+  "address": "16A boulevard de Reuilly, 75012 Paris",
+  "city": "Paris",
+  "department": "Paris",
+  "dept_code": "75",
+  "lat": 48.8589,
+  "lng": 2.347,
+  "geo_precision": "lieu",
+  "price": "10 € en prévente",
+  "price_min": 10,
+  "organizer": "Obinisa",
+  "description": "Cours de salsa fusion avec Relampago et La Niña à 21h, puis soirée de 22h à 2h avec deux DJ.",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20270109-48463",
+  "source_name": "Liste Salsa d'Olivier",
+  "confidence": "haute",
+  "id": "soiree-salsera-du-weekender-obinisa-paris-2027-01-09",
+  "added_on": "2026-11-17"
+ },
+ {
   "title": "Stage afro et kizomba à Irigny",
   "type": "stage",
   "styles": [
@@ -6472,6 +10027,35 @@
   "confidence": "moyenne",
   "id": "stage-afro-et-kizomba-a-irigny-irigny-2027-01-09",
   "added_on": "2026-11-09"
+ },
+ {
+  "title": "Weekender Obinisa avec Relampago",
+  "type": "stage",
+  "styles": [
+   "salsa cubaine",
+   "timba"
+  ],
+  "date": "2027-01-09",
+  "end_date": "2027-01-10",
+  "start_time": "14:00",
+  "recurrence": null,
+  "venue": "Studio Re-Corps",
+  "address": "16A boulevard de Reuilly, 75012 Paris",
+  "city": "Paris",
+  "department": "Paris",
+  "dept_code": "75",
+  "lat": 48.8589,
+  "lng": 2.347,
+  "geo_precision": "lieu",
+  "price": "15 € l'heure, 45 € les trois heures, pass week-end 110 €",
+  "price_min": 15,
+  "organizer": "Obinisa",
+  "description": "Samedi : estilo, chachalokafun et fusion timba tous niveaux. Dimanche : formation afro-cubaine avancée avec musiciens live.",
+  "source_url": "https://allevents.in/paris/weekender-obinisa/200030949473638",
+  "source_name": "AllEvents",
+  "confidence": "haute",
+  "id": "weekender-obinisa-avec-relampago-paris-2027-01-09",
+  "added_on": "2026-11-17"
  },
  {
   "title": "Zest'in Bachata",
@@ -6556,6 +10140,35 @@
   "confidence": "moyenne",
   "id": "diamond-winter-2027-chassieu-2027-01-15",
   "added_on": "2026-10-12"
+ },
+ {
+  "title": "La Kreyola #4, zouk, kompa et salsa",
+  "type": "soirée",
+  "styles": [
+   "zouk",
+   "salsa"
+  ],
+  "date": "2027-01-15",
+  "end_date": null,
+  "start_time": "21:00",
+  "recurrence": null,
+  "venue": "Paris Epicentre",
+  "address": "28 rue Antoine-Julien Hénard, 75012 Paris",
+  "city": "Paris",
+  "department": "Paris",
+  "dept_code": "75",
+  "lat": 48.8589,
+  "lng": 2.347,
+  "geo_precision": "lieu",
+  "price": "9 à 12 €, 10 € après minuit",
+  "price_min": 9,
+  "organizer": "La Kreyola",
+  "description": "Quatrième édition : soirée zouk, kompa et salsa de 21h à 2h, boissons sans alcool et grignotage offerts.",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20261120-48432",
+  "source_name": "Liste Salsa d'Olivier",
+  "confidence": "haute",
+  "id": "la-kreyola-4-zouk-kompa-et-salsa-paris-2027-01-15",
+  "added_on": "2026-11-17"
  },
  {
   "title": "Mensuelle 100% Salsa au Lydo",
@@ -6794,6 +10407,64 @@
   "added_on": "2026-10-12"
  },
  {
+  "title": "Cubaila #204, salsa cubaine",
+  "type": "soirée",
+  "styles": [
+   "salsa cubaine",
+   "rueda"
+  ],
+  "date": "2027-01-22",
+  "end_date": null,
+  "start_time": "19:15",
+  "recurrence": null,
+  "venue": "Paris Epicentre",
+  "address": "28 rue Antoine-Julien Hénard, 75012 Paris",
+  "city": "Paris",
+  "department": "Paris",
+  "dept_code": "75",
+  "lat": 48.8589,
+  "lng": 2.347,
+  "geo_precision": "lieu",
+  "price": "9 à 14 € selon formule, 10 € après minuit",
+  "price_min": 9,
+  "organizer": "Cubaila",
+  "description": "Soirée salsa cubaine précédée de deux cours de casino, avec rueda en fin de soirée, jusqu'à 2h.",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20261127-48433",
+  "source_name": "Liste Salsa d'Olivier",
+  "confidence": "haute",
+  "id": "cubaila-204-salsa-cubaine-paris-2027-01-22",
+  "added_on": "2026-11-17"
+ },
+ {
+  "title": "Suave Dance Festival Paris 2027",
+  "type": "festival",
+  "styles": [
+   "kizomba",
+   "bachata"
+  ],
+  "date": "2027-01-22",
+  "end_date": "2027-01-24",
+  "start_time": "14:00",
+  "recurrence": null,
+  "venue": "Novotel Paris Est",
+  "address": "1 avenue de la République, 93170 Bagnolet",
+  "city": "Bagnolet",
+  "department": "Seine-Saint-Denis",
+  "dept_code": "93",
+  "lat": 48.8671,
+  "lng": 2.4252,
+  "geo_precision": "lieu",
+  "price": "Full pass dès 110 €",
+  "price_min": 110,
+  "organizer": "Suave Dance Festival Organization",
+  "description": "Week-end de kizomba et danses urbaines au Novotel de Bagnolet, avec ateliers, soirées jusqu'au petit matin et animations.",
+  "source_url": "https://www.goandance.com/en/event/9202/suave-dance-festival-paris-2027-official",
+  "source_name": "go&dance",
+  "confidence": "haute",
+  "id": "suave-dance-festival-paris-2027-bagnolet-2027-01-22",
+  "added_on": "2026-11-17"
+ },
+ {
   "title": "Tsunami Weekender",
   "type": "festival",
   "styles": [
@@ -6823,6 +10494,34 @@
   "confidence": "moyenne",
   "id": "tsunami-weekender-bernin-2027-01-22",
   "added_on": "2026-11-16"
+ },
+ {
+  "title": "Vendredi salsa au Cabaret Gaîté",
+  "type": "soirée",
+  "styles": [
+   "salsa cubaine"
+  ],
+  "date": "2027-01-22",
+  "end_date": null,
+  "start_time": "19:30",
+  "recurrence": null,
+  "venue": "Cabaret Gaîté (Smile World)",
+  "address": "80 avenue du Maine, 75014 Paris",
+  "city": "Paris",
+  "department": "Paris",
+  "dept_code": "75",
+  "lat": 48.8589,
+  "lng": 2.347,
+  "geo_precision": "lieu",
+  "price": "Consommation obligatoire (environ 8 €)",
+  "price_min": 8,
+  "organizer": "Soirée Salsa Paris (DJ PieWO Suez)",
+  "description": "Cours de salsa ouvert aux débutants puis soirée jusqu'à 1h dans le complexe de jeux de Gaîté.",
+  "source_url": "https://salsa.faurax.fr/index.php/evt/20270122-48438",
+  "source_name": "Liste Salsa d'Olivier",
+  "confidence": "haute",
+  "id": "vendredi-salsa-au-cabaret-gaite-paris-2027-01-22",
+  "added_on": "2026-11-17"
  },
  {
   "title": "Hacenoba Salsa : carte blanche aux danseurs #2",
