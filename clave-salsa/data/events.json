@@ -896,37 +896,6 @@
   "added_on": "2026-11-17"
  },
  {
-  "title": "Initiation salsa et soirée du mercredi au Barãgones",
-  "type": "initiation",
-  "styles": [
-   "salsa"
-  ],
-  "date": "2026-11-25",
-  "end_date": null,
-  "start_time": "20:30",
-  "recurrence": {
-   "freq": "weekly",
-   "weekday": 3
-  },
-  "venue": "Barãgones",
-  "address": "5 place Saint-Paul, 69005 Lyon",
-  "city": "Lyon",
-  "department": "Rhône",
-  "dept_code": "69",
-  "lat": 45.7485,
-  "lng": 4.8467,
-  "geo_precision": "lieu",
-  "price": "tarif non communiqué",
-  "price_min": null,
-  "organizer": "Barãgones / Abraso Danse",
-  "description": "Chaque mercredi soir, initiation à la salsa animée par Abraso Danse puis soirée dansante dans ce bar à cocktails et tapas du Vieux-Lyon.",
-  "source_url": "https://baragones.fr/evenements/",
-  "source_name": "Barãgones",
-  "confidence": "moyenne",
-  "id": "initiation-salsa-et-soiree-du-mercredi-au-baragone-lyon-rec",
-  "added_on": "2026-10-19"
- },
- {
   "title": "La Sociale BSK au Lydo",
   "type": "soirée",
   "styles": [
